@@ -44,7 +44,7 @@
 - [x] 데이터 구조화 회의 
 
 
-## 참여자
+## 팀원
 
 | <img src="https://avatars.githubusercontent.com/u/114036537?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114224237?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/33450365?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/98254580?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/70871997?s=96&v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114331071?s=96&v=4" width=200> |
 | :----------------------------------------------------------: | :---------------------------------------------: | :-------------------------------------------------: | :-------------------------------------------------: |  :-------------------------------------------------: |  :-------------------------------------------------: |
