@@ -4,7 +4,7 @@
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
- <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p>. 
+ <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p> 
  
  
  
