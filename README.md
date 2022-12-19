@@ -2,6 +2,7 @@
 #### [뚜셰 2차 프로토타입 Readme 바로가기](https://github.com/APPSCHOOL1-REPO/prototype-20221128-lab05/blob/main/README.md)
 
  <h1 align="middle">뚜셰(Touché)</h1>
+ ![appstore](https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png)
  <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p>
  
  
