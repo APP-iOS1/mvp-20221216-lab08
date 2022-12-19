@@ -1,5 +1,6 @@
 #### [뚜셰 1차 프로토타입 Readme 바로가기](https://github.com/APPSCHOOL1-REPO/prototype-20221107-team07/blob/main/README.md)
 #### [뚜셰 2차 프로토타입 Readme 바로가기](https://github.com/APPSCHOOL1-REPO/prototype-20221128-lab05/blob/main/README.md)
+#### [뚜셰 스토리보드 (피그마) 바로가기](https://www.figma.com/file/mpyaq5A1voWtc6SGjVGrVC/Touche_Prototye_2?node-id=0%3A1&t=NEuwJyrk7uAohniW-1)
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
