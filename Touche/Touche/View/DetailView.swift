@@ -12,21 +12,30 @@ struct DetailView: View {
     @State private var animateGradient = false
     @State private var showModal = false
     @State private var isMyPost: Bool = true
+    
+    @StateObject var perfumeStore = PerfumeStore()
     @StateObject var commentStore = CommentStore()
     @StateObject var userStore = UserStore()
+    
+    var perfume: Perfume
     var perfumeUid: String = ""
     var perfumeDict = SingletonData.shared.perfumeDictionary
     
     var body: some View {
-        NavigationView{
             ScrollView{
                 VStack(){
                     // 향수(Perfume_imageUrl)
-                    AsyncImage(url: URL(string: perfumeDict[perfumeUid]?.imageUrl ?? ""))
-                        //resizable ㄴㄴ placeholder
-                        .frame(width: 300, height: 300)
-                        .padding(.vertical)
-                        .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
+                    AsyncImage(url: URL(string: perfume.imageUrl ?? "")){
+                        image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 300, height: 300)
+                    .padding(.vertical)
+                    .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
                     
                     // 색상별 ColorBar
                     Image("ColorBar_Green")
@@ -41,7 +50,7 @@ struct DetailView: View {
                         .frame(width: 12, height: 6)
                         .padding(.top, -5)
                         .padding(.trailing, 350)
-
+                    
                     
                     ZStack{
                         Divider()
@@ -56,13 +65,13 @@ struct DetailView: View {
                         
                         VStack(alignment: .leading){
                             // 향수 브랜드(Perfume_brand)
-                            Text(perfumeDict[perfumeUid]?.brand?[0] ?? "")
+                            Text(perfume.brand?[0] ?? "")
                                 .underline()
                                 .font(.system(size: 18))
                                 .fontWeight(.semibold)
                             
                             // 향수 이름(Perfume_name)
-                            Text(perfumeDict[perfumeUid]?.name?[0] ?? "")
+                            Text(perfume.name?[0] ?? "")
                                 .font(.system(size: 16))
                             
                         }.padding(.leading, -10)
@@ -106,7 +115,7 @@ struct DetailView: View {
                             }
                             
                         }
-                    
+                        
                         Button(action: {
                             isMyPost = false
                         }) {
@@ -127,32 +136,66 @@ struct DetailView: View {
                             VStack(alignment: .leading){
                                 Text("조향사")
                                     .underline()
-                                Text(perfumeDict[perfumeUid]?.perfumer?[0] ?? "")
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 2)
+                                
+                                Text(perfume.perfumer?[0] ?? "")
                             }
-                            .padding(.leading, -180)
                             .padding(.bottom)
+                            .padding(.leading)
                             
                             VStack(alignment: .leading){
                                 Text("출시년도")
                                     .underline()
-                                Text(perfumeDict[perfumeUid]?.releasedYear ?? "")
+                                    .fontWeight(.semibold)
+                                    .padding(.bottom, 2)
+                                
+                                Text(perfume.releasedYear ?? "")
                             }
-                            .padding(.leading, -180)
-                            .padding(.bottom)
+                            .padding(.leading)
                             
-                            VStack(alignment: .leading) {
-                                Text("향수 구성 정보")
-                                    .underline()
-                                if perfumeDict[perfumeUid]?.ingredientsKr?.count == 3 {
-                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[0] ?? "")
-                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[1] ?? "")
-                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[2] ?? "")
-                                } else {
-                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[0] ?? "")
+                            GeometryReader{ geometry in
+                                VStack(alignment: .leading) {
+                                    Text("향수 구성 정보")
+                                        .underline()
+                                        .fontWeight(.semibold)
+                                        .padding(.bottom, 2)
+                                    
+                                    if perfume.ingredientsKr?.count == 3 {
+                                        VStack(alignment: .leading){
+                                            
+                                            VStack(alignment: .leading){
+                                                Text("Top")
+                                                Text(perfume.ingredientsKr?[0] ?? "")
+                                            }.padding(.bottom, 2)
+                                            
+                                            VStack(alignment: .leading){
+                                                Text("Middle")
+
+                                                Text(perfume.ingredientsKr?[1] ?? "")
+                                            }.padding(.bottom, 2)
+                                            
+                                            VStack(alignment: .leading){
+                                                Text("Bottom")
+
+                                                Text(perfume.ingredientsKr?[2] ?? "")
+                                                
+                                                Spacer()
+                                            }.padding(.bottom, 2)
+                                            
+                                        }
+                                        
+                                    } else {
+                                        VStack{
+                                            Text(perfume.ingredientsKr?[0] ?? "")
+                                        }}
                                 }
+                                .frame(width: geometry.size.width, alignment: .leading)
+                                Spacer()
                             }
-                            .padding(.leading, -180)
-                            .padding(.bottom)
+                            .padding()
+                            
+                            Spacer()
                         }
                         .foregroundColor(.gray)
                         .padding(.top)
@@ -172,9 +215,8 @@ struct DetailView: View {
                     }
                 }
                 .padding()
+                Spacer()
             }
-
-        }
     }
 }
 
@@ -186,28 +228,28 @@ struct Review: View {
     
     var body: some View{
         
-            VStack(alignment: .leading){
-                //Comment_nickName
-                Text("Comment_nickName")
-                    .underline()
-                    .padding(.bottom, 1)
-                    .fontWeight(.medium)
-                //Comment_contents
-                Text("Comment_contents")
-            }
-            .fontWeight(.light)
-            .frame(width: 370, height: 80)
-            .padding(.leading, -20)
-            .font(.system(size: 14))
-            .background(.gray)
-            .foregroundColor(.black)
+        VStack(alignment: .leading){
+            //Comment_nickName
+            Text("Comment_nickName")
+                .underline()
+                .padding(.bottom, 1)
+                .fontWeight(.medium)
+            //Comment_contents
+            Text("Comment_contents")
+        }
+        .fontWeight(.light)
+        .frame(width: 370, height: 80)
+        .padding(.leading, -20)
+        .font(.system(size: 14))
+        .background(.gray)
+        .foregroundColor(.black)
     }
 }
 
 
 struct CommentView: View {
     
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var comment = ""
     
@@ -215,33 +257,33 @@ struct CommentView: View {
     @StateObject var commentStore = CommentStore()
     @StateObject var userStore = UserStore()
     
-
+    
     var body: some View {
         VStack(alignment: .leading){
-//            HStack{
-//                //Comment_nickName
-//                Text()
-//                    .underline()
-//                    .padding(.leading, 30)
-//                    .padding(.bottom, -10)
-//                    .foregroundColor(Color(UIColor.systemGray2))
-//
-//
-//                Button{
-//                    commentStore.addComment(comment: Comment(id: UUID().uuidString, contents: comment, createdAt: <#T##String?#>, nickName: <#T##String?#>, writerUID: <#T##String?#>)} label: {
-//                    VStack(spacing: .zero){
-//                    }
-//                    .frame(maxWidth: .infinity)
-//                    .padding(.horizontal, 130)
-//                    .multilineTextAlignment(.center)
-//                    //                  .overlay(alignment: .topTrailing){
-//                    //                      Image(systemName: "xmark")
-//                    //                  }
-//                    .padding(.top)
-//                    .padding(.trailing, 20)
-//                }
-//                .foregroundColor(.black)
-//            }
+            //            HStack{
+            //                //Comment_nickName
+            //                Text()
+            //                    .underline()
+            //                    .padding(.leading, 30)
+            //                    .padding(.bottom, -10)
+            //                    .foregroundColor(Color(UIColor.systemGray2))
+            //
+            //
+            //                Button{
+            //                    commentStore.addComment(comment: Comment(id: UUID().uuidString, contents: comment, createdAt: <#T##String?#>, nickName: <#T##String?#>, writerUID: <#T##String?#>)} label: {
+            //                    VStack(spacing: .zero){
+            //                    }
+            //                    .frame(maxWidth: .infinity)
+            //                    .padding(.horizontal, 130)
+            //                    .multilineTextAlignment(.center)
+            //                    //                  .overlay(alignment: .topTrailing){
+            //                    //                      Image(systemName: "xmark")
+            //                    //                  }
+            //                    .padding(.top)
+            //                    .padding(.trailing, 20)
+            //                }
+            //                .foregroundColor(.black)
+            //            }
             
             ZStack {
                 Rectangle()
@@ -296,7 +338,7 @@ struct HeartStroke: Shape {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-//        DetailView(item: Perfume())
-        DetailView()
+        //        DetailView(item: Perfume())
+        DetailView(perfume: Perfume())
     }
 }
