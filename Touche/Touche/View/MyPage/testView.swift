@@ -13,13 +13,14 @@ struct testView: View {
     var body: some View {
         NavigationStack{
             if userStore.user != nil {
-                NickNameView()
+                WishListView()
             } else {
                 SignInView()
             }
         }.onAppear {
             // MARK: 뷰가 그려질때 로그인 상태를 확인하고 user 프로퍼티를 업데이트
             userStore.listenToLoginState()
+            
         }
     }
 }

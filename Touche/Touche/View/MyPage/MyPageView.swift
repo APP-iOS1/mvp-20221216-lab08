@@ -14,29 +14,15 @@ struct MyPageView: View {
             ["선호 카테고리", "알림설정", "위치 서비스", "국가/지역 - \(nation)", "문의하기", "자주 묻는 질문 FAQ", "개인정보 보호정책", "이용약관"]
         }
     }
+    @EnvironmentObject var userStore: UserStore
     
     var body: some View {
         NavigationStack{
-            Text("위시리스트를 이용하시려면\n로그인 또는 회원가입을 하세요.")
-                .frame(width: .infinity, alignment: .leading)
-            HStack{
-                NavigationLink {
-                    NavigationTestView()
-                } label: {
-                    Text("로그인")
-                        .frame(width: 125, height: 30)
-                }.tint(.black)
-                
-                NavigationLink {
-                    NavigationTestView()
-                } label: {
-                    Text("회원 가입")
-                        .frame(width: 125,height: 30)
-                        .foregroundColor(.black)
-                }.tint(.white)
+            if userStore.user != nil {
+                WishListView()
+            } else {
+                MyPageNonMemberView()
             }
-            .buttonStyle(.borderedProminent)
-            
                 
             List{
                 Section("설정") {
@@ -64,6 +50,6 @@ struct MyPageView: View {
 
 struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        MyPageView()
+        MyPageView().environmentObject(UserStore())
     }
 }

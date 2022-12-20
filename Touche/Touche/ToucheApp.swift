@@ -17,9 +17,11 @@ struct ToucheApp: App {
     
     var body: some Scene {
         let userStore: UserStore = UserStore()
+        let perfumeStore: PerfumeStore = PerfumeStore()
         WindowGroup {
-            testView()
+        testView()
                 .environmentObject(userStore)
+                .environmentObject(perfumeStore)
         }
     }
 }
