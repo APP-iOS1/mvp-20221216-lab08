@@ -15,9 +15,11 @@ struct ToucheApp: App {
         FirebaseApp.configure()
     }
     
-    var body: some Scene {    
+    var body: some Scene {
+        let userStore: UserStore = UserStore()
         WindowGroup {
-            ContentView()
+            testView()
+                .environmentObject(userStore)
         }
     }
 }
