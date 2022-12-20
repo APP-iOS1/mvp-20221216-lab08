@@ -18,10 +18,12 @@ struct ToucheApp: App {
     var body: some Scene {
         let userStore: UserStore = UserStore()
         let perfumeStore: PerfumeStore = PerfumeStore()
+        let likePerfumeStore: LikePerfumeStore = LikePerfumeStore()
         WindowGroup {
-        testView()
+            MyPageView()
                 .environmentObject(userStore)
                 .environmentObject(perfumeStore)
+                .environmentObject(likePerfumeStore)
         }
     }
 }

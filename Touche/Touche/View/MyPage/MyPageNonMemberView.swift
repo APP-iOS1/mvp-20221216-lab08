@@ -10,25 +10,31 @@ import SwiftUI
 struct MyPageNonMemberView: View {
     var body: some View {
         VStack {
-            Text("위시리스트를 이용하시려면\n로그인 또는 회원가입을 하세요.")
-                .frame(width: .infinity, alignment: .leading)
+            HStack {
+                Text("위시리스트를 이용하시려면\n로그인 또는 회원가입을 하세요.")
+                Spacer()
+            }
+            .frame(height: 80)
+            .padding(.horizontal, 20)
+            
             HStack{
                 NavigationLink {
-                    NavigationTestView()
+                    MyPageLoginView(selectedIndex: 0)
                 } label: {
                     Text("로그인")
-                        .frame(width: 125, height: 30)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 40)
+                        .background(.black)
+                        .foregroundColor(.white)
                 }.tint(.black)
                 
                 NavigationLink {
-                    NavigationTestView()
+                    MyPageLoginView(selectedIndex: 1)
                 } label: {
                     Text("회원 가입")
-                        .frame(width: 125,height: 30)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 40)
                         .foregroundColor(.black)
                 }.tint(.white)
             }
-            .buttonStyle(.borderedProminent)
         }
     }
 }

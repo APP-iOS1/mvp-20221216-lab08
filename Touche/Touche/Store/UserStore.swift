@@ -12,7 +12,8 @@ import FirebaseAuth
 class UserStore: ObservableObject{
     @Published var userStore: [User2] = []
     let database = Firestore.firestore().collection("User")
-    var myLikePerfumes: [String] = []
+    var singletonData: SingletonData = SingletonData.shared
+    
     var user: User? {
         didSet { // 저장된 user 정보가 바뀌면 호출되어서 값을 업데이트
             objectWillChange.send()
@@ -32,10 +33,6 @@ class UserStore: ObservableObject{
                     
                     let user2: User2 = User2(id: id, likePerfumes: likePerfumes, nation: nation, nickName: nickName, watchList: watchList)
                     self.userStore.append(user2)
-                    
-                    if self.user?.uid == id {
-                        self.myLikePerfumes = likePerfumes
-                    }
                 }
                 print(self.userStore)
             }
@@ -108,26 +105,6 @@ class UserStore: ObservableObject{
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
-    }
-    func getUserInfo() {
-        database.document(user?.uid ?? "").getDocument { (snapshot, error) in
-            if let snapshot {
-                let docData = snapshot.data()
-                let id = snapshot.documentID
-                let likePerfumes: [String] = docData?["likePerfumes"] as? [String] ?? []
-                let nation: String? = docData?["nation"] as? String ?? ""
-                let nickName: String? = docData?["nickName"] as? String ?? ""
-                let watchList: [String] = docData?["watchList"] as? [String] ?? []
-                
-                let user2: User2 = User2(id: id, likePerfumes: likePerfumes, nation: nation, nickName: nickName, watchList: watchList)
-                self.userStore.append(user2)
-                
-                if self.user?.uid == id {
-                    self.myLikePerfumes = likePerfumes
-                }
-            }
-        }
-        print(self.userStore)
     }
 }
 

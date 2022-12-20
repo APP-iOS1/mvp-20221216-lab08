@@ -11,6 +11,9 @@
 		230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC384295175450016CB7E /* MyPageNonMemberView.swift */; };
 		230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC386295177730016CB7E /* MyPageLoginView.swift */; };
 		230AC38A295178130016CB7E /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 230AC389295178130016CB7E /* SegmentedPicker */; };
+		230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38B2951C3120016CB7E /* SingletonData.swift */; };
+		230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38D2951FE7C0016CB7E /* LikePerfume.swift */; };
+		230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */; };
 		61129579295152DC00CC3681 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61129578295152DC00CC3681 /* SignUpView.swift */; };
 		6112957B295153D400CC3681 /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112957A295153D400CC3681 /* NickNameView.swift */; };
 		6112957D2951549300CC3681 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112957C2951549300CC3681 /* testView.swift */; };
@@ -40,6 +43,9 @@
 		230AC382295174920016CB7E /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		230AC384295175450016CB7E /* MyPageNonMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNonMemberView.swift; sourceTree = "<group>"; };
 		230AC386295177730016CB7E /* MyPageLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageLoginView.swift; sourceTree = "<group>"; };
+		230AC38B2951C3120016CB7E /* SingletonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonData.swift; sourceTree = "<group>"; };
+		230AC38D2951FE7C0016CB7E /* LikePerfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfume.swift; sourceTree = "<group>"; };
+		230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
 		61129578295152DC00CC3681 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		6112957A295153D400CC3681 /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		6112957C2951549300CC3681 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 				61639E0029503C9C0051C954 /* Comment.swift */,
 				61639E0229503DFF0051C954 /* User.swift */,
 				61639E0429503E4E0051C954 /* Search.swift */,
+				230AC38D2951FE7C0016CB7E /* LikePerfume.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				61639E09295044FF0051C954 /* CommentStore.swift */,
 				61639E0B295049CF0051C954 /* UserStore.swift */,
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
+				230AC38B2951C3120016CB7E /* SingletonData.swift */,
+				230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -248,11 +257,13 @@
 				61639DE5295038760051C954 /* ContentView.swift in Sources */,
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
 				6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */,
+				230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */,
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
 				6112957D2951549300CC3681 /* testView.swift in Sources */,
 				230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */,
 				61639E0529503E4E0051C954 /* Search.swift in Sources */,
 				61639E0329503DFF0051C954 /* User.swift in Sources */,
+				230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */,
 				6112957B295153D400CC3681 /* NickNameView.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
 				6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */,
@@ -260,6 +271,7 @@
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
 				61129579295152DC00CC3681 /* SignUpView.swift in Sources */,
 				230AC383295174920016CB7E /* WishListView.swift in Sources */,
+				230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */,
 				61639E0129503C9C0051C954 /* Comment.swift in Sources */,
 				61639E0E29504CB60051C954 /* SearchStore.swift in Sources */,
 				230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */,

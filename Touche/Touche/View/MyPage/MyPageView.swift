@@ -24,7 +24,7 @@ struct MyPageView: View {
                 MyPageNonMemberView()
             }
                 
-            List{
+            List{ 
                 Section("설정") {
                     ForEach(Array(0..<4), id: \.self) { index in
                         NavigationLink {

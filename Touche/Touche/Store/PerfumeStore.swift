@@ -11,10 +11,9 @@ import FirebaseFirestore
 class PerfumeStore: ObservableObject {
     @Published var perfumeStore: [Perfume] = []
     let database = Firestore.firestore().collection("Perfume")
-    var likePerfume: [Perfume] = []
     
     func fetchPerfume() {
-        database.getDocuments { (snapshot, error) in
+        database.getDocuments { [self] (snapshot, error) in
             self.perfumeStore.removeAll()
             if let snapshot {
                 for document in snapshot.documents{
@@ -28,39 +27,12 @@ class PerfumeStore: ObservableObject {
                     let imageUrl: String = docData["imageUrl"] as? String ?? ""
                     let brandSearchCount: Int = docData["brandSearchCount"] as? Int ?? 0
                     let likedCount: Int = docData["likedCount"] as? Int ?? 0
-                    let ingredientsKr: [String] = docData["ingredientsKr"] as? [String] ?? []
-                    let ingredientsEn: [String] = docData["ingredientsEn"] as? [String] ?? []
+                    let ingredientsKr: [String] = docData["ingredients_kr"] as? [String] ?? []
+                    let ingredientsEn: [String] = docData["ingredients_en"] as? [String] ?? []
                     let releasedYear: Int = docData["releasedYear"] as? Int ?? 0
                     
                     let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
                     self.perfumeStore.append(perfume)
-                }
-                print(self.perfumeStore)
-            }
-        }
-    }
-    func getLikePerfume(_ perfumeID: [String]) {
-        for id in perfumeID {
-            database.document(id).getDocument { (snapshot, error) in
-                self.likePerfume.removeAll()
-                if let snapshot {
-                    let docData = snapshot.data()
-                    let id: String = snapshot.documentID
-                    let brand: [String] = docData?["brand"] as? [String] ?? []
-                    let name: [String] = docData?["name"] as? [String] ?? []
-                    let type: [String] = docData?["type"] as? [String] ?? []
-                    let perfumer: [String] = docData?["perfumer"] as? [String] ?? []
-                    let color: [String] = docData?["color"] as? [String] ?? []
-                    let imageUrl: String = docData?["imageUrl"] as? String ?? ""
-                    let brandSearchCount: Int = docData?["brandSearchCount"] as? Int ?? 0
-                    let likedCount: Int = docData?["likedCount"] as? Int ?? 0
-                    let ingredientsKr: [String] = docData?["ingredientsKr"] as? [String] ?? []
-                    let ingredientsEn: [String] = docData?["ingredientsEn"] as? [String] ?? []
-                    let releasedYear: Int = docData?["releasedYear"] as? Int ?? 0
-                    
-                    let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
-                    
-                    self.likePerfume.append(perfume)
                 }
             }
         }
