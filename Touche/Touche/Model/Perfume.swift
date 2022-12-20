@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Perfume: Identifiable {
+struct Perfume: Identifiable, Hashable {
     var id               : String?   = nil
     var brand            : [String]? = []
     var name             : [String]? = []

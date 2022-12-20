@@ -17,7 +17,7 @@ struct ToucheApp: App {
     
     var body: some Scene {    
         WindowGroup {
-            ContentView()
+            HomeView(comment: .init())
         }
     }
 }

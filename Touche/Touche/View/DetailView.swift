@@ -12,12 +12,8 @@ struct DetailView: View {
     @State private var animateGradient = false
     @State private var showModal = false
     @State private var isMyPost: Bool = true
-    
-    @StateObject var perfumeStore = PerfumeStore()
     @StateObject var commentStore = CommentStore()
     @StateObject var userStore = UserStore()
-    
-    var item: Perfume
     var perfumeUid: String = ""
     var perfumeDict = SingletonData.shared.perfumeDictionary
     
@@ -144,12 +140,16 @@ struct DetailView: View {
                             .padding(.leading, -180)
                             .padding(.bottom)
                             
-                            VStack(alignment: .leading){
+                            VStack(alignment: .leading) {
                                 Text("향수 구성 정보")
                                     .underline()
-                                Text(perfumeDict[perfumeUid]?.ingredientsKr?[0] ?? "")
-                                Text(perfumeDict[perfumeUid]?.ingredientsKr?[1] ?? "")
-                                Text(perfumeDict[perfumeUid]?.ingredientsKr?[2] ?? "")
+                                if perfumeDict[perfumeUid]?.ingredientsKr?.count == 3 {
+                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[0] ?? "")
+                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[1] ?? "")
+                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[2] ?? "")
+                                } else {
+                                    Text(perfumeDict[perfumeUid]?.ingredientsKr?[0] ?? "")
+                                }
                             }
                             .padding(.leading, -180)
                             .padding(.bottom)
@@ -170,11 +170,10 @@ struct DetailView: View {
                             
                         }
                     }
-                    
-                    
                 }
                 .padding()
             }
+
         }
     }
 }
@@ -297,6 +296,7 @@ struct HeartStroke: Shape {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(item: Perfume())
+//        DetailView(item: Perfume())
+        DetailView()
     }
 }

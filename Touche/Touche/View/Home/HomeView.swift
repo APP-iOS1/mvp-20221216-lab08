@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var perfumeStore = PerfumeStore()
     @StateObject private var commentStore = CommentStore()
-    var perfume: Perfume
+//    var perfume: Perfume
     var comment: Comment
     
     //    var manyComments: [Comment] {
@@ -137,41 +137,12 @@ struct HomeView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(perfumeStore.perfumeStore) { item in
-                                NavigationLink(destination: Text("hi")) {
-                                    VStack(alignment: .leading) {
-                                        AsyncImage(
-                                            url: URL(string: String(item.imageUrl ?? "")),
-                                            content: { image in
-                                                image
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 130, height: 130)
-                                            },
-                                            placeholder: {
-                                                ProgressView()
-                                            }
-                                        )
-                                        
-                                        Text(item.brand?[0] ?? "")
-                                            .unredacted()
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.black)
-                                        
-                                        Text(item.name?[0] ?? "")
-                                            .font(.system(size: 14))
-                                            .foregroundColor(.black)
-                                        
-                                        HStack {
-                                            Text("좋아요")
-                                            Text(String(item.likedCount ?? 0))
-                                            
-                                            Text("코멘트")
-                                            Text(String(comment.contents?.count ?? 0))
-                                        }
-                                        .font(.system(size: 12))
-                                        .foregroundColor(.gray)
-                                    }
+                                NavigationLink(value: item) {
+                                    LotCommentsCellView(perfume: item)
                                 }
+                                .navigationDestination(for: Perfume.self, destination: { item in
+                                    DetailView(perfumeUid: item.id ?? "")
+                                })
                                 .padding(.leading)
                             }
                         }
@@ -225,6 +196,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(perfume: .init(), comment: .init())
+        HomeView(comment: .init())
     }
 }

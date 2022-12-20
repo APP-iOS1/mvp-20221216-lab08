@@ -28,8 +28,8 @@ class PerfumeStore: ObservableObject {
                     let imageUrl: String = docData["imageUrl"] as? String ?? ""
                     let brandSearchCount: Int = docData["brandSearchCount"] as? Int ?? 0
                     let likedCount: Int = docData["likedCount"] as? Int ?? 0
-                    let ingredientsKr: [String] = docData["ingredientsKr"] as? [String] ?? []
-                    let ingredientsEn: [String] = docData["ingredientsEn"] as? [String] ?? []
+                    let ingredientsKr: [String] = docData["ingredients_kr"] as? [String] ?? []
+                    let ingredientsEn: [String] = docData["ingredients_en"] as? [String] ?? []
                     let releasedYear: String = docData["releasedYear"] as? String ?? ""
                     
                     let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
