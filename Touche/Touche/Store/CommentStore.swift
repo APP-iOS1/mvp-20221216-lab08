@@ -32,7 +32,7 @@ class CommentStore: ObservableObject {
         }
     }
     
-    func addComment(_ comment: Comment) {
+    func addComment(comment: Comment) {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
@@ -42,7 +42,7 @@ class CommentStore: ObservableObject {
         fetchComment()
     }
     
-    func updateComment(_ comment: Comment) {
+    func updateComment(comment: Comment) {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
@@ -52,7 +52,7 @@ class CommentStore: ObservableObject {
         fetchComment()
     }
     
-    func removeComment(_ comment: Comment){
+    func removeComment(comment: Comment){
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .delete()
         fetchComment()
