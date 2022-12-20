@@ -27,6 +27,8 @@
 		61639E0A295044FF0051C954 /* CommentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E09295044FF0051C954 /* CommentStore.swift */; };
 		61639E0C295049CF0051C954 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0B295049CF0051C954 /* UserStore.swift */; };
 		61639E0E29504CB60051C954 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0D29504CB60051C954 /* SearchStore.swift */; };
+		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
+		828B724E2951421700CE1DDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B724D2951421700CE1DDD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		61639E09295044FF0051C954 /* CommentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentStore.swift; sourceTree = "<group>"; };
 		61639E0B295049CF0051C954 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		61639E0D29504CB60051C954 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
+		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
+		828B724D2951421700CE1DDD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		61639DF0295038860051C954 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				828B724B295141E600CE1DDD /* Home */,
 				61639DE4295038760051C954 /* ContentView.swift */,
 				3AB46E4D295142FD0094B898 /* DetailView.swift */,
 				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
@@ -133,6 +138,15 @@
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		828B724B295141E600CE1DDD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				828B724D2951421700CE1DDD /* HomeView.swift */,
+				8215632329518D68008360B8 /* LotCommentsCellView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +234,9 @@
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
 				3AB46E50295144040094B898 /* DetailViewGradiant.swift in Sources */,
 				61639E0529503E4E0051C954 /* Search.swift in Sources */,
+				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
 				61639E0329503DFF0051C954 /* User.swift in Sources */,
+				828B724E2951421700CE1DDD /* HomeView.swift in Sources */,
 				3AB46E4E295142FD0094B898 /* DetailView.swift in Sources */,
 				3AB46E54295182580094B898 /* SingletonData.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
