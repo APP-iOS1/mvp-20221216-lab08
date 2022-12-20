@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class PerfumeStore: ObservableObject {
     @Published var perfumeStore: [Perfume] = []
+    var singletoneData: SingletonData = SingletonData.shared
     let database = Firestore.firestore().collection("Perfume")
     
     func fetchPerfume() {
@@ -29,10 +30,11 @@ class PerfumeStore: ObservableObject {
                     let likedCount: Int = docData["likedCount"] as? Int ?? 0
                     let ingredientsKr: [String] = docData["ingredientsKr"] as? [String] ?? []
                     let ingredientsEn: [String] = docData["ingredientsEn"] as? [String] ?? []
-                    let releasedYear: Int = docData["releasedYear"] as? Int ?? 0
+                    let releasedYear: String = docData["releasedYear"] as? String ?? ""
                     
                     let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
                     self.perfumeStore.append(perfume)
+                    self.singletoneData.perfumeDictionary[id] = perfume
                 }
             }
         }
