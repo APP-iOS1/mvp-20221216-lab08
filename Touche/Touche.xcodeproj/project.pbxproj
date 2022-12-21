@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230AC383295174920016CB7E /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC382295174920016CB7E /* WishListView.swift */; };
+		230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC384295175450016CB7E /* MyPageNonMemberView.swift */; };
+		230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC386295177730016CB7E /* MyPageLoginView.swift */; };
+		230AC38A295178130016CB7E /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 230AC389295178130016CB7E /* SegmentedPicker */; };
+		230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38D2951FE7C0016CB7E /* LikePerfume.swift */; };
+		230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */; };
+		233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B812952BF7900833FEF /* GoogleSignIn */; };
+		233F7B842952BF7900833FEF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B832952BF7900833FEF /* GoogleSignInSwift */; };
+		233F7B862952C08900833FEF /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */; };
+		233F7B892952D3E800833FEF /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B882952D3E800833FEF /* GoogleSignInButton.swift */; };
+		233F7B8B2952D5DB00833FEF /* LikePerfumeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */; };
+		61129579295152DC00CC3681 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61129578295152DC00CC3681 /* SignUpView.swift */; };
+		6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823B2951423A00ED6C08 /* MyPageView.swift */; };
+		6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823D2951479500ED6C08 /* NavigationTestView.swift */; };
+		6162824029514B9200ED6C08 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823F29514B9200ED6C08 /* SignInView.swift */; };
 		04BB6D8C2952949A00F0D8C8 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D8B2952949A00F0D8C8 /* GridView.swift */; };
 		04BB6D8F2952A09200F0D8C8 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D8E2952A09200F0D8C8 /* Brand.swift */; };
 		04BB6D912952A74700F0D8C8 /* SelectedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D902952A74700F0D8C8 /* SelectedButtonView.swift */; };
@@ -49,6 +64,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		230AC382295174920016CB7E /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		230AC384295175450016CB7E /* MyPageNonMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNonMemberView.swift; sourceTree = "<group>"; };
+		230AC386295177730016CB7E /* MyPageLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageLoginView.swift; sourceTree = "<group>"; };
+		230AC38D2951FE7C0016CB7E /* LikePerfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfume.swift; sourceTree = "<group>"; };
+		230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
+		233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
+		233F7B872952C54200833FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		233F7B882952D3E800833FEF /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeListView.swift; sourceTree = "<group>"; };
+		61129578295152DC00CC3681 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		6162823B2951423A00ED6C08 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		6162823D2951479500ED6C08 /* NavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
+		6162823F29514B9200ED6C08 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		04BB6D8B2952949A00F0D8C8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		04BB6D8E2952A09200F0D8C8 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		04BB6D902952A74700F0D8C8 /* SelectedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedButtonView.swift; sourceTree = "<group>"; };
@@ -94,14 +122,47 @@
 			files = (
 				61639DFA295039C10051C954 /* FirebaseDatabaseSwift in Frameworks */,
 				61639DFC295039C10051C954 /* FirebaseFirestore in Frameworks */,
+				233F7B842952BF7900833FEF /* GoogleSignInSwift in Frameworks */,
+				230AC38A295178130016CB7E /* SegmentedPicker in Frameworks */,
 				61639DF8295039C10051C954 /* FirebaseDatabase in Frameworks */,
 				61639DF6295039C10051C954 /* FirebaseAuth in Frameworks */,
+				233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230AC391295225210016CB7E /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				230AC386295177730016CB7E /* MyPageLoginView.swift */,
+				6162823F29514B9200ED6C08 /* SignInView.swift */,
+				61129578295152DC00CC3681 /* SignUpView.swift */,
+				233F7B882952D3E800833FEF /* GoogleSignInButton.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		233F7B7F2952965700833FEF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				6162823B2951423A00ED6C08 /* MyPageView.swift */,
+				6162823D2951479500ED6C08 /* NavigationTestView.swift */,
+				230AC382295174920016CB7E /* WishListView.swift */,
+				230AC384295175450016CB7E /* MyPageNonMemberView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		6162823A2951421700ED6C08 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				230AC391295225210016CB7E /* Sign */,
+				233F7B7F2952965700833FEF /* New Group */,
+				233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */,
+			);
+			path = MyPage;
 		04BB6D8D2952A08100F0D8C8 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +206,7 @@
 		61639DE1295038760051C954 /* Touche */ = {
 			isa = PBXGroup;
 			children = (
+				233F7B872952C54200833FEF /* Info.plist */,
 				61639DE2295038760051C954 /* ToucheApp.swift */,
 				61639E0629503EFF0051C954 /* Store */,
 				61639DFD29503BA50051C954 /* Model */,
@@ -166,6 +228,7 @@
 		61639DF0295038860051C954 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6162823A2951421700ED6C08 /* MyPage */,
 				04D112552951C373003A8A57 /* Search */,
 				828B724B295141E600CE1DDD /* Home */,
 				61639DE4295038760051C954 /* ContentView.swift */,
@@ -185,6 +248,7 @@
 				61639DFE29503BDD0051C954 /* Perfume.swift */,
 				61639E0029503C9C0051C954 /* Comment.swift */,
 				61639E0229503DFF0051C954 /* User.swift */,
+				230AC38D2951FE7C0016CB7E /* LikePerfume.swift */,
 				04D1125A2951CB47003A8A57 /* ColorInfo.swift */,
 				82D837552952F59C00B96B9C /* Search.swift */,
 				822CFA9E2952CC89009AA6A8 /* Clicked.swift */,
@@ -199,6 +263,8 @@
 				61639E0729503F230051C954 /* PerfumeStore.swift */,
 				61639E0B295049CF0051C954 /* UserStore.swift */,
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
+				230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */,
+				233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */,
 				04D1125C2951CB7B003A8A57 /* ColorInfoStore.swift */,
 				655A1DCA2952CC48007CF44B /* ColorConverter.swift */,
 				822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */,
@@ -245,6 +311,9 @@
 				61639DF7295039C10051C954 /* FirebaseDatabase */,
 				61639DF9295039C10051C954 /* FirebaseDatabaseSwift */,
 				61639DFB295039C10051C954 /* FirebaseFirestore */,
+				230AC389295178130016CB7E /* SegmentedPicker */,
+				233F7B812952BF7900833FEF /* GoogleSignIn */,
+				233F7B832952BF7900833FEF /* GoogleSignInSwift */,
 			);
 			productName = Touche;
 			productReference = 61639DDF295038760051C954 /* Touche.app */;
@@ -276,6 +345,8 @@
 			mainGroup = 61639DD6295038760051C954;
 			packageReferences = (
 				61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				230AC388295178130016CB7E /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */,
+				233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 61639DE0295038760051C954 /* Products */;
 			projectDirPath = "";
@@ -304,11 +375,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233F7B892952D3E800833FEF /* GoogleSignInButton.swift in Sources */,
 				82D837562952F59C00B96B9C /* Search.swift in Sources */,
 				04BB6D8C2952949A00F0D8C8 /* GridView.swift in Sources */,
 				61639DE5295038760051C954 /* ContentView.swift in Sources */,
 				655A1DC9295298D3007CF44B /* ParfumeTabView.swift in Sources */,
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
+				6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */,
+				230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */,
+
+				230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */,
+				61639E0529503E4E0051C954 /* Search.swift in Sources */,
+
+				230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */,
+
+				6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */,
+				233F7B862952C08900833FEF /* GoogleAuthViewModel.swift in Sources */,
 				04D112592951C39F003A8A57 /* ColorListView.swift in Sources */,
 				04D112542951C2DE003A8A57 /* SearchView.swift in Sources */,
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
@@ -331,11 +413,16 @@
 				61639E0C295049CF0051C954 /* UserStore.swift in Sources */,
 				3A948FE82952CDCB00EAEA43 /* Review.swift in Sources */,
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
+				61129579295152DC00CC3681 /* SignUpView.swift in Sources */,
+				230AC383295174920016CB7E /* WishListView.swift in Sources */,
+				233F7B8B2952D5DB00833FEF /* LikePerfumeListView.swift in Sources */,
 				655A1DCB2952CC48007CF44B /* ColorConverter.swift in Sources */,
 				61639E0129503C9C0051C954 /* Comment.swift in Sources */,
 				04BB6D932952A8D400F0D8C8 /* SelectedColorButtonView.swift in Sources */,
 				04BB6D912952A74700F0D8C8 /* SelectedButtonView.swift in Sources */,
 				61639E0E29504CB60051C954 /* SearchStore.swift in Sources */,
+				230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */,
+				6162824029514B9200ED6C08 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,13 +551,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Touche/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,13 +582,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Touche/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,6 +629,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		230AC388295178130016CB7E /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/SwiftySegmentedPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+		233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.4;
+			};
+		};
 		61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -547,6 +656,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		230AC389295178130016CB7E /* SegmentedPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 230AC388295178130016CB7E /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */;
+			productName = SegmentedPicker;
+		};
+		233F7B812952BF7900833FEF /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		233F7B832952BF7900833FEF /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		61639DF5295039C10051C954 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
