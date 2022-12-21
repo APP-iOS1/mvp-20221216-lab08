@@ -7,7 +7,7 @@
  <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p><br/><br/><br/>
  
  ## 유민영 강사님 전달 사항
- >![유민영 강사님 가이드 라인](https://user-images.githubusercontent.com/114331071/208889711-606354fa-4241-4cf1-bcf4-df91ff7a0f25.png)<br/><br/><br/>
+>![유민영 강사님 가이드 라인-2](https://user-images.githubusercontent.com/114331071/208896894-35ed4f88-b5ea-4859-afb8-75b8e5feb382.png)<br/><br/><br/>
 
 ## 앱 실행 가이드
 > [앱 실행 가이드 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
