@@ -210,7 +210,7 @@ struct DetailView: View {
                             .fontWeight(.semibold)
                         CommentView(perfume: perfume)
                         VStack{
-                            Text("리뷰")
+                            Text("코멘트 목록")
                                 .padding(.leading, -185)
                                 .fontWeight(.semibold)
                             //CommentView
