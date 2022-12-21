@@ -38,7 +38,8 @@ struct DetailView: View {
                     .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
                     
                     // 색상별 ColorBar
-                    Image("ColorBar_Green")
+                    /*perfumestore.color[0]번째와 asset이미지의 문자열 중복*/
+                    Image("\(String(describing: perfume.color?.first ?? ""))_colorbar")
                         .resizable()
                         .frame(height: 15)
                         .aspectRatio(contentMode: .fit)
@@ -309,17 +310,17 @@ struct CommentView: View {
             
         }
         
-        Group {
-            Button(action: {
-                commentStore.addComment(comment: Comment())
-            }) {
-                
-                Text("작성 완료")
-                    .foregroundColor(Color(UIColor.systemGray2))
-                    .padding(.leading, 240)
-                    .padding(.top, -10)
-            }
-        }
+//        Group {
+//            Button(action: {
+//                commentStore.addComment(Comment())
+//            }) {
+//
+//                Text("작성 완료")
+//                    .foregroundColor(Color(UIColor.systemGray2))
+//                    .padding(.leading, 240)
+//                    .padding(.top, -10)
+//            }
+//        }
         .padding(.bottom)
         .padding(.leading,50)
         

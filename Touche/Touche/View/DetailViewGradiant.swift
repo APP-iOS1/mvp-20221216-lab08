@@ -13,6 +13,31 @@ struct DetailViewGradiant: View {
     }
 }
 
+extension Color {
+    init(hex: String) {
+        print("hexCode:(hex)")
+        let scanner = Scanner(string: hex)
+        _ = scanner.scanString("#")
+
+        var rgb: UInt64 = 0
+        scanner.scanHexInt64(&rgb)
+
+        let r = Double((rgb >> 16) & 0xFF) / 255.0
+        let g = Double((rgb >>  8) & 0xFF) / 255.0
+        let b = Double((rgb >>  0) & 0xFF) / 255.0
+        self.init(red: r, green: g, blue: b)
+    }
+}
+
+func convertSRGB(r:Double, g:Double, b :Double){
+    var sR: Double = r/255
+    var sG: Double = g/255
+    var sB: Double = b/255
+    
+    return
+}
+
+
 class CloudProvider: ObservableObject {
     let offset: CGSize
     let frameHeightRatio: CGFloat

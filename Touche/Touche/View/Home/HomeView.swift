@@ -11,7 +11,7 @@ struct HomeView: View {
     @StateObject private var perfumeStore = PerfumeStore()
     @StateObject private var commentStore = CommentStore()
 //    var perfume: Perfume
-    var comment: Comment
+    
     
     //    var manyComments: [Comment] {
     //        let manyComments = commentStore.commentStore.sorted { $0.contents?.count ?? 0 < $1.contents?.count ?? 0}
@@ -141,7 +141,7 @@ struct HomeView: View {
                                     LotCommentsCellView(perfume: item)
                                 }
                                 .navigationDestination(for: Perfume.self, destination: { item in
-                                    DetailView(perfumeUid: item.id ?? "")
+                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }
@@ -194,8 +194,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(comment: .init())
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView(comment: .init())
+//    }
+//}
