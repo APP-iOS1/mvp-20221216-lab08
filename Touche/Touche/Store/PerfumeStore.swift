@@ -13,7 +13,7 @@ class PerfumeStore: ObservableObject {
     let database = Firestore.firestore().collection("Perfume")
     
     func fetchPerfume() {
-        database.getDocuments { [self] (snapshot, error) in
+        database.getDocuments { (snapshot, error) in
             self.perfumeStore.removeAll()
             if let snapshot {
                 for document in snapshot.documents{
@@ -29,9 +29,10 @@ class PerfumeStore: ObservableObject {
                     let likedCount: Int = docData["likedCount"] as? Int ?? 0
                     let ingredientsKr: [String] = docData["ingredients_kr"] as? [String] ?? []
                     let ingredientsEn: [String] = docData["ingredients_en"] as? [String] ?? []
-                    let releasedYear: Int = docData["releasedYear"] as? Int ?? 0
+                    let releasedYear: String = docData["releasedYear"] as? String ?? ""
+                    let commentsCount: Int = docData["commentsCount"] as? Int ?? 0
                     
-                    let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
+                    let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear, commentsCount: commentsCount)
                     self.perfumeStore.append(perfume)
                 }
             }

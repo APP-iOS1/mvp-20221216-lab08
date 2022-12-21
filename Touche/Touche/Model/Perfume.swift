@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Perfume: Identifiable {
+struct Perfume: Codable,Identifiable, Hashable {
     var id               : String?   = nil
     var brand            : [String]? = []
     var name             : [String]? = []
@@ -19,7 +19,8 @@ struct Perfume: Identifiable {
     var likedCount       : Int?      = nil
     var ingredientsKr    : [String]? = []
     var ingredientsEn    : [String]? = []
-    var releasedYear     : Int?      = nil
+    var releasedYear     : String?   = nil
+    var commentsCount    : Int?      = nil
 
 //    enum CodingKeys: String, CodingKey {
 //        case id               = "id"

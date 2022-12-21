@@ -12,7 +12,6 @@ import FirebaseAuth
 class UserStore: ObservableObject{
     @Published var userStore: [User2] = []
     let database = Firestore.firestore().collection("User")
-    var singletonData: SingletonData = SingletonData.shared
     
     var user: User? {
         didSet { // 저장된 user 정보가 바뀌면 호출되어서 값을 업데이트
@@ -31,15 +30,14 @@ class UserStore: ObservableObject{
                     let nickName: String? = docData["nickName"] as? String ?? ""
                     let watchList: [String] = docData["watchList"] as? [String] ?? []
                     
-                    let user2: User2 = User2(id: id, likePerfumes: likePerfumes, nation: nation, nickName: nickName, watchList: watchList)
-                    self.userStore.append(user2)
+                    let user: User = User(id: id, likePerfumes: likePerfumes, nation: nation, nickName: nickName, watchList: watchList)
+                    self.userStore.append(user)
                 }
-                print(self.userStore)
             }
         }
     }
     
-    func addUser(_ user: User2) {
+    func addUser(_ user: User) {
         database.document(user.id)
             .setData([
                 "likePerfumes": user.likePerfumes ?? [],

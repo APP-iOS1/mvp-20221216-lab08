@@ -10,10 +10,10 @@ import FirebaseFirestore
 
 class CommentStore: ObservableObject {
     @Published var commentStore: [Comment] = []
-    var perfumeID: String = ""
+//    var perfumeID: String = ""
     let database = Firestore.firestore().collection("Perfume")
     
-    func fetchComment() {
+    func fetchComment(perfumeID: String) {
         database.document(perfumeID).collection("comments").getDocuments { (snapshot, error) in
             self.commentStore.removeAll()
             if let snapshot {
@@ -32,29 +32,29 @@ class CommentStore: ObservableObject {
         }
     }
     
-    func addComment(_ comment: Comment) {
+    func addComment(perfumeID: String, comment: Comment) {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
                 "createdAt": comment.createdAt ?? "",
                 "nickName": comment.nickName ?? "",
                 "writerUID": comment.writerUID ?? ""])
-        fetchComment()
+        fetchComment(perfumeID: perfumeID)
     }
     
-    func updateComment(_ comment: Comment) {
+    func updateComment(perfumeID: String, comment: Comment) {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
                 "createdAt": comment.createdAt ?? "",
                 "nickName": comment.nickName ?? "",
                 "writerUID": comment.writerUID ?? ""], merge: true)
-        fetchComment()
+        fetchComment(perfumeID: perfumeID)
     }
     
-    func removeComment(_ comment: Comment){
+    func removeComment(perfumeID: String, comment: Comment){
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .delete()
-        fetchComment()
+        fetchComment(perfumeID: perfumeID)
     }
 }

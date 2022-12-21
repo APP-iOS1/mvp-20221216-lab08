@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct User2: Identifiable {
+struct User: Identifiable {
     var id: String
-    var likePerfumes: [String] = []
+    var likePerfumes: [String]? = []
     var nation: String? = nil
     var nickName: String? = nil
     var watchList: [String]? = []

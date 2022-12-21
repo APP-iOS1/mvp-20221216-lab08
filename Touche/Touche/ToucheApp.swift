@@ -14,17 +14,22 @@ struct ToucheApp: App {
     init() {
         FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
-        let userStore: UserStore = UserStore()
-        let perfumeStore: PerfumeStore = PerfumeStore()
-        let likePerfumeStore: LikePerfumeStore = LikePerfumeStore()
+        var searchstore = SearchStore()
+
+        var userStore = UserStore()
+
+        var colorInfoStore = ColorInfoStore()
+
+        var perfumeStore = PerfumeStore()
         let googleAuthModel: GoogleAuthViewModel = GoogleAuthViewModel()
         WindowGroup {
-            MyPageView()
+            ContentView()
+                .environmentObject(searchstore)
                 .environmentObject(userStore)
+                .environmentObject(colorInfoStore)
                 .environmentObject(perfumeStore)
-                .environmentObject(likePerfumeStore)
                 .environmentObject(googleAuthModel)
         }
     }

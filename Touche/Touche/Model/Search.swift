@@ -8,5 +8,8 @@
 import Foundation
 
 struct Search {
-    var brandNames: [String] = []
+    var brands: [Brand] = []
+    //SearchView의 하위 뷰인 GridView에서 사용하기 위한 isSelected
+    var isSelected: [Bool] = []
+    
 }

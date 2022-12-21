@@ -11,7 +11,6 @@
 		230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC384295175450016CB7E /* MyPageNonMemberView.swift */; };
 		230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC386295177730016CB7E /* MyPageLoginView.swift */; };
 		230AC38A295178130016CB7E /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 230AC389295178130016CB7E /* SegmentedPicker */; };
-		230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38B2951C3120016CB7E /* SingletonData.swift */; };
 		230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38D2951FE7C0016CB7E /* LikePerfume.swift */; };
 		230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */; };
 		233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B812952BF7900833FEF /* GoogleSignIn */; };
@@ -46,7 +45,6 @@
 		230AC382295174920016CB7E /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		230AC384295175450016CB7E /* MyPageNonMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNonMemberView.swift; sourceTree = "<group>"; };
 		230AC386295177730016CB7E /* MyPageLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageLoginView.swift; sourceTree = "<group>"; };
-		230AC38B2951C3120016CB7E /* SingletonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonData.swift; sourceTree = "<group>"; };
 		230AC38D2951FE7C0016CB7E /* LikePerfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfume.swift; sourceTree = "<group>"; };
 		230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
 		233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				61639E09295044FF0051C954 /* CommentStore.swift */,
 				61639E0B295049CF0051C954 /* UserStore.swift */,
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
-				230AC38B2951C3120016CB7E /* SingletonData.swift */,
 				230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */,
 				233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */,
 			);
@@ -300,7 +297,6 @@
 				61129579295152DC00CC3681 /* SignUpView.swift in Sources */,
 				230AC383295174920016CB7E /* WishListView.swift in Sources */,
 				233F7B8B2952D5DB00833FEF /* LikePerfumeListView.swift in Sources */,
-				230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */,
 				61639E0129503C9C0051C954 /* Comment.swift in Sources */,
 				61639E0E29504CB60051C954 /* SearchStore.swift in Sources */,
 				230AC387295177730016CB7E /* MyPageLoginView.swift in Sources */,
