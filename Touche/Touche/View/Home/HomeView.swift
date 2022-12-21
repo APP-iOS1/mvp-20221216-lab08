@@ -127,7 +127,7 @@ struct HomeView: View {
 //                                            clickedStore.addClickedPerfume(Clicked(id: item.id ?? "", imageUrl: item.imageUrl ?? ""))
                                         })
                                 .navigationDestination(for: Perfume.self, destination: { item in
-                                    DetailView(perfumeUid: item.id ?? "")
+                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }
