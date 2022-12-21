@@ -21,7 +21,7 @@ class CloudProvider: ObservableObject {
         frameHeightRatio = CGFloat.random(in: 0.7 ..< 1.4)
         offset = CGSize(width: CGFloat.random(in: -100 ..< 100),
                         height: CGFloat.random(in: -100 ..< 100))
-    }
+    }   
 }
 
 struct Cloud: View {

@@ -141,7 +141,7 @@ struct HomeView: View {
                                     LotCommentsCellView(perfume: item)
                                 }
                                 .navigationDestination(for: Perfume.self, destination: { item in
-                                    DetailView(perfumeUid: item.id ?? "")
+                                    //DetailView(perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }
