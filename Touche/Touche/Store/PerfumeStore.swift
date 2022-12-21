@@ -31,8 +31,9 @@ class PerfumeStore: ObservableObject {
                     let ingredientsKr: [String] = docData["ingredients_kr"] as? [String] ?? []
                     let ingredientsEn: [String] = docData["ingredients_en"] as? [String] ?? []
                     let releasedYear: String = docData["releasedYear"] as? String ?? ""
+                    let commentsCount: Int = docData["commentsCount"] as? Int ?? 0
                     
-                    let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear)
+                    let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear, commentsCount: commentsCount)
                     self.perfumeStore.append(perfume)
                     self.singletoneData.perfumeDictionary[id] = perfume
                 }

@@ -15,9 +15,9 @@ struct ToucheApp: App {
         FirebaseApp.configure()
     }
     
-    var body: some Scene {    
+    var body: some Scene {
         WindowGroup {
-            HomeView(comment: .init())
+            ContentView()
         }
     }
 }
