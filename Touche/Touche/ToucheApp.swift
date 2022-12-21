@@ -19,14 +19,16 @@ struct ToucheApp: App {
         var searchstore = SearchStore()
 
         var userStore = UserStore()
-       // var colorInfoStore = ColorInfoStore()
+
+//        var colorInfoStore = ColorInfoStore()
         var perfumeStore = PerfumeStore()
         //var commentStore = CommentStore()
         WindowGroup {
-            HomeView()
+            ContentView()
                 .environmentObject(searchstore)
                 .environmentObject(userStore)
-              //  .environmentObject(colorInfoStore)
+//                .environmentObject(colorInfoStore)
+
                 .environmentObject(perfumeStore)
                 //.environmentObject(commentStore)
         }

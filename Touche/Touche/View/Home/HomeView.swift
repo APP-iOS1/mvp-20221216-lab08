@@ -6,21 +6,30 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     @StateObject private var perfumeStore = PerfumeStore()
-    @StateObject private var commentStore = CommentStore()
-//    var perfume: Perfume
+
+    @StateObject private var clickedStore = ClickedStore()
+
     
-    
-    //    var manyComments: [Comment] {
-    //        let manyComments = commentStore.commentStore.sorted { $0.contents?.count ?? 0 < $1.contents?.count ?? 0}
-    //        return manyComments
-    //    }
-    //
+    // 지금 사람들이 많이 검색한 브랜드 정렬
     var mostSearchedBrands: [Perfume] {
         let mostSearchedBrands = perfumeStore.perfumeStore.sorted { $0.brandSearchCount ?? 0 > $1.brandSearchCount ?? 0 }.prefix(5)
         return Array(mostSearchedBrands)
+    }
+    
+    // 코멘트 많이 달린 향수 정렬 Top
+    var manyCommentsTop: [Perfume] {
+        let manyComments = perfumeStore.perfumeStore.sorted { $0.commentsCount ?? 0 > $1.commentsCount ?? 0 }.prefix(5)
+        return Array(manyComments)
+    }
+    
+    // 코멘트 많이 달린 향수 정렬 Bottom
+    var manyCommentsBottom: [Perfume] {
+        let manyComments1 = perfumeStore.perfumeStore.sorted { $0.commentsCount ?? 0 > $1.commentsCount ?? 0 }.dropFirst(5).prefix(5)
+        return Array(manyComments1)
     }
     
     var body: some View {
@@ -66,8 +75,8 @@ struct HomeView: View {
                         .foregroundColor(.black)
                         .padding()
                     
-                    ForEach(mostSearchedBrands) { count in
-                        Text(count.brand?[0] ?? "")
+                    ForEach(mostSearchedBrands) { brand in
+                        Text(brand.brand?[0] ?? "")
                             .font(.system(size: 25))
                             .fontWeight(.regular)
                             .foregroundColor(.black)
@@ -86,45 +95,19 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(perfumeStore.perfumeStore) { item in
-                                NavigationLink(destination: Text("hi")) {
-                                    VStack(alignment: .leading) {
-                                        AsyncImage(
-                                            url: URL(string: String(item.imageUrl ?? "")),
-                                            content: { image in
-                                                image
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 130, height: 130)
-                                            },
-                                            placeholder: {
-                                                ProgressView()
-                                            }
-                                        )
-                                        
-                                        Text(item.brand?[0] ?? "")
-                                            .unredacted()
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.black)
-                                        
-                                        Text(item.name?[0] ?? "")
-                                            .font(.system(size: 14))
-                                            .foregroundColor(.black)
-                                        
-                                        HStack {
-                                            Text("좋아요")
-                                            Text(String(item.likedCount ?? 0))
-                                        }
-                                        .font(.system(size: 12))
-                                        .foregroundColor(.gray)
-                                    }
+                            ForEach(clickedStore.clickedStore) { item in
+                                NavigationLink(value: item) {
+                                    ClickedCellView(clicked: item)
                                 }
+                                .navigationDestination(for: Clicked.self, destination: { item in
+                                    DetailView(perfumeUid: item.id)
+                                })
                                 .padding(.leading)
                             }
                         }
                     }
                     
-                    // 지금 실시간 코멘트 많이 달린 향수
+                    // 코멘트 많이 달린 향수
                     HStack {
                         Text("지금 실시간 코멘트 많이 달린 향수")
                             .font(.system(size: 20))
@@ -136,10 +119,15 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(perfumeStore.perfumeStore) { item in
+                            ForEach(manyCommentsTop) { item in
                                 NavigationLink(value: item) {
                                     LotCommentsCellView(perfume: item)
                                 }
+                                .simultaneousGesture(
+                                    TapGesture()
+                                        .onEnded { _ in
+//                                            clickedStore.addClickedPerfume(Clicked(id: item.id ?? "", imageUrl: item.imageUrl ?? ""))
+                                        })
                                 .navigationDestination(for: Perfume.self, destination: { item in
                                     DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
@@ -148,39 +136,13 @@ struct HomeView: View {
                         }
                         
                         HStack {
-                            ForEach(perfumeStore.perfumeStore) { item in
-                                NavigationLink(destination: Text("hi")) {
-                                    VStack(alignment: .leading) {
-                                        AsyncImage(
-                                            url: URL(string: String(item.imageUrl ?? "")),
-                                            content: { image in
-                                                image
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 130, height: 130)
-                                            },
-                                            placeholder: {
-                                                ProgressView()
-                                            }
-                                        )
-                                        
-                                        Text(item.brand?[0] ?? "")
-                                            .unredacted()
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.black)
-                                        
-                                        Text(item.name?[0] ?? "")
-                                            .font(.system(size: 14))
-                                            .foregroundColor(.black)
-                                        
-                                        HStack {
-                                            Text("좋아요")
-                                            Text(String(item.likedCount ?? 0))
-                                        }
-                                        .font(.system(size: 12))
-                                        .foregroundColor(.gray)
-                                    }
+                            ForEach(manyCommentsBottom) { item in
+                                NavigationLink(value: item) {
+                                    LotCommentsCellView2(perfume: item)
                                 }
+                                .navigationDestination(for: Perfume.self, destination: { item in
+                                    DetailView(perfumeUid: item.id ?? "")
+                                })
                                 .padding(.leading)
                             }
                         }
@@ -190,12 +152,15 @@ struct HomeView: View {
         }
         .onAppear {
             perfumeStore.fetchPerfume()
+            clickedStore.fetchClickedPerfume()
         }
     }
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView(comment: .init())
-//    }
-//}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}
+

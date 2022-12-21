@@ -20,6 +20,7 @@ struct Perfume: Identifiable, Hashable {
     var ingredientsKr    : [String]? = []
     var ingredientsEn    : [String]? = []
     var releasedYear     : String?   = nil
+    var commentsCount    : Int?      = nil
 
 //    enum CodingKeys: String, CodingKey {
 //        case id               = "id"

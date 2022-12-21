@@ -1,19 +1,19 @@
 //
-//  LotCommentsCellView.swift
+//  CilckedCell.swift
 //  Touche
 //
-//  Created by  장종환 on 2022/12/20.
+//  Created by  장종환 on 2022/12/21.
 //
 
 import SwiftUI
 
-struct LotCommentsCellView: View {
-    var perfume: Perfume
+struct ClickedCellView: View {
+    var clicked: Clicked
 
     var body: some View {
         VStack(alignment: .leading) {
             AsyncImage(
-                url: URL(string: String(perfume.imageUrl ?? "")),
+                url: URL(string: String(clicked.imageUrl)),
                 content: { image in
                     image
                         .resizable()
@@ -25,29 +25,29 @@ struct LotCommentsCellView: View {
                 }
             )
 
-            Text(perfume.brand?[0] ?? "")
+            Text(clicked.brand[0])
                 .unredacted()
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
 
-            Text(perfume.name?[0] ?? "")
+            Text(clicked.name[0])
                 .font(.system(size: 14))
                 .foregroundColor(.black)
 
-            HStack {
-                Text("좋아요")
-                Text(String(perfume.likedCount ?? 0))
-
-                Text("코멘트")
-                Text(String(perfume.commentsCount ?? 0))
-            }
-            .font(.system(size: 12))
-            .foregroundColor(.gray)
+//            HStack {
+//                Text("좋아요")
+//                Text(String(perfume.likedCount ?? 0))
+//
+//                Text("코멘트")
+//                Text(String(perfume.commentsCount ?? 0))
+//            }
+//            .font(.system(size: 12))
+//            .foregroundColor(.gray)
         }
     }
 }
 
-//struct LotCommentsCellView_Previews: PreviewProvider {
+//struct ClickedCellView_Previews: PreviewProvider {
 //    @State static var perfume = PerfumeStore()
 //
 //    static var previews: some View {

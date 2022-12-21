@@ -1,5 +1,5 @@
 //
-//  LotCommentsCellView.swift
+//  LotCommentsCellView2.swift
 //  Touche
 //
 //  Created by  장종환 on 2022/12/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LotCommentsCellView: View {
+struct LotCommentsCellView2: View {
     var perfume: Perfume
 
     var body: some View {
@@ -47,10 +47,8 @@ struct LotCommentsCellView: View {
     }
 }
 
-//struct LotCommentsCellView_Previews: PreviewProvider {
-//    @State static var perfume = PerfumeStore()
-//
+//struct LotCommentsCellView2_Previews: PreviewProvider {
 //    static var previews: some View {
-//        LotCommentsCellView(perfume: .init())
+//        LotCommentsCellView2(perfume: .init())
 //    }
 //}
