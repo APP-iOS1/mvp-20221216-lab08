@@ -16,20 +16,21 @@ struct ToucheApp: App {
     }
 
     var body: some Scene {
-        var searchstore = SearchStore()
-
-        var userStore = UserStore()
-
-        var colorInfoStore = ColorInfoStore()
-
-        var perfumeStore = PerfumeStore()
-        //var commentStore = CommentStore()
+        let searchstore = SearchStore()
+        let userStore = UserStore()
+        let colorInfoStore = ColorInfoStore()
+        let perfumeStore = PerfumeStore()
+        let likePerfumeStore = LikePerfumeStore()
+        let googleAuthModel: GoogleAuthViewModel = GoogleAuthViewModel()
+        
         WindowGroup {
             ContentView()
                 .environmentObject(searchstore)
                 .environmentObject(userStore)
                 .environmentObject(colorInfoStore)
                 .environmentObject(perfumeStore)
+                .environmentObject(likePerfumeStore)
+                .environmentObject(googleAuthModel)
                 //.environmentObject(commentStore)
         }
     }

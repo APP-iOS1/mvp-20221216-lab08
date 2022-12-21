@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ParfumeTabView: View {
+struct PerfumeTabView: View {
     @State private var selectedIndex = 0
     @State private var touchTab = false
     let tabBarNames = ["홈", "카테고리", "내 계정"]
@@ -21,11 +21,9 @@ struct ParfumeTabView: View {
                         case 0:
                             HomeView()
                         case 1:
-                            HomeView()
-                        case 2:
-                            HomeView()
+                            SearchView()
                         default:
-                            HomeView()
+                            MyPageView()
                         }
                     }
                     Spacer()
@@ -81,6 +79,6 @@ struct ParfumeTabView: View {
 
 struct ParfumeTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ParfumeTabView()
+        PerfumeTabView()
     }
 }
