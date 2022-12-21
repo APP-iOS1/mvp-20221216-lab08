@@ -62,13 +62,14 @@ class UserStore: ObservableObject{
     
     // MARK: - 로그인 메서드
     func logIn(emailAddress: String, password: String) {
-        do {
-            Auth.auth().signIn(withEmail: emailAddress, password: password)
-            listenToLoginState()
-            print("로그인 성공")
-        } catch {
-            print("로그인 실패")
-            //                await handleError(message: "등록되지 않은 사용자 입니다.")
+        Task {
+            do {
+                try await Auth.auth().signIn(withEmail: emailAddress, password: password)
+                listenToLoginState()
+                print("로그인 성공")
+            } catch {
+//                await handleError(message: "등록되지 않은 사용자 입니다.")
+            }
         }
     }
     
