@@ -14,8 +14,8 @@ class LikePerfumeStore: ObservableObject {
     let database = Firestore.firestore().collection("User")
     let uid: String = Auth.auth().currentUser?.uid ?? ""
     
-    func fetchLikePerfume() {
-        database.document(uid).collection("LikePerfume").getDocuments { [self] (snapshot, error) in
+    func fetchLikePerfume() { // TODO: id 바꾸기
+        database.document("i5yMiGuhXTQdocwzfX4nJZf4cjg1").collection("LikePerfume").getDocuments { [self] (snapshot, error) in
             self.likePerfumeStore.removeAll()
             if let snapshot {
                 for document in snapshot.documents{

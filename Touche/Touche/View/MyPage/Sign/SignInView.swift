@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import GoogleSignIn
 
 struct SignInView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -14,6 +15,8 @@ struct SignInView: View {
     @EnvironmentObject var googleAuthModel: GoogleAuthViewModel
     @State var email: String = ""
     @State var password: String = ""
+    private var button = GIDSignInButton()
+
     
     var body: some View {
         VStack{
@@ -27,18 +30,21 @@ struct SignInView: View {
             .padding()
             Button {
                 userStore.logIn(emailAddress: email, password: password)
-                if userStore.user != nil {
-                    self.presentationMode.wrappedValue.dismiss()
-                }
+                self.presentationMode.wrappedValue.dismiss()
                 
             } label: {
                 Text("로그인")
+                    .frame(width: 360, height: 44)
+                    .background(.black)
+                    .foregroundColor(.white)
             }
-            Button {
-                googleAuthModel.signIn()
-            } label: {
-                Text("구글 로그인")
-            }
+            
+            GoogleSignInButton()
+                .frame(width: 370, height: 35)
+                .onTapGesture {
+                    googleAuthModel.signIn()
+                    self.presentationMode.wrappedValue.dismiss()
+                }
         }
     }
 }

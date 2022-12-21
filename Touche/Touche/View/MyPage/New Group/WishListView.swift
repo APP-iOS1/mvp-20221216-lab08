@@ -12,11 +12,18 @@ struct WishListView: View {
     var body: some View {
         ScrollView(.horizontal) {
             VStack {
-                NavigationLink {
+                HStack {
+                    NavigationLink {
+                        LikePerfumeListView()
+                    } label: {
+                        Text("향수 관심리스트")
+                            .foregroundColor(.black)
+                            .font(.title2)
+                    }
+                    Spacer()
                     
-                } label: {
-                    Text("향수 관심리스트")
                 }
+                .padding(.horizontal)
                 HStack {
                     ForEach(likePerfumeStore.likePerfumeStore) { perfume in
                         WishListCell(likePerfume: perfume)
@@ -41,8 +48,14 @@ struct WishListCell: View {
             } placeholder: {
                 ProgressView()
             }
-            Text(likePerfume.name.first ?? "")
-            Text(likePerfume.brand.first ?? "")
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(likePerfume.name.first ?? "")
+                    Text(likePerfume.brand.first ?? "")
+                }
+                Spacer()
+            }
+            .padding(.horizontal)
         }
         .onAppear {
             print("likePerfume: \(likePerfume)")

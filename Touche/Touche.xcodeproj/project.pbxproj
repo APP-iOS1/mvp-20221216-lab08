@@ -17,6 +17,8 @@
 		233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B812952BF7900833FEF /* GoogleSignIn */; };
 		233F7B842952BF7900833FEF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B832952BF7900833FEF /* GoogleSignInSwift */; };
 		233F7B862952C08900833FEF /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */; };
+		233F7B892952D3E800833FEF /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B882952D3E800833FEF /* GoogleSignInButton.swift */; };
+		233F7B8B2952D5DB00833FEF /* LikePerfumeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */; };
 		61129579295152DC00CC3681 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61129578295152DC00CC3681 /* SignUpView.swift */; };
 		6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823B2951423A00ED6C08 /* MyPageView.swift */; };
 		6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823D2951479500ED6C08 /* NavigationTestView.swift */; };
@@ -49,6 +51,8 @@
 		230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
 		233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
 		233F7B872952C54200833FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		233F7B882952D3E800833FEF /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeListView.swift; sourceTree = "<group>"; };
 		61129578295152DC00CC3681 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		6162823B2951423A00ED6C08 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		6162823D2951479500ED6C08 /* NavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				230AC386295177730016CB7E /* MyPageLoginView.swift */,
 				6162823F29514B9200ED6C08 /* SignInView.swift */,
 				61129578295152DC00CC3681 /* SignUpView.swift */,
+				233F7B882952D3E800833FEF /* GoogleSignInButton.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				230AC391295225210016CB7E /* Sign */,
 				233F7B7F2952965700833FEF /* New Group */,
+				233F7B8A2952D5DB00833FEF /* LikePerfumeListView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233F7B892952D3E800833FEF /* GoogleSignInButton.swift in Sources */,
 				61639DE5295038760051C954 /* ContentView.swift in Sources */,
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
 				6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */,
@@ -292,6 +299,7 @@
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
 				61129579295152DC00CC3681 /* SignUpView.swift in Sources */,
 				230AC383295174920016CB7E /* WishListView.swift in Sources */,
+				233F7B8B2952D5DB00833FEF /* LikePerfumeListView.swift in Sources */,
 				230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */,
 				61639E0129503C9C0051C954 /* Comment.swift in Sources */,
 				61639E0E29504CB60051C954 /* SearchStore.swift in Sources */,
