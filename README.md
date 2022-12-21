@@ -50,10 +50,11 @@
 - [x] 2차 프로토타입 뷰 기준 추가 구현 필요한 목업 뷰 생성
 
 > 12/21 화
-- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 문제점 해결 및 서포트_은노
+- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트_은노
 - [x] MyPageView 화면 구성, 이메일 로그인 구현_미주, 석진
 - [x] Firebase 데이터 연동한 HomeView 화면 구성_종환
 - [x] Firebase 데이터 연동한 HomewDetailView 화면 구성_영서
+- [ ] HomeView, HomeDetailView 연동_영서, 종환
 - [x] Firestore에 데이터 축적_유진
 
 ## 팀원
