@@ -14,10 +14,21 @@ struct ToucheApp: App {
     init() {
         FirebaseApp.configure()
     }
-    
-    var body: some Scene {    
+
+    var body: some Scene {
+        var searchstore = SearchStore()
+
+        var userStore = UserStore()
+//        var colorInfoStore = ColorInfoStore()
+        var perfumeStore = PerfumeStore()
+        //var commentStore = CommentStore()
         WindowGroup {
-            HomeView(comment: .init())
+            ContentView()
+                .environmentObject(searchstore)
+                .environmentObject(userStore)
+//                .environmentObject(colorInfoStore)
+                .environmentObject(perfumeStore)
+                //.environmentObject(commentStore)
         }
     }
 }

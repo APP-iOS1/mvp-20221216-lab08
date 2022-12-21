@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comment: Identifiable {
+struct Comment: Identifiable, Hashable {
     var id: String? = nil
     var contents: String? = nil
     var createdAt: String? = nil
