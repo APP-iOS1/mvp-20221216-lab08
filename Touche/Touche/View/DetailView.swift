@@ -23,30 +23,31 @@ struct DetailView: View {
     //    var perfumeDict = SingletonData.shared.perfumeDictionary
     
     var body: some View {
-        ScrollView{
-            VStack(){
-                // 향수(Perfume_imageUrl)
-                AsyncImage(url: URL(string: perfume.imageUrl ?? "")){
-                    image in
-                    image
+            ScrollView{
+                VStack(){
+                    // 향수(Perfume_imageUrl)
+                    AsyncImage(url: URL(string: perfume.imageUrl ?? "")){
+                        image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 300, height: 300)
+                    .padding(.vertical)
+                    .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
+                    
+                    // 색상별 ColorBar
+                    /*perfumestore.color[0]번째와 asset이미지의 문자열 중복*/
+                    Image("\(String(describing: perfume.color?.first ?? ""))_colorbar")
                         .resizable()
-                        .scaledToFit()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: 300, height: 300)
-                .padding(.vertical)
-                .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
-                
-                // 색상별 ColorBar
-                Image("ColorBar_Green")
-                    .resizable()
-                    .frame(height: 15)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.horizontal)
-                
-                // ColorBar 중 향수가 해당되는 위치
-                Image(systemName: "chevron.up")
+                        .frame(height: 15)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.horizontal)
+                    
+                    // ColorBar 중 향수가 해당되는 위치
+                    Image(systemName: "chevron.up")
                     .resizable()
                     .frame(width: 12, height: 6)
                     .padding(.top, -5)
@@ -227,6 +228,7 @@ struct DetailView: View {
             .padding()
             Spacer()
         }
+
         .task{commentStore.fetchComment(perfumeID: self.perfume.id ?? "")}
     }
 }

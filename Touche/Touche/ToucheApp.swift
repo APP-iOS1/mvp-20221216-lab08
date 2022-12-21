@@ -19,6 +19,7 @@ struct ToucheApp: App {
         var searchstore = SearchStore()
 
         var userStore = UserStore()
+
 //        var colorInfoStore = ColorInfoStore()
         var perfumeStore = PerfumeStore()
         //var commentStore = CommentStore()
@@ -27,6 +28,7 @@ struct ToucheApp: App {
                 .environmentObject(searchstore)
                 .environmentObject(userStore)
 //                .environmentObject(colorInfoStore)
+
                 .environmentObject(perfumeStore)
                 //.environmentObject(commentStore)
         }
