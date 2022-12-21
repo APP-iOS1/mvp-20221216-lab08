@@ -63,7 +63,7 @@ struct DetailView: View {
                 }
                 
                 ZStack(){
-                    GeometryReader{ geometry in
+                  
                         VStack(alignment: .leading){
                             // 향수 브랜드(Perfume_brand)
                             Text(perfume.brand?[0] ?? "")
@@ -76,8 +76,8 @@ struct DetailView: View {
                                 .font(.system(size: 16))
                             
                         }.padding(.leading, -10)
-                            .frame(width: geometry.size.width / 2, alignment: .leading)
-                    }
+                
+                    
                     
                     // 관심있는 향수 추가(User_likePerfumes, Perfume_likedCount)
                     ZStack(alignment: .trailing) {
