@@ -63,20 +63,21 @@ struct DetailView: View {
                 }
                 
                 ZStack(){
-                    
-                    VStack(alignment: .leading){
-                        // 향수 브랜드(Perfume_brand)
-                        Text(perfume.brand?[0] ?? "")
-                            .underline()
-                            .font(.system(size: 18))
-                            .fontWeight(.semibold)
-                        
-                        // 향수 이름(Perfume_name)
-                        Text(perfume.name?[0] ?? "")
-                            .font(.system(size: 16))
-                        
-                    }.padding(.leading, -10)
-                    
+                    GeometryReader{ geometry in
+                        VStack(alignment: .leading){
+                            // 향수 브랜드(Perfume_brand)
+                            Text(perfume.brand?[0] ?? "")
+                                .underline()
+                                .font(.system(size: 18))
+                                .fontWeight(.semibold)
+                            
+                            // 향수 이름(Perfume_name)
+                            Text(perfume.name?[0] ?? "")
+                                .font(.system(size: 16))
+                            
+                        }.padding(.leading, -10)
+                            .frame(width: geometry.size.width / 2, alignment: .leading)
+                    }
                     
                     // 관심있는 향수 추가(User_likePerfumes, Perfume_likedCount)
                     ZStack(alignment: .trailing) {
@@ -203,11 +204,20 @@ struct DetailView: View {
                     
                 } else {
                     ScrollView {
+                        Text("코멘트 작성하기")
+                            .padding(.leading, -185)
+                            .padding(.top)
+                            .fontWeight(.semibold)
                         CommentView(perfume: perfume)
                         VStack{
+                            Text("리뷰")
+                                .padding(.leading, -185)
+                                .fontWeight(.semibold)
                             //CommentView
                             ForEach(commentStore.commentStore, id: \.self){ item in
                                 Review(comment: item)
+                                
+                            Divider()
                             }
                         }
                         
@@ -220,8 +230,6 @@ struct DetailView: View {
         .task{commentStore.fetchComment(perfumeID: self.perfume.id ?? "")}
     }
 }
-
-
 
 
 struct HeartStroke: Shape {

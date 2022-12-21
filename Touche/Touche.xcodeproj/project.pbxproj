@@ -116,8 +116,8 @@
 				828B724B295141E600CE1DDD /* Home */,
 				61639DE4295038760051C954 /* ContentView.swift */,
 				3AB46E4D295142FD0094B898 /* DetailView.swift */,
-				3A948FE72952CDCB00EAEA43 /* Review.swift */,
 				3A948FE52952979800EAEA43 /* CommentView.swift */,
+				3A948FE72952CDCB00EAEA43 /* Review.swift */,
 				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
 			);
 			path = View;

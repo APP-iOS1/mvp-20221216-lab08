@@ -23,17 +23,16 @@ struct Review: View {
             Text(comment.contents ?? "")
         }
         .fontWeight(.light)
-        .frame(width: 370, height: 80)
-        .padding(.leading, -20)
+        .frame(minWidth: 370, maxWidth: 370, minHeight: 80, maxHeight: .infinity, alignment: .leading)
         .font(.system(size: 14))
-        .background(.gray)
+//        .background(Color(UIColor.systemGray5))
         .foregroundColor(.black)
         
     }
 }
 
-//struct Review_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Review(comment: <#Comment#>)
-//    }
-//}
+struct Review_Previews: PreviewProvider {
+    static var previews: some View {
+        Review(comment: Comment(contents: "은바이론먼트", nickName: "은노쨔응"))
+    }
+}

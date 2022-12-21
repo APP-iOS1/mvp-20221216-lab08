@@ -11,7 +11,7 @@ struct CommentView: View {
     
     //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State private var comment = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
+    @State private var contents = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
     
     @StateObject var perfumeStore = PerfumeStore()
     @StateObject var commentStore = CommentStore()
@@ -25,36 +25,35 @@ struct CommentView: View {
     var body: some View {
         
         ZStack {
-            VStack {
-                
+            VStack() {
                 //Contents(Comment) 작성하는 TextEditor
-                TextEditor(text: $comment)
+                TextEditor(text: $contents)
                     .font(.system(size: 17))
                     .scrollContentBackground(.hidden)
                     .background(Color(UIColor.systemGray6))
-                    .frame(width: 360, height: 150)
-                    .foregroundColor(self.comment == placeholderString ? .gray : .primary)
+                    .frame(width: 370, height: 150)
+                    .foregroundColor(self.contents == placeholderString ? .gray : .primary)
                     .onTapGesture {
-                        if self.comment == placeholderString {
-                            self.comment = ""
+                        if self.contents == placeholderString {
+                            self.contents = ""
                         }
                     }
                     .padding(.horizontal)
-                    .padding(.top)
                 
                 HStack{
                 Spacer()
                     Button {
                         //완료버튼 눌렀을 때
-                        let _: Comment = Comment(id: UUID().uuidString, contents: comment)
-                        commentStore.addComment(perfumeID: perfume.id ?? "", comment: Comment(id: UUID().uuidString, contents: comment))
-                        comment = ""
+                        let _: Comment = Comment(id: UUID().uuidString, contents: contents)
+                        commentStore.addComment(perfumeID: perfume.id ?? "", comment: Comment(id: UUID().uuidString, contents: contents))
+                        contents = ""
                         print("tapped")
                     } label: {
                         Text("작성완료")
                             .font(.system(size: 17))
                             .frame(width: 100, height: 30)
                             .foregroundColor(.black)
+                            .padding(.trailing)
 //                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(UIColor.systemGray5) ,lineWidth: 2))
  
                     }
