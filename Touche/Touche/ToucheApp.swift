@@ -24,6 +24,7 @@ struct ToucheApp: App {
 
         var perfumeStore = PerfumeStore()
         let googleAuthModel: GoogleAuthViewModel = GoogleAuthViewModel()
+        //var commentStore = CommentStore()
         WindowGroup {
             ContentView()
                 .environmentObject(searchstore)
@@ -31,6 +32,7 @@ struct ToucheApp: App {
                 .environmentObject(colorInfoStore)
                 .environmentObject(perfumeStore)
                 .environmentObject(googleAuthModel)
+                //.environmentObject(commentStore)
         }
     }
 }
