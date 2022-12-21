@@ -220,7 +220,7 @@ struct DetailView: View {
                             Divider()
                             }
                         }
-                        
+                        .padding(.horizontal)
                     }
                 }
             }
