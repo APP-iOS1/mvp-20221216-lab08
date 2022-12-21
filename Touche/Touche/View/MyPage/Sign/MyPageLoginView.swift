@@ -9,8 +9,8 @@ import SwiftUI
 import SegmentedPicker
 
 struct MyPageLoginView: View {
-    let titles: [String] = ["로그인", "회원가입"]
     @State var selectedIndex: Int?
+    let titles: [String] = ["로그인", "회원가입"]
     
     var body: some View {
         VStack {

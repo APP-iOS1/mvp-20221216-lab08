@@ -14,9 +14,10 @@
 		230AC38C2951C3120016CB7E /* SingletonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38B2951C3120016CB7E /* SingletonData.swift */; };
 		230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38D2951FE7C0016CB7E /* LikePerfume.swift */; };
 		230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */; };
+		233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B812952BF7900833FEF /* GoogleSignIn */; };
+		233F7B842952BF7900833FEF /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 233F7B832952BF7900833FEF /* GoogleSignInSwift */; };
+		233F7B862952C08900833FEF /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */; };
 		61129579295152DC00CC3681 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61129578295152DC00CC3681 /* SignUpView.swift */; };
-		6112957B295153D400CC3681 /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112957A295153D400CC3681 /* NickNameView.swift */; };
-		6112957D2951549300CC3681 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112957C2951549300CC3681 /* testView.swift */; };
 		6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823B2951423A00ED6C08 /* MyPageView.swift */; };
 		6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823D2951479500ED6C08 /* NavigationTestView.swift */; };
 		6162824029514B9200ED6C08 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162823F29514B9200ED6C08 /* SignInView.swift */; };
@@ -46,9 +47,9 @@
 		230AC38B2951C3120016CB7E /* SingletonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonData.swift; sourceTree = "<group>"; };
 		230AC38D2951FE7C0016CB7E /* LikePerfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfume.swift; sourceTree = "<group>"; };
 		230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
+		233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
+		233F7B872952C54200833FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		61129578295152DC00CC3681 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		6112957A295153D400CC3681 /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
-		6112957C2951549300CC3681 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		6162823B2951423A00ED6C08 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		6162823D2951479500ED6C08 /* NavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
 		6162823F29514B9200ED6C08 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -75,27 +76,43 @@
 			files = (
 				61639DFA295039C10051C954 /* FirebaseDatabaseSwift in Frameworks */,
 				61639DFC295039C10051C954 /* FirebaseFirestore in Frameworks */,
+				233F7B842952BF7900833FEF /* GoogleSignInSwift in Frameworks */,
 				230AC38A295178130016CB7E /* SegmentedPicker in Frameworks */,
 				61639DF8295039C10051C954 /* FirebaseDatabase in Frameworks */,
 				61639DF6295039C10051C954 /* FirebaseAuth in Frameworks */,
+				233F7B822952BF7900833FEF /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6162823A2951421700ED6C08 /* MyPage */ = {
+		230AC391295225210016CB7E /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				230AC386295177730016CB7E /* MyPageLoginView.swift */,
+				6162823F29514B9200ED6C08 /* SignInView.swift */,
+				61129578295152DC00CC3681 /* SignUpView.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		233F7B7F2952965700833FEF /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 				6162823B2951423A00ED6C08 /* MyPageView.swift */,
-				230AC386295177730016CB7E /* MyPageLoginView.swift */,
-				6162823F29514B9200ED6C08 /* SignInView.swift */,
-				6112957A295153D400CC3681 /* NickNameView.swift */,
-				61129578295152DC00CC3681 /* SignUpView.swift */,
 				6162823D2951479500ED6C08 /* NavigationTestView.swift */,
-				6112957C2951549300CC3681 /* testView.swift */,
 				230AC382295174920016CB7E /* WishListView.swift */,
 				230AC384295175450016CB7E /* MyPageNonMemberView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		6162823A2951421700ED6C08 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				230AC391295225210016CB7E /* Sign */,
+				233F7B7F2952965700833FEF /* New Group */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -120,6 +137,7 @@
 		61639DE1295038760051C954 /* Touche */ = {
 			isa = PBXGroup;
 			children = (
+				233F7B872952C54200833FEF /* Info.plist */,
 				61639DE2295038760051C954 /* ToucheApp.swift */,
 				61639E0629503EFF0051C954 /* Store */,
 				61639DFD29503BA50051C954 /* Model */,
@@ -168,6 +186,7 @@
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
 				230AC38B2951C3120016CB7E /* SingletonData.swift */,
 				230AC38F2951FF680016CB7E /* LikePerfumeStore.swift */,
+				233F7B852952C08900833FEF /* GoogleAuthViewModel.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -194,6 +213,8 @@
 				61639DF9295039C10051C954 /* FirebaseDatabaseSwift */,
 				61639DFB295039C10051C954 /* FirebaseFirestore */,
 				230AC389295178130016CB7E /* SegmentedPicker */,
+				233F7B812952BF7900833FEF /* GoogleSignIn */,
+				233F7B832952BF7900833FEF /* GoogleSignInSwift */,
 			);
 			productName = Touche;
 			productReference = 61639DDF295038760051C954 /* Touche.app */;
@@ -226,6 +247,7 @@
 			packageReferences = (
 				61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				230AC388295178130016CB7E /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */,
+				233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 61639DE0295038760051C954 /* Products */;
 			projectDirPath = "";
@@ -259,14 +281,13 @@
 				6162823E2951479500ED6C08 /* NavigationTestView.swift in Sources */,
 				230AC38E2951FE7C0016CB7E /* LikePerfume.swift in Sources */,
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
-				6112957D2951549300CC3681 /* testView.swift in Sources */,
 				230AC385295175450016CB7E /* MyPageNonMemberView.swift in Sources */,
 				61639E0529503E4E0051C954 /* Search.swift in Sources */,
 				61639E0329503DFF0051C954 /* User.swift in Sources */,
 				230AC3902951FF680016CB7E /* LikePerfumeStore.swift in Sources */,
-				6112957B295153D400CC3681 /* NickNameView.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
 				6162823C2951423A00ED6C08 /* MyPageView.swift in Sources */,
+				233F7B862952C08900833FEF /* GoogleAuthViewModel.swift in Sources */,
 				61639E0C295049CF0051C954 /* UserStore.swift in Sources */,
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
 				61129579295152DC00CC3681 /* SignUpView.swift in Sources */,
@@ -407,6 +428,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +459,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +511,14 @@
 				minimumVersion = 0.0.2;
 			};
 		};
+		233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.4;
+			};
+		};
 		61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -503,6 +534,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 230AC388295178130016CB7E /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */;
 			productName = SegmentedPicker;
+		};
+		233F7B812952BF7900833FEF /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		233F7B832952BF7900833FEF /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 233F7B802952BF7800833FEF /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		61639DF5295039C10051C954 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

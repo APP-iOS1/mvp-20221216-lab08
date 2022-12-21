@@ -9,10 +9,12 @@ import SwiftUI
 import FirebaseAuth
 
 struct SignInView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userStore: UserStore
+    @EnvironmentObject var googleAuthModel: GoogleAuthViewModel
     @State var email: String = ""
     @State var password: String = ""
-    @EnvironmentObject var userStore: UserStore
-
+    
     var body: some View {
         VStack{
             VStack(alignment: .leading){
@@ -25,8 +27,17 @@ struct SignInView: View {
             .padding()
             Button {
                 userStore.logIn(emailAddress: email, password: password)
+                if userStore.user != nil {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                
             } label: {
                 Text("로그인")
+            }
+            Button {
+                googleAuthModel.signIn()
+            } label: {
+                Text("구글 로그인")
             }
         }
     }

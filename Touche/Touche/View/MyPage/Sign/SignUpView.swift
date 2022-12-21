@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var userStore: UserStore
     @State var email: String = ""
     @State var password: String = ""
     @State var checkPassword: String = ""
     @State var nickName: String = ""
-    @EnvironmentObject var userStore: UserStore
+
 
     var body: some View {
         VStack{
@@ -30,6 +32,8 @@ struct SignUpView: View {
             .padding()
             Button {
                 userStore.signUp(emailAddress: email, password: password, nickname: nickName)
+                self.presentationMode.wrappedValue.dismiss()
+
             } label: {
                 Text("회원가입")
             }

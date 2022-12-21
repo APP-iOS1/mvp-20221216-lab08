@@ -29,7 +29,6 @@ class LikePerfumeStore: ObservableObject {
                     self.likePerfumeStore.append(likePerfume)
                 }
             }
-            print(self.likePerfumeStore)
         }
         
     }

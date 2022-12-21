@@ -19,11 +19,13 @@ struct ToucheApp: App {
         let userStore: UserStore = UserStore()
         let perfumeStore: PerfumeStore = PerfumeStore()
         let likePerfumeStore: LikePerfumeStore = LikePerfumeStore()
+        let googleAuthModel: GoogleAuthViewModel = GoogleAuthViewModel()
         WindowGroup {
             MyPageView()
                 .environmentObject(userStore)
                 .environmentObject(perfumeStore)
                 .environmentObject(likePerfumeStore)
+                .environmentObject(googleAuthModel)
         }
     }
 }
