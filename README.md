@@ -49,6 +49,13 @@
 - [x] 데이터 CRUD 및 Store 저장
 - [x] 2차 프로토타입 뷰 기준 추가 구현 필요한 목업 뷰 생성
 
+> 12/21 화
+- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 문제점 해결 및 서포트_은노
+- [x] MyPageView 화면 구성, 이메일 로그인 구현_미주, 석진
+- [x] Firebase 데이터 연동한 HomeView 화면 구성_종환
+- [x] Firebase 데이터 연동한 HomewDetailView 화면 구성_영서
+- [x] Firestore에 데이터 축적_유진
+
 ## 팀원
 
 | <img src="https://avatars.githubusercontent.com/u/114036537?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114224237?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/33450365?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/98254580?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/70871997?s=96&v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114331071?s=96&v=4" width=200> |
