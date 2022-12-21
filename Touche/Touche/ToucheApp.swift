@@ -14,12 +14,14 @@ struct ToucheApp: App {
     init() {
         FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
         var searchstore = SearchStore()
-        
+
         var userStore = UserStore()
+
         var colorInfoStore = ColorInfoStore()
+
         var perfumeStore = PerfumeStore()
         //var commentStore = CommentStore()
         WindowGroup {
