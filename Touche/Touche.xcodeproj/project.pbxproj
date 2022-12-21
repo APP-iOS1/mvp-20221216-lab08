@@ -30,6 +30,10 @@
 		61639E0C295049CF0051C954 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0B295049CF0051C954 /* UserStore.swift */; };
 		61639E0E29504CB60051C954 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0D29504CB60051C954 /* SearchStore.swift */; };
 		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
+		821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821563252951A7E8008360B8 /* LotCommentsCellView2.swift */; };
+		822CFA9D2952CC42009AA6A8 /* ClickedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */; };
+		822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFA9E2952CC89009AA6A8 /* Clicked.swift */; };
+		822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */; };
 		828B724E2951421700CE1DDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B724D2951421700CE1DDD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		61639E0B295049CF0051C954 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		61639E0D29504CB60051C954 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
 		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
+		821563252951A7E8008360B8 /* LotCommentsCellView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView2.swift; sourceTree = "<group>"; };
+		822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedStore.swift; sourceTree = "<group>"; };
+		822CFA9E2952CC89009AA6A8 /* Clicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clicked.swift; sourceTree = "<group>"; };
+		822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CilckedCellView.swift; sourceTree = "<group>"; };
 		828B724D2951421700CE1DDD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +139,7 @@
 				61639E0229503DFF0051C954 /* User.swift */,
 				61639E0429503E4E0051C954 /* Search.swift */,
 				3AB46E53295182580094B898 /* SingletonData.swift */,
+				822CFA9E2952CC89009AA6A8 /* Clicked.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,10 +147,11 @@
 		61639E0629503EFF0051C954 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				61639E0729503F230051C954 /* PerfumeStore.swift */,
 				61639E09295044FF0051C954 /* CommentStore.swift */,
+				61639E0729503F230051C954 /* PerfumeStore.swift */,
 				61639E0B295049CF0051C954 /* UserStore.swift */,
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
+				822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -150,7 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				828B724D2951421700CE1DDD /* HomeView.swift */,
+				822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */,
 				8215632329518D68008360B8 /* LotCommentsCellView.swift */,
+				821563252951A7E8008360B8 /* LotCommentsCellView2.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -239,14 +251,18 @@
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
 				3AB46E50295144040094B898 /* DetailViewGradiant.swift in Sources */,
+				822CFA9D2952CC42009AA6A8 /* ClickedStore.swift in Sources */,
 				61639E0529503E4E0051C954 /* Search.swift in Sources */,
 				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
 				61639E0329503DFF0051C954 /* User.swift in Sources */,
+				821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */,
 				828B724E2951421700CE1DDD /* HomeView.swift in Sources */,
 				3AB46E4E295142FD0094B898 /* DetailView.swift in Sources */,
+				822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */,
 				3AB46E54295182580094B898 /* SingletonData.swift in Sources */,
 				3A948FE62952979800EAEA43 /* CommentView.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
+				822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */,
 				61639E0C295049CF0051C954 /* UserStore.swift in Sources */,
 				3A948FE82952CDCB00EAEA43 /* Review.swift in Sources */,
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
