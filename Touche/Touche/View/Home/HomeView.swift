@@ -99,8 +99,8 @@ struct HomeView: View {
                                 NavigationLink(value: item) {
                                     ClickedCellView(clicked: item)
                                 }
-                                .navigationDestination(for: Clicked.self, destination: { item in
-                                    DetailView(perfumeUid: item.id)
+                                .navigationDestination(for: Clicked.self, destination: { item2 in
+//                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }
@@ -143,7 +143,7 @@ struct HomeView: View {
                                     LotCommentsCellView2(perfume: item)
                                 }
                                 .navigationDestination(for: Perfume.self, destination: { item in
-                                    DetailView(perfumeUid: item.id ?? "")
+                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }

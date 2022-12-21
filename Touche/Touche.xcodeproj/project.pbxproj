@@ -19,7 +19,6 @@
 		04D1125D2951CB7B003A8A57 /* ColorInfoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1125C2951CB7B003A8A57 /* ColorInfoStore.swift */; };
 		3A948FE62952979800EAEA43 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A948FE52952979800EAEA43 /* CommentView.swift */; };
 		3A948FE82952CDCB00EAEA43 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A948FE72952CDCB00EAEA43 /* Review.swift */; };
-		3AB46E4E295142FD0094B898 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB46E4D295142FD0094B898 /* DetailView.swift */; };
 		3AB46E50295144040094B898 /* DetailViewGradiant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB46E4F295144040094B898 /* DetailViewGradiant.swift */; };
 		61639DE3295038760051C954 /* ToucheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639DE2295038760051C954 /* ToucheApp.swift */; };
 		61639DE5295038760051C954 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639DE4295038760051C954 /* ContentView.swift */; };
@@ -33,7 +32,6 @@
 		61639DFF29503BDD0051C954 /* Perfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639DFE29503BDD0051C954 /* Perfume.swift */; };
 		61639E0129503C9C0051C954 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0029503C9C0051C954 /* Comment.swift */; };
 		61639E0329503DFF0051C954 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0229503DFF0051C954 /* User.swift */; };
-		61639E0529503E4E0051C954 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0429503E4E0051C954 /* Search.swift */; };
 		61639E0829503F230051C954 /* PerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0729503F230051C954 /* PerfumeStore.swift */; };
 		61639E0A295044FF0051C954 /* CommentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E09295044FF0051C954 /* CommentStore.swift */; };
 		61639E0C295049CF0051C954 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0B295049CF0051C954 /* UserStore.swift */; };
@@ -46,6 +44,8 @@
 		822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFA9E2952CC89009AA6A8 /* Clicked.swift */; };
 		822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */; };
 		828B724E2951421700CE1DDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828B724D2951421700CE1DDD /* HomeView.swift */; };
+		82D837562952F59C00B96B9C /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D837552952F59C00B96B9C /* Search.swift */; };
+		82D837582952F5CF00B96B9C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D837572952F5CF00B96B9C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,11 +59,8 @@
 		04D112582951C39F003A8A57 /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		04D1125A2951CB47003A8A57 /* ColorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfo.swift; sourceTree = "<group>"; };
 		04D1125C2951CB7B003A8A57 /* ColorInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoStore.swift; sourceTree = "<group>"; };
-
 		3A948FE52952979800EAEA43 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		3A948FE72952CDCB00EAEA43 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		3AB46E4D295142FD0094B898 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-
 		3AB46E4F295144040094B898 /* DetailViewGradiant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewGradiant.swift; sourceTree = "<group>"; };
 		61639DDF295038760051C954 /* Touche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61639DE2295038760051C954 /* ToucheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucheApp.swift; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 		61639DFE29503BDD0051C954 /* Perfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfume.swift; sourceTree = "<group>"; };
 		61639E0029503C9C0051C954 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		61639E0229503DFF0051C954 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		61639E0429503E4E0051C954 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		61639E0729503F230051C954 /* PerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStore.swift; sourceTree = "<group>"; };
 		61639E09295044FF0051C954 /* CommentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentStore.swift; sourceTree = "<group>"; };
 		61639E0B295049CF0051C954 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
@@ -87,6 +83,8 @@
 		822CFA9E2952CC89009AA6A8 /* Clicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clicked.swift; sourceTree = "<group>"; };
 		822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CilckedCellView.swift; sourceTree = "<group>"; };
 		828B724D2951421700CE1DDD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		82D837552952F59C00B96B9C /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Search/Search.swift; sourceTree = "<group>"; };
+		82D837572952F5CF00B96B9C /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 		04BB6D8D2952A08100F0D8C8 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				61639E0429503E4E0051C954 /* Search.swift */,
 				04BB6D8E2952A09200F0D8C8 /* Brand.swift */,
 			);
 			path = Search;
@@ -133,6 +130,7 @@
 				61639DF2295039410051C954 /* GoogleService-Info.plist */,
 				61639DE1295038760051C954 /* Touche */,
 				61639DE0295038760051C954 /* Products */,
+				82D837542952F51600B96B9C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,7 +173,7 @@
 				3A948FE52952979800EAEA43 /* CommentView.swift */,
 				3A948FE72952CDCB00EAEA43 /* Review.swift */,
 				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
-				04BB6D9A2952D9DD00F0D8C8 /* DetailView.swift */,
+				82D837572952F5CF00B96B9C /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,8 +186,7 @@
 				61639E0029503C9C0051C954 /* Comment.swift */,
 				61639E0229503DFF0051C954 /* User.swift */,
 				04D1125A2951CB47003A8A57 /* ColorInfo.swift */,
-				61639E0429503E4E0051C954 /* Search.swift */,
-				3AB46E53295182580094B898 /* SingletonData.swift */,
+				82D837552952F59C00B96B9C /* Search.swift */,
 				822CFA9E2952CC89009AA6A8 /* Clicked.swift */,
 			);
 			path = Model;
@@ -203,9 +200,8 @@
 				61639E0B295049CF0051C954 /* UserStore.swift */,
 				61639E0D29504CB60051C954 /* SearchStore.swift */,
 				04D1125C2951CB7B003A8A57 /* ColorInfoStore.swift */,
-        655A1DCA2952CC48007CF44B /* ColorConverter.swift */,
+				655A1DCA2952CC48007CF44B /* ColorConverter.swift */,
 				822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */,
-
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -219,6 +215,13 @@
 				821563252951A7E8008360B8 /* LotCommentsCellView2.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		82D837542952F51600B96B9C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D837562952F59C00B96B9C /* Search.swift in Sources */,
 				04BB6D8C2952949A00F0D8C8 /* GridView.swift in Sources */,
-				04BB6D9B2952D9DD00F0D8C8 /* DetailView.swift in Sources */,
 				61639DE5295038760051C954 /* ContentView.swift in Sources */,
 				655A1DC9295298D3007CF44B /* ParfumeTabView.swift in Sources */,
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
@@ -313,17 +316,15 @@
 				3AB46E50295144040094B898 /* DetailViewGradiant.swift in Sources */,
 				04D1125D2951CB7B003A8A57 /* ColorInfoStore.swift in Sources */,
 				822CFA9D2952CC42009AA6A8 /* ClickedStore.swift in Sources */,
-				61639E0529503E4E0051C954 /* Search.swift in Sources */,
 				04BB6D952952BCC300F0D8C8 /* FilteringResultView.swift in Sources */,
 				04D1125B2951CB47003A8A57 /* ColorInfo.swift in Sources */,
 				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
 				61639E0329503DFF0051C954 /* User.swift in Sources */,
+				82D837582952F5CF00B96B9C /* DetailView.swift in Sources */,
 				04BB6D8F2952A09200F0D8C8 /* Brand.swift in Sources */,
 				821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */,
 				828B724E2951421700CE1DDD /* HomeView.swift in Sources */,
-				3AB46E4E295142FD0094B898 /* DetailView.swift in Sources */,
 				822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */,
-				3AB46E54295182580094B898 /* SingletonData.swift in Sources */,
 				3A948FE62952979800EAEA43 /* CommentView.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
 				822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */,

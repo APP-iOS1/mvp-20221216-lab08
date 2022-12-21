@@ -249,6 +249,5 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         //        DetailView(item: Perfume())
         DetailView(perfume: Perfume())
-`
     }
 }

@@ -40,7 +40,7 @@ struct FilteringResultView: View {
                         ForEach(0..<4){_ in
                             GridRow(alignment: .center) {
                                 ForEach(0..<2){_ in
-                                    NavigationLink(destination: DetailView(), label: {
+                                    NavigationLink(destination: DetailView(perfume: Perfume()), label: {
                                         VStack(alignment: .leading){
                                             Image("perfume9")
                                                 .resizable()
