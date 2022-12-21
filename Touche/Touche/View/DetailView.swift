@@ -2,12 +2,13 @@
 //  DetailView.swift
 //  Touche
 //
-//  Created by youngseo on 2022/12/20.
+//  Created by mac on 2022/12/21.
 //
 
 import SwiftUI
 
 struct DetailView: View {
+
     @State private var toggle = false
     @State private var animateGradient = false
     @State private var showModal = false
@@ -248,5 +249,6 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         //        DetailView(item: Perfume())
         DetailView(perfume: Perfume())
+`
     }
 }
