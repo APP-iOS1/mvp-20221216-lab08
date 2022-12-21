@@ -6,6 +6,12 @@
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
  <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p> 
  
+ ## 유민영 강사님 전달 사항
+ ![유민영 강사님 가이드 라인](https://user-images.githubusercontent.com/114331071/208889711-606354fa-4241-4cf1-bcf4-df91ff7a0f25.png)
+
+## 앱 실행 가이드
+![앱 설치   실행 가이드 (4)](https://user-images.githubusercontent.com/114331071/208889760-682a2459-04ae-44d5-ae4f-1366e6abdfd0.png)
+
  
  ## 앱 정의(ADS)
 <p align></p>
