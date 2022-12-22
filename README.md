@@ -77,6 +77,21 @@
 - [x] 유민영 강사님 및 조별 상호 피드백을 통한 개선사항 정리 및 목표 재설정
 <br/><br/><br/>
 
+
+
+## 뷰 별 피드백 정리
+> 디자인 피드백
+>> 홈뷰
+>>> 1. 세이프티 에리어 적용
+>>> 2. 하단 마진 넓이 추가
+>>> 3. 검색한 브랜드에 로고 추가
+>>> 4. 내가 클릭한 향수 워딩 변경
+
+>> 디테일부
+>>> 1. 하단 마진 넓이 추가
+>>> 2.
+
+
 ## 팀원
 
 | <img src="https://avatars.githubusercontent.com/u/114036537?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114224237?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/33450365?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/98254580?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/70871997?s=96&v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114331071?s=96&v=4" width=200> |
