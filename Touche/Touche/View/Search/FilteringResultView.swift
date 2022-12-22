@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
 struct FilteringResultView: View {
     @EnvironmentObject var perfumeStore: PerfumeStore
     @State var selectedBrand:[Brand]
     @State var selectedColor:ColorInfo
     @State var queryResult:[Perfume] = []
+    
+    let db = ToucheApp.db
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     /// <#Description#>
     var body: some View {
@@ -85,25 +87,36 @@ struct FilteringResultView: View {
         }
     }
     func query() -> [Perfume]{
-        //selectedBrand : [Brand] 의 brand:String값들이 perfumeStore의 brand들과 일치하는 애들을 검사하고, -> Set1: [Perfume]
-        //그 다음에 색상이 selectedColor.color_name과 Set1[i].color[0]들이 같은 것들을 비교해야 한다.
-        var set1 : [Perfume] = []
-        for item in selectedBrand{
-            let brandName = item.brand
-            for item2 in perfumeStore.perfumeStore{
-                if brandName == item2.brand?[0]{
-                    set1.append(item2)
+        var ret:[Perfume] = []
+        db.collection("Perfume")
+            .whereField("color", arrayContains: selectedColor)//perfume의 색이 SELECtedColor인 것을 반환
+            .whereField("brand", arrayContainsAny: selectedBrand).getDocuments(){(querySnapshot, error) in
+                if let error = error{
+                    print("Error getting documents: \(error)")
+                }else{
+                    for document in querySnapshot!.documents{
+                        let docData = document.data()
+                        let id: String = document.documentID
+                        let brand: [String] = docData["brand"] as? [String] ?? []
+                        let name: [String] = docData["name"] as? [String] ?? []
+                        let type: [String] = docData["type"] as? [String] ?? []
+                        let perfumer: [String] = docData["perfumer"] as? [String] ?? []
+                        let color: [String] = docData["color"] as? [String] ?? []
+                        let imageUrl: String = docData["imageUrl"] as? String ?? ""
+                        let brandSearchCount: Int = docData["brandSearchCount"] as? Int ?? 0
+                        let likedCount: Int = docData["likedCount"] as? Int ?? 0
+                        let ingredientsKr: [String] = docData["ingredients_kr"] as? [String] ?? []
+                        let ingredientsEn: [String] = docData["ingredients_en"] as? [String] ?? []
+                        let releasedYear: String = docData["releasedYear"] as? String ?? ""
+                        let commentsCount: Int = docData["commentsCount"] as? Int ?? 0
+                        
+                        let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear, commentsCount: commentsCount)
+                        ret.append(perfume)
+                    }
                 }
-            }
-        }
-        var set2 : [Perfume] = []
-        for item in set1{
-            let color = item.color?[0]
-            if selectedColor.color_name == color{
-                set2.append(item)
-            }
-        }
-        return set2
+                
+            }//brand에 포함된 배열 중에서 SELECTEDBRAND에 속한 것들을 반환
+        return ret
     }
 }
 
