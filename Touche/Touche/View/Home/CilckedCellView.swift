@@ -25,12 +25,12 @@ struct ClickedCellView: View {
                 }
             )
 
-            Text(clicked.brand[0])
+            Text(clicked.brand.first ?? "" )
                 .unredacted()
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
 
-            Text(clicked.name[0])
+            Text(clicked.name.first ?? "")
                 .font(.system(size: 14))
                 .foregroundColor(.black)
 
