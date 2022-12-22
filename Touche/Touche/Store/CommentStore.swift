@@ -15,7 +15,7 @@ class CommentStore: ObservableObject {
     
     func fetchComment(perfumeID: String) {
         database.document(perfumeID).collection("comments")
-            .order(by: "CreatedAt", descending: true)
+//            .order(by: "CreatedAt", descending: true)
             .getDocuments { (snapshot, error) in
             self.commentStore.removeAll()
             if let snapshot {
@@ -23,8 +23,9 @@ class CommentStore: ObservableObject {
                     let docData = document.data()
                     let id = document.documentID
                     let contents: String = docData["contents"] as? String ?? ""
-                    let createdAtTimeStamp: Timestamp = docData["createdAt"] as? Timestamp ?? Timestamp()
-                    let createdAt: Date = createdAtTimeStamp.dateValue() as? Date ?? Date()
+//                    let createdAtTimeStamp: Timestamp = docData["createdAt"] as? Timestamp ?? Timestamp()
+//                    let createdAt: Date = createdAtTimeStamp.dateValue() as? Date ?? Date()
+                    let createdAt: String = docData["createdAt"] as? String ?? ""
                     let nickName: String = docData["nickName"] as? String ?? ""
                     let writerUID: String = docData["writerUID"] as? String ?? ""
                     

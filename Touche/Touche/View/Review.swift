@@ -24,10 +24,13 @@ struct Review: View {
                 
                 Spacer()
                 
-                Text(comment.createdAt.formatted(.dateTime.year().month().day()))
+                Text(comment.createdAt ?? "")
                 
             }
             //Comment_contents
+            
+            Spacer()
+            
             Text(comment.contents ?? "")
         }
         .fontWeight(.light)
@@ -35,6 +38,7 @@ struct Review: View {
         .font(.system(size: 14))
 //        .background(Color(UIColor.systemGray5))
         .foregroundColor(.black)
+        .padding()
         
     }
 }

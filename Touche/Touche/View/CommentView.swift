@@ -14,14 +14,13 @@ struct CommentView: View {
     @State private var contents = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
     
     @StateObject var perfumeStore = PerfumeStore()
-    @StateObject var commentStore = CommentStore()
+    @StateObject var commentStore : CommentStore
     @StateObject var userStore = UserStore()
     
     var placeholderString: String = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
     
     var perfume: Perfume
     var comment_2: [Comment] = []
-//    var comment: Comment
     
     var body: some View {
         
@@ -45,7 +44,7 @@ struct CommentView: View {
                 Spacer()
                     Button {
                         //완료버튼 눌렀을 때
-                        let newComment: Comment = Comment(id: UUID().uuidString, contents: contents, createdAt: Date())
+                        let newComment: Comment = Comment(id: UUID().uuidString, contents: contents)
                         commentStore.addComment(perfumeID: perfume.id ?? "", comment: newComment)
                         contents = ""
                         print("tapped")

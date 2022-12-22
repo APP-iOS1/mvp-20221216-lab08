@@ -10,7 +10,7 @@ import Foundation
 struct Comment: Identifiable, Hashable {
     var id: String? = nil
     var contents: String? = nil
-    var createdAt: Date
+    var createdAt: String? = nil
     var nickName: String? = nil
     var writerUID: String? = nil
     

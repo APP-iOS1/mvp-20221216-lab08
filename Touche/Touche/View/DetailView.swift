@@ -136,73 +136,7 @@ struct DetailView: View {
                 
                 if isMyPost {
                     // 향수 상세 정보(Perfume_perfumer, ingredientsKr)
-                    VStack(alignment: .leading){
-                        VStack(alignment: .leading){
-                            Text("조향사")
-                                .underline()
-                                .fontWeight(.semibold)
-                                .padding(.bottom, 2)
-                            
-                            Text(perfume.perfumer?[0] ?? "")
-                        }
-                        .padding(.bottom)
-                        .padding(.leading)
-                        
-                        VStack(alignment: .leading){
-                            Text("출시년도")
-                                .underline()
-                                .fontWeight(.semibold)
-                                .padding(.bottom, 2)
-                            
-                            Text(perfume.releasedYear ?? "")
-                        }
-                        .padding(.leading)
-                        
-                        GeometryReader{ geometry in
-                            VStack(alignment: .leading) {
-                                Text("향수 구성 정보")
-                                    .underline()
-                                    .fontWeight(.semibold)
-                                    .padding(.bottom, 2)
-                                
-                                if perfume.ingredientsKr?.count == 3 {
-                                    VStack(alignment: .leading){
-                                        
-                                        VStack(alignment: .leading){
-                                            Text("Top")
-                                            Text(perfume.ingredientsKr?[0] ?? "")
-                                        }.padding(.bottom, 2)
-                                        
-                                        VStack(alignment: .leading){
-                                            Text("Middle")
-                                            
-                                            Text(perfume.ingredientsKr?[1] ?? "")
-                                        }.padding(.bottom, 2)
-                                        
-                                        VStack(alignment: .leading){
-                                            Text("Bottom")
-                                            
-                                            Text(perfume.ingredientsKr?[2] ?? "")
-                                            
-                                            Spacer()
-                                        }.padding(.bottom, 2)
-                                        
-                                    }
-                                    
-                                } else {
-                                    VStack{
-                                        Text(perfume.ingredientsKr?[0] ?? "")
-                                    }}
-                            }
-                            .frame(width: geometry.size.width, alignment: .leading)
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        Spacer()
-                    }
-                    .foregroundColor(.gray)
-                    .padding(.top)
+                    PerfumeInfoView(perfume: perfume)
                     
                 } else {
                     ScrollView {
@@ -210,11 +144,12 @@ struct DetailView: View {
                             .padding(.leading, -185)
                             .padding(.top)
                             .fontWeight(.semibold)
-                        CommentView(perfume: perfume)
+                        CommentView(commentStore: commentStore, perfume: perfume)
                         VStack{
                             Text("코멘트 목록")
                                 .padding(.leading, -185)
                                 .fontWeight(.semibold)
+
                             //CommentView
                             ForEach(commentStore.commentStore, id: \.self){ item in
                                 Review(comment: item)
