@@ -67,11 +67,11 @@
 - [x] Firestore에 데이터 축적 (유진)
 
 > 12/22 수
-- [x] Search > SearchView 내 원하는 데이터 필터링 통한 FilteringResultView 생성 (은노)
-- [x] MyPage > LikedPerfumeListView 추가를 통한 로그인 사용자의 관심 향수 리스트 생성 (미주, 석진)
-- [x] Home > ClickedCellView 추가를 통한 클릭한 향수 리스트를 HomeView 내 추가
-- [x] DetailView > LotCommentCellView, LotCommentCellView2 추가를 통한 향수 디테일 뷰 내 댓글 기능 추기 (영서)
-- [x] DetailView > 컬러바 에셋 이미지 추가를 통한 개별 향수 데이터에 따른 컬러바 노출 생성 (유진)
+- [x] Search > SearchView 내 원하는 데이터 필터링 통한 FilteringResultView 생성 및 구현 (은노)
+- [x] MyPage > LikedPerfumeListView 추가를 통한 로그인 사용자의 관심 향수 리스트 생성 및 구현 (미주, 석진)
+- [x] Home > ClickedCellView 추가를 통한 클릭한 향수 리스트를 HomeView 내 추가 및 구현 (종환)
+- [x] DetailView > LotCommentCellView, LotCommentCellView2 추가를 통한 향수 디테일 뷰 내 댓글 기능 생성 및 구현 (영서)
+- [x] DetailView > 컬러바 에셋 이미지 추가를 통한 개별 향수 데이터에 따른 컬러바 노출 생성 및 구현 (유진)
 
 > 12/23 목
 - [x] 유민영 강사님 및 조별 상호 피드백을 통한 개선사항 정리 및 목표 재설정
