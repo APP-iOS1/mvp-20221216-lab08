@@ -18,7 +18,7 @@ struct DetailView: View {
     
     var perfume: Perfume
     var perfumeUid: String = ""
-
+    
     var body: some View {
         ScrollView{
             VStack(){
@@ -48,7 +48,8 @@ struct DetailView: View {
                     ProgressView()
                 }
                 .frame(width: 250, height: 250)
-                .padding(.vertical)
+                .padding(.top, 20)
+                .padding(.bottom)
                 .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
                 
                 ZStack{
@@ -76,26 +77,21 @@ struct DetailView: View {
                         
                     }.padding(.leading, 15)
                     
-                    
+                    Spacer()
                     
                     // 관심있는 향수 추가(User_likePerfumes, Perfume_likedCount)
-                    ZStack(alignment: .trailing) {
+                    Button(action: {
+                        withAnimation(.easeOut(duration: 0.5)) {
+                            toggle.toggle()
+                        }
+                    }) {
                         Image(systemName: "heart.fill")
                             .font(.system(size: 20))
                             .foregroundColor(toggle ? .black : Color(UIColor.systemGray4))
                             .padding(.trailing, 25)
-                        Button(action: {
-                            withAnimation(.easeOut(duration: 0.5)) {
-                                toggle.toggle()
-                            }
-                        }) {
-                            HeartStroke()
-                        }
                     }
-                    .padding(.horizontal)
-                    
                 }
-
+                
                 
                 
                 HStack(alignment: .center){
@@ -161,10 +157,11 @@ struct DetailView: View {
                                     Review(comment: item)
                                     
                                     Divider()
+                                        .padding(.horizontal)
                                     
                                 }
                             }
-                            .padding(.horizontal)
+                            
                         }
                     }
                 }
@@ -173,16 +170,6 @@ struct DetailView: View {
             Spacer()
         }
         .task{commentStore.fetchComment(perfumeID: self.perfume.id ?? "")}
-    }
-}
-
-
-struct HeartStroke: Shape {
-    func path(in rect: CGRect) -> Path {
-        let path =
-        Path { path in
-        }
-        return path
     }
 }
 

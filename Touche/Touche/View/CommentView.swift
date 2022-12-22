@@ -36,8 +36,7 @@ struct CommentView: View {
                             self.contents = ""
                         }
                     }
-                    .padding(.horizontal)
-                
+
                 HStack{
                 Spacer()
                     Button {
@@ -60,7 +59,7 @@ struct CommentView: View {
                     }
                 }
                 .foregroundColor(.black)
-//                .padding(.trailing)
+
                 Spacer()
             }
         }
