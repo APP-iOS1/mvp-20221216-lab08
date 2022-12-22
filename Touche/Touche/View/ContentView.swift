@@ -24,7 +24,7 @@ struct ContentView: View {
             if isLoading {
                 launchScreenView
             }else{
-                SearchView()
+                PerfumeTabView()
             }
             
         }

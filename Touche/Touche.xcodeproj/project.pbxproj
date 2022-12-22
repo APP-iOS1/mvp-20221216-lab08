@@ -31,12 +31,27 @@
 		61639DFC295039C10051C954 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 61639DFB295039C10051C954 /* FirebaseFirestore */; };
 		61639DFF29503BDD0051C954 /* Perfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639DFE29503BDD0051C954 /* Perfume.swift */; };
 		61639E0129503C9C0051C954 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0029503C9C0051C954 /* Comment.swift */; };
-		61639E0329503DFF0051C954 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0229503DFF0051C954 /* User.swift */; };
+		61639E0329503DFF0051C954 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0229503DFF0051C954 /* UserInfo.swift */; };
 		61639E0829503F230051C954 /* PerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0729503F230051C954 /* PerfumeStore.swift */; };
 		61639E0A295044FF0051C954 /* CommentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E09295044FF0051C954 /* CommentStore.swift */; };
 		61639E0C295049CF0051C954 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0B295049CF0051C954 /* UserStore.swift */; };
 		61639E0E29504CB60051C954 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61639E0D29504CB60051C954 /* SearchStore.swift */; };
-		655A1DC9295298D3007CF44B /* ParfumeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DC8295298D3007CF44B /* ParfumeTabView.swift */; };
+		6177F81A295301F5004439CE /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F816295301F5004439CE /* GoogleSignInButton.swift */; };
+		6177F81B295301F5004439CE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F817295301F5004439CE /* SignUpView.swift */; };
+		6177F81C295301F5004439CE /* MyPageLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F818295301F5004439CE /* MyPageLoginView.swift */; };
+		6177F81D295301F5004439CE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F819295301F5004439CE /* SignInView.swift */; };
+		6177F82429530226004439CE /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82029530225004439CE /* MyPageView.swift */; };
+		6177F82529530226004439CE /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82129530226004439CE /* NavigationTestView.swift */; };
+		6177F82629530226004439CE /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82229530226004439CE /* WishListView.swift */; };
+		6177F82729530226004439CE /* MyPageNonMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82329530226004439CE /* MyPageNonMemberView.swift */; };
+		6177F82929530238004439CE /* LikePerfumeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82829530237004439CE /* LikePerfumeListView.swift */; };
+		6177F82B2953025D004439CE /* LikePerfume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82A2953025D004439CE /* LikePerfume.swift */; };
+		6177F82E29530266004439CE /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82C29530266004439CE /* GoogleAuthViewModel.swift */; };
+		6177F82F29530266004439CE /* LikePerfumeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177F82D29530266004439CE /* LikePerfumeStore.swift */; };
+		6177F83329530491004439CE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83229530491004439CE /* GoogleSignIn */; };
+		6177F83529530491004439CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83429530491004439CE /* GoogleSignInSwift */; };
+		618E5D302953075D00D793B9 /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 618E5D2F2953075D00D793B9 /* SegmentedPicker */; };
+		655A1DC9295298D3007CF44B /* PerfumeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DC8295298D3007CF44B /* PerfumeTabView.swift */; };
 		655A1DCB2952CC48007CF44B /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DCA2952CC48007CF44B /* ColorConverter.swift */; };
 		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
 		821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821563252951A7E8008360B8 /* LotCommentsCellView2.swift */; };
@@ -70,12 +85,25 @@
 		61639DF2295039410051C954 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61639DFE29503BDD0051C954 /* Perfume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfume.swift; sourceTree = "<group>"; };
 		61639E0029503C9C0051C954 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		61639E0229503DFF0051C954 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		61639E0229503DFF0051C954 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		61639E0729503F230051C954 /* PerfumeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfumeStore.swift; sourceTree = "<group>"; };
 		61639E09295044FF0051C954 /* CommentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentStore.swift; sourceTree = "<group>"; };
 		61639E0B295049CF0051C954 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		61639E0D29504CB60051C954 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
-		655A1DC8295298D3007CF44B /* ParfumeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParfumeTabView.swift; sourceTree = "<group>"; };
+		6177F816295301F5004439CE /* GoogleSignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		6177F817295301F5004439CE /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		6177F818295301F5004439CE /* MyPageLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageLoginView.swift; sourceTree = "<group>"; };
+		6177F819295301F5004439CE /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		6177F82029530225004439CE /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		6177F82129530226004439CE /* NavigationTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
+		6177F82229530226004439CE /* WishListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		6177F82329530226004439CE /* MyPageNonMemberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageNonMemberView.swift; sourceTree = "<group>"; };
+		6177F82829530237004439CE /* LikePerfumeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePerfumeListView.swift; sourceTree = "<group>"; };
+		6177F82A2953025D004439CE /* LikePerfume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePerfume.swift; sourceTree = "<group>"; };
+		6177F82C29530266004439CE /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
+		6177F82D29530266004439CE /* LikePerfumeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
+		6177F83029530341004439CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		655A1DC8295298D3007CF44B /* PerfumeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfumeTabView.swift; sourceTree = "<group>"; };
 		655A1DCA2952CC48007CF44B /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
 		821563252951A7E8008360B8 /* LotCommentsCellView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView2.swift; sourceTree = "<group>"; };
@@ -92,8 +120,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6177F83329530491004439CE /* GoogleSignIn in Frameworks */,
+				618E5D302953075D00D793B9 /* SegmentedPicker in Frameworks */,
 				61639DFA295039C10051C954 /* FirebaseDatabaseSwift in Frameworks */,
 				61639DFC295039C10051C954 /* FirebaseFirestore in Frameworks */,
+				6177F83529530491004439CE /* GoogleSignInSwift in Frameworks */,
 				61639DF8295039C10051C954 /* FirebaseDatabase in Frameworks */,
 				61639DF6295039C10051C954 /* FirebaseAuth in Frameworks */,
 			);
@@ -145,6 +176,7 @@
 		61639DE1295038760051C954 /* Touche */ = {
 			isa = PBXGroup;
 			children = (
+				6177F83029530341004439CE /* Info.plist */,
 				61639DE2295038760051C954 /* ToucheApp.swift */,
 				61639E0629503EFF0051C954 /* Store */,
 				61639DFD29503BA50051C954 /* Model */,
@@ -168,8 +200,9 @@
 			children = (
 				04D112552951C373003A8A57 /* Search */,
 				828B724B295141E600CE1DDD /* Home */,
+				6177F815295301DC004439CE /* MyPage */,
 				61639DE4295038760051C954 /* ContentView.swift */,
-				655A1DC8295298D3007CF44B /* ParfumeTabView.swift */,
+				655A1DC8295298D3007CF44B /* PerfumeTabView.swift */,
 				3A948FE52952979800EAEA43 /* CommentView.swift */,
 				3A948FE72952CDCB00EAEA43 /* Review.swift */,
 				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
@@ -184,10 +217,11 @@
 				04BB6D8D2952A08100F0D8C8 /* Search */,
 				61639DFE29503BDD0051C954 /* Perfume.swift */,
 				61639E0029503C9C0051C954 /* Comment.swift */,
-				61639E0229503DFF0051C954 /* User.swift */,
+				61639E0229503DFF0051C954 /* UserInfo.swift */,
 				04D1125A2951CB47003A8A57 /* ColorInfo.swift */,
 				82D837552952F59C00B96B9C /* Search.swift */,
 				822CFA9E2952CC89009AA6A8 /* Clicked.swift */,
+				6177F82A2953025D004439CE /* LikePerfume.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,8 +236,42 @@
 				04D1125C2951CB7B003A8A57 /* ColorInfoStore.swift */,
 				655A1DCA2952CC48007CF44B /* ColorConverter.swift */,
 				822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */,
+				6177F82C29530266004439CE /* GoogleAuthViewModel.swift */,
+				6177F82D29530266004439CE /* LikePerfumeStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		6177F815295301DC004439CE /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6177F81F29530213004439CE /* Sign */,
+				6177F81E29530205004439CE /* MyPage */,
+				6177F82829530237004439CE /* LikePerfumeListView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		6177F81E29530205004439CE /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6177F82329530226004439CE /* MyPageNonMemberView.swift */,
+				6177F82029530225004439CE /* MyPageView.swift */,
+				6177F82129530226004439CE /* NavigationTestView.swift */,
+				6177F82229530226004439CE /* WishListView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		6177F81F29530213004439CE /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				6177F816295301F5004439CE /* GoogleSignInButton.swift */,
+				6177F818295301F5004439CE /* MyPageLoginView.swift */,
+				6177F819295301F5004439CE /* SignInView.swift */,
+				6177F817295301F5004439CE /* SignUpView.swift */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 		828B724B295141E600CE1DDD /* Home */ = {
@@ -245,6 +313,9 @@
 				61639DF7295039C10051C954 /* FirebaseDatabase */,
 				61639DF9295039C10051C954 /* FirebaseDatabaseSwift */,
 				61639DFB295039C10051C954 /* FirebaseFirestore */,
+				6177F83229530491004439CE /* GoogleSignIn */,
+				6177F83429530491004439CE /* GoogleSignInSwift */,
+				618E5D2F2953075D00D793B9 /* SegmentedPicker */,
 			);
 			productName = Touche;
 			productReference = 61639DDF295038760051C954 /* Touche.app */;
@@ -276,6 +347,8 @@
 			mainGroup = 61639DD6295038760051C954;
 			packageReferences = (
 				61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6177F83129530491004439CE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				618E5D2E2953075D00D793B9 /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */,
 			);
 			productRefGroup = 61639DE0295038760051C954 /* Products */;
 			projectDirPath = "";
@@ -304,30 +377,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6177F82429530226004439CE /* MyPageView.swift in Sources */,
 				82D837562952F59C00B96B9C /* Search.swift in Sources */,
 				04BB6D8C2952949A00F0D8C8 /* GridView.swift in Sources */,
+				6177F82B2953025D004439CE /* LikePerfume.swift in Sources */,
 				61639DE5295038760051C954 /* ContentView.swift in Sources */,
-				655A1DC9295298D3007CF44B /* ParfumeTabView.swift in Sources */,
+				655A1DC9295298D3007CF44B /* PerfumeTabView.swift in Sources */,
+				6177F82E29530266004439CE /* GoogleAuthViewModel.swift in Sources */,
+				6177F82729530226004439CE /* MyPageNonMemberView.swift in Sources */,
 				61639DFF29503BDD0051C954 /* Perfume.swift in Sources */,
 				04D112592951C39F003A8A57 /* ColorListView.swift in Sources */,
 				04D112542951C2DE003A8A57 /* SearchView.swift in Sources */,
+				6177F82529530226004439CE /* NavigationTestView.swift in Sources */,
 				61639DE3295038760051C954 /* ToucheApp.swift in Sources */,
 				04D112572951C389003A8A57 /* BrandListView.swift in Sources */,
+				6177F82629530226004439CE /* WishListView.swift in Sources */,
 				3AB46E50295144040094B898 /* DetailViewGradiant.swift in Sources */,
 				04D1125D2951CB7B003A8A57 /* ColorInfoStore.swift in Sources */,
 				822CFA9D2952CC42009AA6A8 /* ClickedStore.swift in Sources */,
+				6177F81B295301F5004439CE /* SignUpView.swift in Sources */,
 				04BB6D952952BCC300F0D8C8 /* FilteringResultView.swift in Sources */,
 				04D1125B2951CB47003A8A57 /* ColorInfo.swift in Sources */,
 				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
-				61639E0329503DFF0051C954 /* User.swift in Sources */,
+				61639E0329503DFF0051C954 /* UserInfo.swift in Sources */,
 				82D837582952F5CF00B96B9C /* DetailView.swift in Sources */,
+				6177F81D295301F5004439CE /* SignInView.swift in Sources */,
 				04BB6D8F2952A09200F0D8C8 /* Brand.swift in Sources */,
 				821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */,
 				828B724E2951421700CE1DDD /* HomeView.swift in Sources */,
 				822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */,
 				3A948FE62952979800EAEA43 /* CommentView.swift in Sources */,
+				6177F81A295301F5004439CE /* GoogleSignInButton.swift in Sources */,
+				6177F82F29530266004439CE /* LikePerfumeStore.swift in Sources */,
 				61639E0A295044FF0051C954 /* CommentStore.swift in Sources */,
 				822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */,
+				6177F82929530238004439CE /* LikePerfumeListView.swift in Sources */,
+				6177F81C295301F5004439CE /* MyPageLoginView.swift in Sources */,
 				61639E0C295049CF0051C954 /* UserStore.swift in Sources */,
 				3A948FE82952CDCB00EAEA43 /* Review.swift in Sources */,
 				61639E0829503F230051C954 /* PerfumeStore.swift in Sources */,
@@ -466,6 +551,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Touche/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -494,6 +580,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Touche/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Touche/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -544,6 +631,22 @@
 				kind = branch;
 			};
 		};
+		6177F83129530491004439CE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.4;
+			};
+		};
+		618E5D2E2953075D00D793B9 /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KazaiMazai/SwiftySegmentedPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -566,6 +669,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		6177F83229530491004439CE /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6177F83129530491004439CE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		6177F83429530491004439CE /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6177F83129530491004439CE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		618E5D2F2953075D00D793B9 /* SegmentedPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 618E5D2E2953075D00D793B9 /* XCRemoteSwiftPackageReference "SwiftySegmentedPicker" */;
+			productName = SegmentedPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
