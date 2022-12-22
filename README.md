@@ -5,12 +5,9 @@
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
  <p align="middle">향수를 시각화하다, 가장 직관적인 시각 데이터 기반 향수 소셜 커뮤니티 앱 뚜셰입니다.</p><br/><br/><br/>
- 
- ## 유민영 강사님 전달 사항
->![유민영 강사님 가이드 라인-2](https://user-images.githubusercontent.com/114331071/208896894-35ed4f88-b5ea-4859-afb8-75b8e5feb382.png)<br/><br/><br/>
 
-## 앱 실행 가이드
-> [앱 실행 가이드 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
+## 앱 스토리 보드
+> [스토리 보드 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
 ![앱 설치   실행 가이드 (4)](https://user-images.githubusercontent.com/114331071/208889760-682a2459-04ae-44d5-ae4f-1366e6abdfd0.png)
 <br/><br/><br/>
 
@@ -33,7 +30,7 @@
 > 100% 달성 목표
 - [x] 기존 프로토타입에서 하드코딩으로 구성했던 화면 요소 데이터화_12/20 완료
 - [x] 추후 데이터의 수정 및 관리가 용이한 방향의 데이터 구조화 및 데이터 저장 플뢧폼 채택_12/20 완료
-- [ ] 프로토타입2 화면 구성 요소에 저장된 데이터 적용_12/20 진행중
+- [x] 프로토타입2 화면 구성 요소에 저장된 데이터 적용_12/20 진행중 12/22 완료
 - [ ] 향수에 대한 *저관여자*, *고관여자별* 검색 기능 제공
       (저관여자: 향수에 관한 정보가 낯선 사람, 고관여자: 향수에 대한 정보가 친숙하고, 지식이 많은 사람)<br/><br/><br/>
 
@@ -58,11 +55,11 @@
 - [x] 2차 프로토타입 뷰 기준 추가 구현 필요한 목업 뷰 생성
 
 > 12/21 화
-- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트_은노
-- [x] MyPageView 화면 구성, 이메일 로그인 구현_미주, 석진
-- [x] Firebase 데이터 연동한 HomeView 화면 구성_종환
-- [x] Firebase 데이터 연동한 HomewDetailView 화면 구성_영서
-- [ ] HomeView, HomeDetailView 연동_영서, 종환
+- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트 _은노
+- [x] MyPageView 화면 구성, 이메일 로그인 구현 _미주, 석진
+- [x] Firebase 데이터 연동한 HomeView 화면 구성 _종환
+- [x] Firebase 데이터 연동한 HomewDetailView 화면 구성 _영서
+- [x] HomeView, HomeDetailView 연동 _영서, 종환
 - [x] Firestore에 데이터 축적_유진<br/><br/><br/>
 
 ## 팀원
