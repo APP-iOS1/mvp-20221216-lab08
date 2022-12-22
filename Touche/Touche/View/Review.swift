@@ -14,37 +14,55 @@ struct Review: View {
     var body: some View{
         
         VStack(alignment: .leading){
-            //Comment_nickName
+            
             
             HStack{
-                Text(comment.nickName ?? "")
-                    .underline()
-                    .padding(.bottom, 1)
-                    .fontWeight(.medium)
-                
+                //Comment_nickName
+                if comment.nickName == ""{
+                    Text("익명의 작성자")
+                        .underline()
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                else{
+                    Text(comment.nickName ?? "")
+                        .underline()
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
                 Spacer()
                 
-                Text(comment.createdAt ?? "")
+                //Comment_createdAt
+                if comment.createdAt == ""{
+                    Text("3333.12.25")
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                else{
+                    Text(comment.createdAt ?? "")
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
                 
             }
             //Comment_contents
-            
-            Spacer()
-            
             Text(comment.contents ?? "")
+                .padding(.top)
         }
         .fontWeight(.light)
-        .frame(minWidth: 370, maxWidth: 370, minHeight: 80, maxHeight: .infinity, alignment: .leading)
+        .padding(.horizontal)
+        .padding(.vertical, 5)
+        .frame(minWidth: 350, maxWidth: 350, minHeight: 80, maxHeight: .infinity, alignment: .leading)
         .font(.system(size: 14))
 //        .background(Color(UIColor.systemGray5))
         .foregroundColor(.black)
-        .padding()
+        
         
     }
 }
 
-//struct Review_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Review(comment: Comment(contents: "은바이론먼트", nickName: "은노쨔응"))
-//    }
-//}
+struct Review_Previews: PreviewProvider {
+    static var previews: some View {
+        Review(comment: Comment(contents: "은바이론먼트", nickName: "은노쨔응"))
+    }
+}

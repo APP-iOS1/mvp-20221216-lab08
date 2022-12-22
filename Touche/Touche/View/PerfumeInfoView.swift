@@ -75,11 +75,10 @@ struct PerfumeInfoView: View {
                         }}
                 }
                 .frame(width: geometry.size.width, alignment: .leading)
-                Spacer()
+                
             }
             .padding()
             
-            Spacer()
         }
         .foregroundColor(.gray)
         .padding(.top)

@@ -13,9 +13,7 @@ struct CommentView: View {
     
     @State private var contents = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
     
-    @StateObject var perfumeStore = PerfumeStore()
     @StateObject var commentStore : CommentStore
-    @StateObject var userStore = UserStore()
     
     var placeholderString: String = " 맹목적인 비난의 글은 다른 향수 사용자의 경험 및 추억을 퇴색시킬 수 있습니다."
     
@@ -31,7 +29,7 @@ struct CommentView: View {
                     .font(.system(size: 17))
                     .scrollContentBackground(.hidden)
                     .background(Color(UIColor.systemGray6))
-                    .frame(width: 370, height: 150)
+                    .frame(width: 350, height: 150)
                     .foregroundColor(self.contents == placeholderString ? .gray : .primary)
                     .onTapGesture {
                         if self.contents == placeholderString {
@@ -51,9 +49,12 @@ struct CommentView: View {
                     } label: {
                         Text("작성완료")
                             .font(.system(size: 17))
+                            .foregroundColor(.white)
                             .frame(width: 100, height: 30)
-                            .foregroundColor(.black)
+                            .background(Color(UIColor.systemGray2))
                             .padding(.trailing)
+
+                        
 //                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(UIColor.systemGray5) ,lineWidth: 2))
  
                     }
