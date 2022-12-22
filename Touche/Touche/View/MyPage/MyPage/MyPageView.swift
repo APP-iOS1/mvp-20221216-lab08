@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyPageView: View {
     @EnvironmentObject var userStore: UserStore
+    @EnvironmentObject var perfumeStore: PerfumeStore
+    @EnvironmentObject var likePerfumeStore: LikePerfumeStore
     let nation: String = "대한민국"
     var menuArray: [String] {
         get{
@@ -18,35 +20,35 @@ struct MyPageView: View {
     
     var body: some View {
         NavigationStack{
-                ScrollView {
-                    if userStore.user != nil {
-                        WishListView()
-                    } else {
-                        MyPageNonMemberView()
-                    }
-                    
-                    List{
-                        Section("설정") {
-                            ForEach(Array(0..<4), id: \.self) { index in
-                                NavigationLink {
-                                    NavigationTestView()
-                                } label: {
-                                    Text("\(menuArray[index])")
-                                }
-                            }
-                        }
-                        Section("고객지원") {
-                            ForEach(Array(4..<8), id: \.self) { index in
-                                NavigationLink {
-                                    NavigationTestView()
-                                } label: {
-                                    Text("\(menuArray[index])")
-                                }
-                            }
-                        }
-                    }.listStyle(.plain)
-                        .frame(height: 600)
+            ScrollView {
+                if userStore.user != nil {
+                    WishListView()
+                } else {
+                    MyPageNonMemberView()
                 }
+                
+                List{
+                    Section("설정") {
+                        ForEach(Array(0..<4), id: \.self) { index in
+                            NavigationLink {
+                                NavigationTestView()
+                            } label: {
+                                Text("\(menuArray[index])")
+                            }
+                        }
+                    }
+                    Section("고객지원") {
+                        ForEach(Array(4..<8), id: \.self) { index in
+                            NavigationLink {
+                                NavigationTestView()
+                            } label: {
+                                Text("\(menuArray[index])")
+                            }
+                        }
+                    }
+                }.listStyle(.plain)
+                    .frame(height: 600)
+            }
         }
     }
 }

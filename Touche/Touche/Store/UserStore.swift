@@ -19,6 +19,29 @@ class UserStore: ObservableObject{
             objectWillChange.send()
         }
     }
+    enum SignInState {
+        case splash
+        case signIn
+        case signOut
+    }
+        
+    enum LogInState {
+        case success
+        case fail
+        case none
+    }
+        
+    enum LoginPlatform {
+        case email
+        case google
+        case none
+    }
+
+        
+        //인증 상태를 관리하는 변수
+    @Published var state: SignInState = .splash
+    @Published var loginState: LogInState = .none
+    @Published var loginPlatform: LoginPlatform = .none
     
     func fetchUser() {
         database.getDocuments { (snapshot, error) in
@@ -67,10 +90,12 @@ class UserStore: ObservableObject{
                 try await Auth.auth().signIn(withEmail: emailAddress, password: password)
                 listenToLoginState()
                 print("로그인 성공")
+
             } catch {
 //                await handleError(message: "등록되지 않은 사용자 입니다.")
             }
         }
+        self.loginState = .success
     }
     
     // MARK: - 회원가입 메서드

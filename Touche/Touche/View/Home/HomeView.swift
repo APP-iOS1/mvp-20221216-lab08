@@ -12,6 +12,7 @@ struct HomeView: View {
     @StateObject private var perfumeStore = PerfumeStore()
 
     @StateObject private var clickedStore = ClickedStore()
+    @EnvironmentObject var userStore: UserStore
 
     
     // 지금 사람들이 많이 검색한 브랜드 정렬
@@ -155,6 +156,8 @@ struct HomeView: View {
         .onAppear {
             perfumeStore.fetchPerfume()
             clickedStore.fetchClickedPerfume()
+            userStore.logOut()
+            print("11")
         }
     }
 }

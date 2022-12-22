@@ -38,7 +38,7 @@ struct MyPageLoginView: View {
                 .onAppear {
                     
                 }
-                .animation(.easeInOut(duration: 0.3))
+                .animation(.easeInOut(duration: 0.3), value: selectedIndex)
                 Spacer()
             }
             .padding(.leading, 15)

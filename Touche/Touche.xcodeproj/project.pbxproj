@@ -51,6 +51,7 @@
 		6177F83329530491004439CE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83229530491004439CE /* GoogleSignIn */; };
 		6177F83529530491004439CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83429530491004439CE /* GoogleSignInSwift */; };
 		618E5D302953075D00D793B9 /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 618E5D2F2953075D00D793B9 /* SegmentedPicker */; };
+		61BA41332954138C00B14455 /* TextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA41322954138C00B14455 /* TextFieldClearButton.swift */; };
 		655A1DC9295298D3007CF44B /* PerfumeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DC8295298D3007CF44B /* PerfumeTabView.swift */; };
 		655A1DCB2952CC48007CF44B /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DCA2952CC48007CF44B /* ColorConverter.swift */; };
 		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
@@ -103,6 +104,7 @@
 		6177F82C29530266004439CE /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
 		6177F82D29530266004439CE /* LikePerfumeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
 		6177F83029530341004439CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		61BA41322954138C00B14455 /* TextFieldClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButton.swift; sourceTree = "<group>"; };
 		655A1DC8295298D3007CF44B /* PerfumeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfumeTabView.swift; sourceTree = "<group>"; };
 		655A1DCA2952CC48007CF44B /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				6177F818295301F5004439CE /* MyPageLoginView.swift */,
 				6177F819295301F5004439CE /* SignInView.swift */,
 				6177F817295301F5004439CE /* SignUpView.swift */,
+				61BA41322954138C00B14455 /* TextFieldClearButton.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				04BB6D952952BCC300F0D8C8 /* FilteringResultView.swift in Sources */,
 				04D1125B2951CB47003A8A57 /* ColorInfo.swift in Sources */,
 				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
+				61BA41332954138C00B14455 /* TextFieldClearButton.swift in Sources */,
 				61639E0329503DFF0051C954 /* UserInfo.swift in Sources */,
 				82D837582952F5CF00B96B9C /* DetailView.swift in Sources */,
 				6177F81D295301F5004439CE /* SignInView.swift in Sources */,

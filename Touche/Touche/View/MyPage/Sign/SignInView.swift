@@ -13,6 +13,7 @@ struct SignInView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var userStore: UserStore
     @EnvironmentObject var googleAuthModel: GoogleAuthViewModel
+    @EnvironmentObject var likePerfumeStore: LikePerfumeStore
     @State var email: String = ""
     @State var password: String = ""
     private var button = GIDSignInButton()
@@ -23,22 +24,37 @@ struct SignInView: View {
             VStack(alignment: .leading){
                 Text("이메일")
                 TextField("이메일 입력", text: $email)
+                    .textInputAutocapitalization(.never)
+                    // 대문자 입력 방지
+                    .modifier(TextFieldClearButton(text: $email))
+                    // 텍스트 입력시 우측 x버튼 출력
+
                 Text("비밀번호")
                 SecureField("비밀번호 입력", text: $password)
+                    .textInputAutocapitalization(.never)
+                    .modifier(TextFieldClearButton(text: $password))
+
             }
             .textFieldStyle(.roundedBorder)
             .padding()
             Button {
                 userStore.logIn(emailAddress: email, password: password)
-                self.presentationMode.wrappedValue.dismiss()
-                
             } label: {
                 Text("로그인")
                     .frame(width: 360, height: 44)
                     .background(.black)
                     .foregroundColor(.white)
             }
-            
+            .disabled(email.isEmpty || password.isEmpty )
+            .onChange(of: userStore.user) { newValue in
+                if userStore.loginState == .success {
+                    likePerfumeStore.fetchLikePerfume()
+                    self.presentationMode.wrappedValue.dismiss()
+                    userStore.state = .signIn
+                    email = ""
+                    password = ""
+                } // onchange 값이 변경되면 메인 스레드에서 작동된다.
+            }
             GoogleSignInButton()
                 .frame(width: 370, height: 35)
                 .onTapGesture {
