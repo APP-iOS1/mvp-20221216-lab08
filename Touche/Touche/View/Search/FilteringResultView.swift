@@ -8,74 +8,102 @@
 import SwiftUI
 
 struct FilteringResultView: View {
-    var selectedBrand:[Brand]
-    var selectedColor:ColorInfo
+    @EnvironmentObject var perfumeStore: PerfumeStore
+    @State var selectedBrand:[Brand]
+    @State var selectedColor:ColorInfo
+    @State var queryResult:[Perfume] = []
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    /// <#Description#>
     var body: some View {
         NavigationView{
-            VStack{
-                Spacer()
-                
-                VStack(alignment: .leading){
-                    HStack{
-                        Text("선택한 브랜드 : ")
-                        ForEach(selectedBrand, id:\.self){ item in
-                            Text("\(item.brand)")
-                        }
+            VStack(alignment: .leading){
+                HStack{
+                    Text("선택한 브랜드 : ")
+                    ForEach(selectedBrand, id:\.self){ item in
+                        Text("\(item.brand)")
                     }
-                    
-                    Divider()
-                    
-                    HStack{
-                        Text("선택한 색상  :  \(selectedColor.color_name)")
-                    }
-                    
-                    Divider()
                 }
                 
-                ScrollView{
+                Divider()
                 
-                    Spacer()
+                HStack{
+                    Text("선택한 색상  :  \(selectedColor.color_name)")
+                }
                 
-                    Grid(horizontalSpacing: -5, verticalSpacing: 20){
-                        ForEach(0..<4){_ in
-                            GridRow(alignment: .center) {
-                                ForEach(0..<2){_ in
-                                    NavigationLink(destination: DetailView(perfume: Perfume()), label: {
-                                        VStack(alignment: .leading){
-                                            Image("perfume9")
-                                                .resizable()
-                                                .frame(width: 210, height: 210)
-                                                .padding(.bottom, -30)
-                                            
-                                            VStack(alignment: .leading){
-                                                Text("바이레도")
-                                                    .underline()
-                                                    .fontWeight(.semibold)
-                                                    .font(.system(size: 17))
-                                                
-                                                Text("오픈 스카이")
-                                                    .font(.system(size: 15))
-                                                
-                                                Text("좋아요 50")
-                                                    .font(.system(size: 14))
-                                            .foregroundColor(.gray)
-                                                
-                                            }
-                                            .padding(.leading, 30)
-                                            
-                                        }
-                                        .foregroundColor(.black)
-                                        .font(.system(size: 13))
+                Divider()
+                
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        
+                        ForEach(queryResult, id: \.self) { value in
+                            NavigationLink(destination: DetailView(perfume: value), label:{
+                                VStack{
+                                    AsyncImage(url: URL(string: String(value.imageUrl ?? "")),
+                                               content: { image in
+                                        image
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 210, height: 210)
+                                    },
+                                               placeholder: {
+                                        ProgressView()
                                     }
-                                    )
+                                    ).padding(.bottom,-30)
+                                    
+                                    
+                                    Text(value.brand?[0] ?? "")
+                                        .underline()
+                                        .fontWeight(.semibold)
+                                        .font(.system(size: 17))
+                                        .padding(.leading, 30)
+                                    Text(value.name?[0] ?? "")
+                                        .font(.system(size: 15))
+                                        .padding(.leading, 30)
+                                    Text(String(value.likedCount ?? 0))
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, 30)
                                 }
                             }
-
+                            )
+                            
                         }
+                        
+                        
+                        
+                        
                     }
+                    
+                    
                 }
+                
+                
+                
+            }.onAppear{
+                self.queryResult = query()
             }
-            .padding(.horizontal, 10)
         }
     }
+    func query() -> [Perfume]{
+        //selectedBrand : [Brand] 의 brand:String값들이 perfumeStore의 brand들과 일치하는 애들을 검사하고, -> Set1: [Perfume]
+        //그 다음에 색상이 selectedColor.color_name과 Set1[i].color[0]들이 같은 것들을 비교해야 한다.
+        var set1 : [Perfume] = []
+        for item in selectedBrand{
+            let brandName = item.brand
+            for item2 in perfumeStore.perfumeStore{
+                if brandName == item2.brand?[0]{
+                    set1.append(item2)
+                }
+            }
+        }
+        var set2 : [Perfume] = []
+        for item in set1{
+            let color = item.color?[0]
+            if selectedColor.color_name == color{
+                set2.append(item)
+            }
+        }
+        return set2
+    }
 }
+
