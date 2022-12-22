@@ -17,7 +17,7 @@ struct PerfumeInfoView: View {
                 Text("조향사")
                     .underline()
                     .fontWeight(.semibold)
-                    .padding(.bottom, 2)
+                    .padding(.bottom, 1)
                 
                 Text(perfume.perfumer?[0] ?? "")
             }
@@ -28,18 +28,17 @@ struct PerfumeInfoView: View {
                 Text("출시년도")
                     .underline()
                     .fontWeight(.semibold)
-                    .padding(.bottom, 2)
+                    .padding(.bottom, 1)
                 
                 Text(perfume.releasedYear ?? "")
             }
             .padding(.leading)
             
-            GeometryReader{ geometry in
                 VStack(alignment: .leading) {
                     Text("향수 구성 정보")
                         .underline()
                         .fontWeight(.semibold)
-                        .padding(.bottom, 2)
+                        .padding(.bottom, 1)
                     
                     if perfume.ingredientsKr?.count == 3 {
                         VStack(alignment: .leading){
@@ -47,25 +46,22 @@ struct PerfumeInfoView: View {
                             VStack(alignment: .leading){
                                 Text("Top")
                                 Text(perfume.ingredientsKr?[0] ?? "")
-                            }.padding(.bottom, 2)
+                            }.padding(.bottom, 1)
                             
                             VStack(alignment: .leading){
                                 Text("Middle")
                                 
                                 Text(perfume.ingredientsKr?[1] ?? "")
-                            }.padding(.bottom, 2)
+                            }.padding(.bottom, 1)
                             
                             VStack(alignment: .leading){
                                 Text("Bottom")
                                 
                                 Text(perfume.ingredientsKr?[2] ?? "")
-                                
-                                Text("")
-                                Text("")
-                                Text("")
-                                
+
                                 Spacer()
-                            }.padding(.bottom, 2)
+                                
+                            }.padding(.bottom, 1)
                             
                         }
                         
@@ -74,14 +70,13 @@ struct PerfumeInfoView: View {
                             Text(perfume.ingredientsKr?[0] ?? "")
                         }}
                 }
-                .frame(width: geometry.size.width, alignment: .leading)
-                
-            }
+
             .padding()
             
         }
         .foregroundColor(.gray)
         .padding(.top)
+
     }
 }
 

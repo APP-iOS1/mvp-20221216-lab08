@@ -68,12 +68,13 @@ struct DetailView: View {
                             .underline()
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
+                            .padding(.bottom, 1)
                         
                         // 향수 이름(Perfume_name)
                         Text(perfume.name?[0] ?? "")
                             .font(.system(size: 16))
                         
-                    }.padding(.leading, -10)
+                    }.padding(.leading, 15)
                     
                     
                     
@@ -136,7 +137,10 @@ struct DetailView: View {
                 
                 if isMyPost {
                     // 향수 상세 정보(Perfume_perfumer, ingredientsKr)
-                    PerfumeInfoView(perfume: perfume)
+                    VStack(alignment: .leading){
+                        PerfumeInfoView(perfume: perfume)
+                    }
+                    .frame(width: 380, alignment: .leading)
                     
                 } else {
                     ScrollView {

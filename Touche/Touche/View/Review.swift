@@ -50,7 +50,7 @@ struct Review: View {
                 .padding(.top)
         }
         .fontWeight(.light)
-        .padding(.horizontal)
+//        .padding(.horizontal)
         .padding(.vertical, 5)
         .frame(minWidth: 350, maxWidth: 350, minHeight: 80, maxHeight: .infinity, alignment: .leading)
         .font(.system(size: 14))
