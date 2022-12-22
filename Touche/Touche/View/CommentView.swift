@@ -21,6 +21,7 @@ struct CommentView: View {
     
     var perfume: Perfume
     var comment_2: [Comment] = []
+//    var comment: Comment
     
     var body: some View {
         
@@ -44,8 +45,8 @@ struct CommentView: View {
                 Spacer()
                     Button {
                         //완료버튼 눌렀을 때
-                        let _: Comment = Comment(id: UUID().uuidString, contents: contents)
-                        commentStore.addComment(perfumeID: perfume.id ?? "", comment: Comment(id: UUID().uuidString, contents: contents))
+                        let newComment: Comment = Comment(id: UUID().uuidString, contents: contents, createdAt: Date())
+                        commentStore.addComment(perfumeID: perfume.id ?? "", comment: newComment)
                         contents = ""
                         print("tapped")
                     } label: {
@@ -69,8 +70,8 @@ struct CommentView: View {
         
     }
 }
-struct CommentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CommentView(perfume: Perfume())
-    }
-}
+//struct CommentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CommentView(perfume: Perfume(), comment: Comment(), createdAt: Date()))
+//    }
+//}

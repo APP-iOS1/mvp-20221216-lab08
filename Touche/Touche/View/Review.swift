@@ -15,10 +15,18 @@ struct Review: View {
         
         VStack(alignment: .leading){
             //Comment_nickName
-            Text(comment.nickName ?? "")
-                .underline()
-                .padding(.bottom, 1)
-                .fontWeight(.medium)
+            
+            HStack{
+                Text(comment.nickName ?? "")
+                    .underline()
+                    .padding(.bottom, 1)
+                    .fontWeight(.medium)
+                
+                Spacer()
+                
+                Text(comment.createdAt.formatted(.dateTime.year().month().day()))
+                
+            }
             //Comment_contents
             Text(comment.contents ?? "")
         }
@@ -31,8 +39,8 @@ struct Review: View {
     }
 }
 
-struct Review_Previews: PreviewProvider {
-    static var previews: some View {
-        Review(comment: Comment(contents: "은바이론먼트", nickName: "은노쨔응"))
-    }
-}
+//struct Review_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Review(comment: Comment(contents: "은바이론먼트", nickName: "은노쨔응"))
+//    }
+//}

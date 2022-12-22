@@ -14,14 +14,17 @@ class CommentStore: ObservableObject {
     let database = Firestore.firestore().collection("Perfume")
     
     func fetchComment(perfumeID: String) {
-        database.document(perfumeID).collection("comments").getDocuments { (snapshot, error) in
+        database.document(perfumeID).collection("comments")
+            .order(by: "CreatedAt", descending: true)
+            .getDocuments { (snapshot, error) in
             self.commentStore.removeAll()
             if let snapshot {
                 for document in snapshot.documents{
                     let docData = document.data()
                     let id = document.documentID
                     let contents: String = docData["contents"] as? String ?? ""
-                    let createdAt: String = docData["createdAt"] as? String ?? ""
+                    let createdAtTimeStamp: Timestamp = docData["createdAt"] as? Timestamp ?? Timestamp()
+                    let createdAt: Date = createdAtTimeStamp.dateValue() as? Date ?? Date()
                     let nickName: String = docData["nickName"] as? String ?? ""
                     let writerUID: String = docData["writerUID"] as? String ?? ""
                     
@@ -36,7 +39,7 @@ class CommentStore: ObservableObject {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
-                "createdAt": comment.createdAt ?? "",
+                "createdAt": comment.createdAt ?? Date(),
                 "nickName": comment.nickName ?? "",
                 "writerUID": comment.writerUID ?? ""])
         fetchComment(perfumeID: perfumeID)
@@ -46,7 +49,7 @@ class CommentStore: ObservableObject {
         database.document(perfumeID).collection("comments").document(comment.id ?? "")
             .setData([
                 "contents": comment.contents ?? "",
-                "createdAt": comment.createdAt ?? "",
+                "createdAt": comment.createdAt ?? Date(),
                 "nickName": comment.nickName ?? "",
                 "writerUID": comment.writerUID ?? ""], merge: true)
         fetchComment(perfumeID: perfumeID)

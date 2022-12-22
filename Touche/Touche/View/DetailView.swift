@@ -20,7 +20,7 @@ struct DetailView: View {
     
     var perfume: Perfume
     var perfumeUid: String = ""
-    //    var comment: Comment
+//        var comment: Comment
     //    var perfumeDict = SingletonData.shared.perfumeDictionary
     
     var body: some View {
