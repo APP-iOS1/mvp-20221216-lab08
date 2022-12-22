@@ -37,7 +37,7 @@ struct DetailView: View {
                     }
                     .frame(width: 300, height: 300)
                     .padding(.vertical)
-                    .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
+                    .background(DetailViewGradiant(perfume:perfume).padding(.top, 35).padding(.bottom, 50))
                     
                     // 색상별 ColorBar
                     /*perfumestore.color[0]번째와 asset이미지의 문자열 중복*/
