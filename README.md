@@ -55,12 +55,22 @@
 - [x] 2차 프로토타입 뷰 기준 추가 구현 필요한 목업 뷰 생성
 
 > 12/21 화
-- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트 _은노
-- [x] MyPageView 화면 구성, 이메일 로그인 구현 _미주, 석진
-- [x] Firebase 데이터 연동한 HomeView 화면 구성 _종환
-- [x] Firebase 데이터 연동한 HomewDetailView 화면 구성 _영서
-- [x] HomeView, HomeDetailView 연동 _영서, 종환
-- [x] Firestore에 데이터 축적_유진<br/><br/><br/>
+- [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트 (은노)
+- [x] MyPageView 화면 구성, 이메일 로그인 구현 (미주, 석진)
+- [x] Firebase 데이터 연동한 HomeView 화면 구성 (종환)
+- [x] Firebase 데이터 연동한 HomewDetailView 화면 구성 (영서)
+- [x] HomeView, HomeDetailView 연동 (영서, 종환)
+- [x] Firestore에 데이터 축적 (유진)
+
+> 12/22 수
+- [x] Search > SearchView 내 원하는 데이터 필터링 통한 FilteringResultView 생성 (은노)
+- [x] MyPage > LikedPerfumeListView 추가를 통한 로그인 사용자의 관심 향수 리스트 생성 (미주, 석진)
+- [x] Home > ClickedCellView 추가를 통한 클릭한 향수 리스트를 HomeView 내 추가
+- [x] DetailView > LotCommentCellView, LotCommentCellView2 추가를 통한 향수 디테일 뷰 내 댓글 기능 추기 (영서)
+- [x] DetailView > 컬러바 에셋 이미지 추가를 통한 개별 향수 데이터에 따른 컬러바 노출 생성 (유진)
+
+> 12/23 목
+> -[x] 유민영 강사님 및 조별 상호 피드백을 통한 개선사항 정리 및 목표 재설정
 
 ## 팀원
 
