@@ -10,9 +10,7 @@ import FirebaseAuth
 
 struct HomeView: View {
     @StateObject private var perfumeStore = PerfumeStore()
-
     @StateObject private var clickedStore = ClickedStore()
-
     
     // 지금 사람들이 많이 검색한 브랜드 정렬
     var mostSearchedBrands: [Perfume] {
@@ -86,7 +84,7 @@ struct HomeView: View {
                     
                     // 내가 클릭한 향수
                     HStack {
-                        Text("내가 클릭한 향수")
+                        Text("최근 본 향수")
                             .foregroundColor(.black)
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
@@ -95,12 +93,11 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(clickedStore.clickedStore) { item in
+                            ForEach(clickedStore.clicedStore) { item in
                                 NavigationLink(value: item) {
                                     ClickedCellView(clicked: item)
                                 }
                                 .navigationDestination(for: Clicked.self, destination: { item2 in
-//                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
                                 .padding(.leading)
                             }
@@ -123,16 +120,15 @@ struct HomeView: View {
                                 NavigationLink(value: item) {
                                     LotCommentsCellView(perfume: item)
                                 }
+                                .navigationDestination(for: Perfume.self, destination: { item in
+                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
+                                })
                                 .simultaneousGesture(
                                     TapGesture()
-                                        .onEnded { _ in
-//                                            clickedStore.addClickedPerfume(Clicked(id: item.id ?? "", imageUrl: item.imageUrl ?? ""))
+                                        .onEnded({ _ in
+                                            clickedStore.addClickedPerfume(perfume: item)
                                         })
-                                .navigationDestination(for: Perfume.self, destination: { item in
-
-                                    DetailView(perfume: item, perfumeUid: item.id ?? "")
-
-                                })
+                                )
                                 .padding(.leading)
                             }
                         }
@@ -145,6 +141,12 @@ struct HomeView: View {
                                 .navigationDestination(for: Perfume.self, destination: { item in
                                     DetailView(perfume: item, perfumeUid: item.id ?? "")
                                 })
+                                .simultaneousGesture(
+                                    TapGesture()
+                                        .onEnded({ _ in
+                                            clickedStore.addClickedPerfume(perfume: item)
+                                        })
+                                )
                                 .padding(.leading)
                             }
                         }
