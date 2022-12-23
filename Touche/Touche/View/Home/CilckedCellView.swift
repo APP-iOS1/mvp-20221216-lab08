@@ -12,7 +12,7 @@ struct ClickedCellView: View {
     
     var body: some View {
         NavigationLink {
-            DetailView(perfume: Perfume())
+            DetailView(perfume: perfume)
         } label: {
             VStack(alignment: .leading) {
                 AsyncImage(
