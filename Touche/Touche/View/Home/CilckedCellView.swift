@@ -24,6 +24,26 @@ struct ClickedCellView: View {
                     ProgressView()
                 }
             )
+
+            Text(clicked.brand.first ?? "")
+                .unredacted()
+                .fontWeight(.semibold)
+                .foregroundColor(.black)
+
+            Text(clicked.name.first ?? "")
+                .font(.system(size: 14))
+                .foregroundColor(.black)
+
+//            HStack {
+//                Text("좋아요")
+//                Text(String(perfume.likedCount ?? 0))
+//
+//                Text("코멘트")
+//                Text(String(perfume.commentsCount ?? 0))
+//            }
+//            .font(.system(size: 12))
+//            .foregroundColor(.gray)
+
         }
     }
 }

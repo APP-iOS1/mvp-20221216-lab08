@@ -14,19 +14,49 @@ struct Review: View {
     var body: some View{
         
         VStack(alignment: .leading){
-            //Comment_nickName
-            Text(comment.nickName ?? "")
-                .underline()
-                .padding(.bottom, 1)
-                .fontWeight(.medium)
+            
+            
+            HStack{
+                //Comment_nickName
+                if comment.nickName == ""{
+                    Text("익명의 작성자")
+                        .underline()
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                else{
+                    Text(comment.nickName ?? "")
+                        .underline()
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                Spacer()
+                
+                //Comment_createdAt
+                if comment.createdAt == ""{
+                    Text("3333.12.25")
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                else{
+                    Text(comment.createdAt ?? "")
+                        .padding(.bottom, 1)
+                        .fontWeight(.medium)
+                }
+                
+            }
             //Comment_contents
             Text(comment.contents ?? "")
+                .padding(.top)
         }
         .fontWeight(.light)
-        .frame(minWidth: 370, maxWidth: 370, minHeight: 80, maxHeight: .infinity, alignment: .leading)
+//        .padding(.horizontal)
+        .padding(.vertical, 5)
+        .frame(minWidth: 350, maxWidth: 350, minHeight: 80, maxHeight: .infinity, alignment: .leading)
         .font(.system(size: 14))
 //        .background(Color(UIColor.systemGray5))
         .foregroundColor(.black)
+        
         
     }
 }
