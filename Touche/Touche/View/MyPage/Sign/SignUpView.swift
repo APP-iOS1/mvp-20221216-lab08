@@ -45,35 +45,53 @@ struct SignUpView: View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Group{
+                Group {
                     Text("이메일")
                     TextField("이메일 입력", text: $email)
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -8)
                     Text(!isEmailRuleSatisfied ? "올바른 형식의 이메일 주소를 입력해주세요." : "")
                         .font(.caption)
                         .foregroundColor(.red)
                 }
+                .padding(.vertical, 1)
                 Group{
                     Text("비밀번호")
                     SecureField("비밀번호 입력", text: $password)
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -8)
                     Text(isPasswordRuleSatisfied ? "" : "6자 이상의 비밀번호를 입력해주세요.")
                         .font(.caption)
                         .foregroundColor(.red)
                     
                     Text("비밀번호 확인")
                     SecureField("비밀번호 확인", text: $checkPassword)
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -8)
                     Text(isPasswordSame ? "" : "비밀번호가 일치하지 않습니다.")
                         .font(.caption)
                         .foregroundColor(.red)
                 }
+                .padding(.vertical, 1)
+                
                 Group{
                     Text("닉네임")
                     TextField("닉네임 입력", text: $nickName)
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -8)
                     Text(isNickNameInThelist ? "이미 사용중인 닉네임 입니다." : "")
                         .font(.caption)
                         .foregroundColor(.red)
                 }
             }
-            .textFieldStyle(.roundedBorder)
             .padding()
             Button {
                 userStore.signUp(emailAddress: email, password: password, nickname: nickName)

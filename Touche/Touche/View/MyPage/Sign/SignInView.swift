@@ -21,21 +21,24 @@ struct SignInView: View {
     
     var body: some View {
         VStack{
-            VStack(alignment: .leading){
-                Text("이메일")
-                TextField("이메일 입력", text: $email)
-                    .textInputAutocapitalization(.never)
-                    // 대문자 입력 방지
-                    .modifier(TextFieldClearButton(text: $email))
-                    // 텍스트 입력시 우측 x버튼 출력
-
-                Text("비밀번호")
-                SecureField("비밀번호 입력", text: $password)
-                    .textInputAutocapitalization(.never)
-                    .modifier(TextFieldClearButton(text: $password))
-
+            VStack(alignment: .leading, spacing: 20){
+                
+                    Text("이메일")
+                    TextField("이메일 입력", text: $email)
+                        .textInputAutocapitalization(.never) // 대문자 입력 방지
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -13)
+                    
+                    Text("비밀번호")
+                    SecureField("비밀번호 입력", text: $password)
+                        .textInputAutocapitalization(.never)
+                        .frame(height: 40)
+                        .padding(.horizontal, 10)
+                        .border(.gray)
+                        .padding(.top, -13)
             }
-            .textFieldStyle(.roundedBorder)
             .padding()
             Button {
                 userStore.logIn(emailAddress: email, password: password)
