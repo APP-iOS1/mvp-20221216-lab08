@@ -7,14 +7,12 @@
 
 import SwiftUI
 import FirebaseCore
-import FirebaseFirestore
+
 
 @main
 struct ToucheApp: App {
-    static let db:Firestore = Firestore.firestore()
     init() {
         FirebaseApp.configure()
-        
     }
 
     var body: some Scene {
