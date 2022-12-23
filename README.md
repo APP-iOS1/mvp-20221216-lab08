@@ -25,17 +25,16 @@
 - 메인 목표 달성과제 3/4 해결, 75% 완료.
 
 ## 기술 한계점
-HomeView -> Store 연결 유저가 선택한 향수에 ULD 삽입하지 않고(PerfumeSotre), 유저 정보에 유저가 선택한 향수(ClickedStore)를 따로 만들어 관리하여 데이터 중복, 동기화되지 않는 문제
-DetailView -> 좋아요 버튼 클릭 시 UserStore 내 likePerfumes 와 미연동, Review 내 작성시간(createdAt -> Date 변환 불가) 미노출
-SearchView -> Query 비동기 함수를 생성해 DB에서 데이터를 직접 가져오지 못함
-GoogleSignIn 시 nickName값 받아오지 못하는 문제
-일반 로그인 시 FirebaseAuth 내 유저프로필 정보를 저장하지 못함 
-기획 : 향수 무게감에 따른 색상 별 위도값을 나타내는 것에 대한 기획 부족
-로그인 실패 에러 핸들링 미구현
-로그인 사용자와 비로그인 사용자별 뷰 구분 미구현
-HomeView내 
-
-
+1. HomeView -> Store 연결 유저가 선택한 향수에 ULD 삽입하지 않고(PerfumeSotre), 유저 정보에 유저가 선택한 향수(ClickedStore)를 따로 만들어 관리하여 데이터 중복, 동기화되지 않는 문제
+2. DetailView -> 좋아요 버튼 클릭 시 UserStore 내 likePerfumes 와 미연동, Review 내 작성시간(createdAt -> Date 변환 불가) 미노출
+3. SearchView -> Query 비동기 함수를 생성해 DB에서 데이터를 직접 가져오지 못함
+4. GoogleSignIn 시 nickName값 받아오지 못하는 문제
+5. 일반 로그인 시 FirebaseAuth 내 유저프로필 정보를 저장하지 못함 
+6. 기획 : 향수 무게감에 따른 색상 별 위도값을 나타내는 것에 대한 기획 부족
+7. 로그인 실패 에러 핸들링 미구현
+8. 로그인 사용자와 비로그인 사용자별 뷰 구분 미구현
+9. 로그인 / 비로그인 사용자의 MyPage 내 설정/ 고객지원 스크롤 높이 통일 미구현
+10. HomeView safeArea 색 전환 미구현
 
 
 ## 주요기능
@@ -70,30 +69,36 @@ HomeView내
 - [x] 화면 내 데이터화할 구성 요소 확인
 - [x] 데이터 구조화 회의
 
-> 12/20 월
+> 12/19 월
 - [x] 파이어베이스를 활용한 데이터 구조체 생성
 - [x] 데이터 CRUD 및 Store 저장
 - [x] 2차 프로토타입 뷰 기준 추가 구현 필요한 목업 뷰 생성
 
-> 12/21 화
+> 12/20 화
 - [x] Firestore에 데이터 축적 가능한 Touche manager 앱 생성, 뷰 별 기술 문제점 해결 및 서포트 (은노)
 - [x] MyPageView 화면 구성, 이메일 로그인 구현 (미주, 석진)
 - [x] Firebase 데이터 연동한 HomeView 화면 구성 (종환)
 - [x] Firebase 데이터 연동한 HomewDetailView 화면 구성 (영서)
 - [x] HomeView, HomeDetailView 연동 (영서, 종환)
-- [x] Firestore에 데이터 축적 (유진)
+- [x] Firestore에 데이터 축적, Readme 업데이트 (유진)
 
-> 12/22 수
+> 12/21 수
 - [x] Search > SearchView 내 원하는 데이터 필터링 통한 FilteringResultView 생성 및 구현 (은노)
 - [x] MyPage > LikedPerfumeListView 추가를 통한 로그인 사용자의 관심 향수 리스트 생성 및 구현 (미주, 석진)
 - [x] Home > ClickedCellView 추가를 통한 클릭한 향수 리스트를 HomeView 내 추가 및 구현 (종환)
-- [x] DetailView > LotCommentCellView, LotCommentCellView2 추가를 통한 향수 디테일 뷰 내 댓글 기능 생성 및 구현 (영서)
-- [x] DetailView > 컬러바 에셋 이미지 추가를 통한 개별 향수 데이터에 따른 컬러바 노출 생성 및 구현 (유진)
+- [x] DetailView > CommentView, Review 추가를 통한 향수 디테일 뷰 내 댓글 기능 생성 및 구현 (영서)
+- [x] DetailView > 컬러바 에셋 이미지 추가를 통한 개별 향수 데이터에 따른 컬러바 노출 생성 및 구현, Readme 업데이트 (유진)
 
-> 12/23 목
+> 12/22 목
 - [x] 유민영 강사님 및 조별 상호 피드백을 통한 개선사항 정리 및 목표 재설정
-<br/><br/><br/>
 
+> 12/
+<br/><br/><br/>
+- [x] HomeView > 최근 본 향수와 DetailView 연결 (종환)
+- [x] DetailView > 뷰 정렬, 코멘트 추가 시 Review 내 즉시 반영 (영서) 
+- [x] HomeView 내 SafeArea 적용, Readme 업데이트 (유진)
+- [x] LoginView 내 전체 UI 정렬 
+- [x] 
 
 
 ## 뷰 별 피드백 정리
@@ -132,8 +137,6 @@ HomeView내
 > UserStore 전부 부르기보다 UserDefault에 저장
 > Query 함수 대신 WhereField 검색 참조 (12/22 은노 수정 완료)
 <br/><br/><br/>
-
-
 
 
 ## 팀원
