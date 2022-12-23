@@ -32,9 +32,13 @@
 
 ## GIF 앱 화면
 
-| <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |
+| <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337919-83f8ec30-a2e3-4018-849d-093d1569a99b.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |
 | :-: | :-: | :-: | :-: |
 | 홈 | 홈 화면 내 댓글 달기 | 브랜드, 색 필터링 | 내 계정 |
+
+
+
+
 
 
 
