@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct Clicked: Identifiable, Hashable {
-    var id: String
-    var brand: [String]
-    var name: [String]
-    var imageUrl: String
+struct Clicked: Codable,Identifiable, Hashable {
+    var id               : String?   = nil
+    var brand            : [String]? = nil
+    var name             : [String]? = nil
+    var imageUrl         : String?   = nil
+    var likedCount       : Int?      = nil
+    var commentsCount    : Int?      = nil
 }

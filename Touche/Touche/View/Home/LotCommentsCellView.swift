@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LotCommentsCellView: View {
     var perfume: Perfume
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             AsyncImage(
@@ -24,20 +24,20 @@ struct LotCommentsCellView: View {
                     ProgressView()
                 }
             )
-
+            
             Text(perfume.brand?[0] ?? "")
                 .unredacted()
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
-
+            
             Text(perfume.name?[0] ?? "")
                 .font(.system(size: 14))
                 .foregroundColor(.black)
-
+            
             HStack {
                 Text("좋아요")
                 Text(String(perfume.likedCount ?? 0))
-
+                
                 Text("코멘트")
                 Text(String(perfume.commentsCount ?? 0))
             }
@@ -47,10 +47,10 @@ struct LotCommentsCellView: View {
     }
 }
 
-//struct LotCommentsCellView_Previews: PreviewProvider {
-//    @State static var perfume = PerfumeStore()
-//
-//    static var previews: some View {
-//        LotCommentsCellView(perfume: .init())
-//    }
-//}
+struct LotCommentsCellView_Previews: PreviewProvider {
+    @State static var perfume = PerfumeStore()
+    
+    static var previews: some View {
+        LotCommentsCellView(perfume: Perfume(id: "", brand: [""], name: [""], type: [""], perfumer: [""], color: [""], imageUrl: "https://ifh.cc/g/tWTd2v.png", brandSearchCount: 0, likedCount: 0, ingredientsKr: [""], ingredientsEn: [""], releasedYear: "", commentsCount: 0))
+    }
+}
