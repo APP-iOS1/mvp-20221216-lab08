@@ -6,7 +6,7 @@
 #### [뚜셰 스토리보드 (피그마) 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
 </div>
 <br/>
-<details>
+</details>
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
