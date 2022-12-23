@@ -166,6 +166,18 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		3A5B5055295570AF0066739F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				82D837572952F5CF00B96B9C /* DetailView.swift */,
+				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
+				3A5B505329544A1E0066739F /* PerfumeInfoView.swift */,
+				3A948FE52952979800EAEA43 /* CommentView.swift */,
+				3A948FE72952CDCB00EAEA43 /* Review.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		61639DD6295038760051C954 = {
 			isa = PBXGroup;
 			children = (
@@ -213,13 +225,8 @@
 				04D112552951C373003A8A57 /* Search */,
 				828B724B295141E600CE1DDD /* Home */,
 				6177F815295301DC004439CE /* MyPage */,
-				61639DE4295038760051C954 /* ContentView.swift */,
 				655A1DC8295298D3007CF44B /* PerfumeTabView.swift */,
-				3A948FE52952979800EAEA43 /* CommentView.swift */,
-				3A948FE72952CDCB00EAEA43 /* Review.swift */,
-				3AB46E4F295144040094B898 /* DetailViewGradiant.swift */,
-				82D837572952F5CF00B96B9C /* DetailView.swift */,
-				3A5B505329544A1E0066739F /* PerfumeInfoView.swift */,
+				61639DE4295038760051C954 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +301,7 @@
 				822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */,
 				8215632329518D68008360B8 /* LotCommentsCellView.swift */,
 				821563252951A7E8008360B8 /* LotCommentsCellView2.swift */,
+				3A5B5055295570AF0066739F /* Detail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
