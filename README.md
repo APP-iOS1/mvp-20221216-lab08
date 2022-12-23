@@ -6,6 +6,7 @@
 [뚜셰 스토리보드 (피그마)](https://www.shorturl.at/lMORV)<br/>
 </div>
 </details>
+<br/><br/><br/>
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
@@ -22,9 +23,13 @@
 
 
 ## 앱 설치 가이드라인
-1. 아이폰 14 Pro, Light Mode Only, Potrait Mode Only 환경으로 실행 요청드립니다.
-1. 이 앱은 비로그인 사용자도 향수 정보에 접근할 수 있습니다.
-2. 회원가입 시
+1. 하단 첨부 이미지에 따라 로컬 저장소에 파일을 다운로드 부탁드립니다.
+2. 시뮬레이터는 아이폰 14 Pro, Light Mode Only, Potrait Mode Only 환경으로 실행 요청드립니다.
+3. 이 앱은 향수 정보에 접근하기 위한 조건으로 로그인이 강제되지 않습니다.
+4. 내 계정 탭, 회원 가입 시 약 2-3초간의 대기 시간이 소요 됩니다.
+5. 홈 탭 내 '지금 실시간 코멘트 많이 달린 향수' 를 클릭 시 상단 '최근 본 향수' 에 랜덤으로 쌓이게 됩니다. 
+6. 로그인 / 비로그인 사용자를 분리하여 댓글, 좋아요 기능 접근에 차등을 두는 뷰를 구현하지 못했습니다.
+<br/>
 ![Toche_Instaill_Guideline](https://user-images.githubusercontent.com/114331071/209328790-3a3389f8-08a0-4995-a594-61915ffb347e.png)
 
 
