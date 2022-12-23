@@ -1,9 +1,9 @@
 <details>
 <summary>뚜셰 이전 프로젝트 Readme.</summary>
 <div markdown="1">
-#### [뚜셰 1차 프로토타입 Readme 바로가기](shorturl.at/bqvIQ)
-#### [뚜셰 2차 프로토타입 Readme 바로가기](shorturl.at/sJOP9)
-#### [뚜셰 스토리보드 (피그마) 바로가기](shorturl.at/altxR)
+#### [뚜셰 1차 프로토타입 Readme 바로가기](https://www.shorturl.at/bqvIQ)
+#### [뚜셰 2차 프로토타입 Readme 바로가기](https://www.shorturl.at/sJOP9)
+#### [뚜셰 스토리보드 (피그마) 바로가기](https://www.shorturl.at/altxR)
 </div>
 <br/>
 </details>
