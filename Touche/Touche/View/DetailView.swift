@@ -51,7 +51,7 @@ struct DetailView: View {
                 .frame(width: 250, height: 250)
                 .padding(.top, 20)
                 .padding(.bottom)
-                .background(DetailViewGradiant().padding(.top, 35).padding(.bottom, 50))
+                .background(DetailViewGradiant(perfume: perfume).padding(.top, 35).padding(.bottom, 50))
                 
                 ZStack{
                     Divider()

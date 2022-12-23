@@ -37,35 +37,9 @@ struct FilteringResultView: View {
                         
                         ForEach(queryResult, id: \.self) { value in
                             NavigationLink(destination: DetailView(perfume: value), label:{
-                                VStack{
-                                    AsyncImage(url: URL(string: String(value.imageUrl ?? "")),
-                                               content: { image in
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 210, height: 210)
-                                    },
-                                               placeholder: {
-                                        ProgressView()
-                                    }
-                                    ).padding(.bottom,-30)
-                                    
-                                    
-                                    Text(value.brand?[0] ?? "")
-                                        .underline()
-                                        .fontWeight(.semibold)
-                                        .font(.system(size: 17))
-                                        .padding(.leading, 30)
-                                    Text(value.name?[0] ?? "")
-                                        .font(.system(size: 15))
-                                        .padding(.leading, 30)
-                                    Text(String(value.likedCount ?? 0))
-                                        .font(.system(size: 14))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 30)
-                                }
-                            }
-                            )
+                                LotCommentsCellView(perfume: value)
+                                
+                            })
                             
                         }
                         
