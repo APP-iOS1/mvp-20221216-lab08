@@ -1,11 +1,8 @@
-<details>
-<summary>뚜셰 이전 프로젝트 Readme.</summary>
-<div markdown="1">
-[뚜셰 1차 프로토타입 Readme](https://www.shorturl.at/bqvIQ)<br/>
-[뚜셰 2차 프로토타입 Readme](https://www.shorturl.at/sJOP9)<br/>
-[뚜셰 스토리보드 (피그마)](https://www.shorturl.at/lMORV)<br/>
-</div>
-</details>
+
+### 뚜셰 이전 프로젝트 Readme
+#### [뚜셰 1차 프로토타입 Readme](https://www.shorturl.at/bqvIQ)<br/>
+#### [뚜셰 2차 프로토타입 Readme](https://www.shorturl.at/sJOP9)<br/>
+#### [뚜셰 스토리보드 (피그마)](https://www.shorturl.at/lMORV)<br/>
 <br/><br/><br/>
 
  <h1 align="middle">뚜셰(Touché)</h1>
