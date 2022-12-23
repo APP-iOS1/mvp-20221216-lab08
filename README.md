@@ -101,7 +101,7 @@
 - [x] HomeView > 최근 본 향수와 DetailView 연결 (종환)
 - [x] DetailView > 뷰 정렬, 코멘트 추가 시 Review 내 즉시 반영 (영서) 
 - [x] HomeView > SafeArea 적용, Readme 업데이트 (유진)
-- [x] LoginView 내 전체 UI 정렬, 회원가입 시 예외 처리 기능 업데이트 (미주, 석진) 
+- [x] LoginView 내 전체 UI 정렬, 회원가입 시 예외 처리 기능 업데이트_MVP lab16 : 떡볶잉 팀 코드 참조 (미주, 석진) 
 - [x] DetailVIew > Firebase 에 저장된 컬러 데이터 접근을 통한 뷰별 애니메이션 기능 업데이트 (은노) <br/><br/><br/>
 
 
