@@ -31,34 +31,35 @@ struct WishListView: View {
                 }
             }
         }
-        .onAppear{
-            likePerfumeStore.fetchLikePerfume()
-        }
     }
 }
 struct WishListCell: View {
-    var likePerfume: LikePerfume
+    var likePerfume: Perfume
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: likePerfume.imageUrl)) { image in
-                image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-            } placeholder: {
-                ProgressView()
-            }
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(likePerfume.name.first ?? "")
-                    Text(likePerfume.brand.first ?? "")
+            NavigationLink {
+                DetailView(perfume: likePerfume)
+            } label: {
+                VStack{
+                    AsyncImage(url: URL(string: likePerfume.imageUrl ?? "")) { image in
+                        image
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(likePerfume.name?.first ?? "")
+                            Text(likePerfume.brand?.first ?? "")
+                        }.foregroundColor(.black)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
                 }
-                Spacer()
             }
-            .padding(.horizontal)
-        }
-        .onAppear {
-            print("likePerfume: \(likePerfume)")
         }
     }
 }

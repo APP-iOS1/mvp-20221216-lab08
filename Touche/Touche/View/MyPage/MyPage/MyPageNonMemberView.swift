@@ -20,7 +20,6 @@ struct MyPageNonMemberView: View {
             HStack{
                 NavigationLink {
                     MyPageLoginView(selectedIndex: 0)
-                    
                 } label: {
                     Text("로그인")
                         .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 40)

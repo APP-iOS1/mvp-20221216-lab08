@@ -17,8 +17,40 @@ class UserStore: ObservableObject{
     var user: User? {
         didSet { // 저장된 user 정보가 바뀌면 호출되어서 값을 업데이트
             objectWillChange.send()
+            print("didSet")
         }
     }
+    
+    enum SignInState {
+        case splash
+        case signIn
+        case signOut
+    }
+        
+    enum LogInState {
+        case success
+        case fail
+        case none
+    }
+        
+    enum LoginPlatform {
+        case email
+        case google
+        case none
+    }
+        
+    var userEmailList: [String] {
+        userStore.map { $0.id ?? "" }
+    }
+    
+    var userNickNameList: [String] {
+        return userStore.map{ $0.nickName ?? "" }
+    }
+    
+        //인증 상태를 관리하는 변수
+    @Published var state: SignInState = .splash
+    @Published var loginState: LogInState = .none
+    @Published var loginPlatform: LoginPlatform = .none
     
     func fetchUser() {
         database.getDocuments { (snapshot, error) in
@@ -40,12 +72,14 @@ class UserStore: ObservableObject{
     }
     
     func addUser(_ userInfo: UserInfo) {
-        database.document(userInfo.id)
+        database.document(user?.uid ?? "")
             .setData([
-                "likePerfumes": userInfo.likePerfumes ?? [],
-                "nation": userInfo.nation ?? "",
+//                "likePerfumes": userInfo.likePerfumes ?? [],
+                "email": userInfo.email ?? "",
+//                "nation": userInfo.nation ?? "",
                 "nickName": userInfo.nickName ?? "",
-                "watchList": userInfo.watchList ?? []])
+//                "watchList": userInfo.watchList ?? []
+            ])
         fetchUser()
     }
     
@@ -56,8 +90,8 @@ class UserStore: ObservableObject{
             }
             // 로그인이 되어 있는 상태라면 user property에 user를 할당
             self.user = user
+            print("update")
         }
-        print("1")
     }
     
     // MARK: - 로그인 메서드
@@ -71,6 +105,8 @@ class UserStore: ObservableObject{
 //                await handleError(message: "등록되지 않은 사용자 입니다.")
             }
         }
+        self.loginState = .success
+        
     }
     
     // MARK: - 회원가입 메서드
@@ -82,20 +118,25 @@ class UserStore: ObservableObject{
                 return
             } else {
                 // MARK: 받아온 닉네임 정보로 사용자의 displayName 설정
-                if let currentUser = Auth.auth().currentUser?.createProfileChangeRequest() {
-                    currentUser.displayName = nickname
-//                    currentUser.commitChanges(completion: {error in
-//                        if let error = error {
-//                            print(error)
-//                        } else {
-//                            print("DisplayName changed")
-//                        }
-//                    })
-                }
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = nickname
                 self.logIn(emailAddress: emailAddress, password: password)
+//                self.updateDisplayName(displayName: nickname)
             }
         }
     }
+    
+    func updateDisplayName(displayName: String) { // (2)
+        if let user = Auth.auth().currentUser {
+          let changeRequest = user.createProfileChangeRequest() // (3)
+          changeRequest.displayName = displayName
+          changeRequest.commitChanges { error in // (4)
+            if error != nil {
+              print("Successfully updated display name for user [\(user.uid)] to [\(displayName)]")
+            }
+          }
+        }
+      }
     
     func logOut() {
         do {
@@ -103,5 +144,25 @@ class UserStore: ObservableObject{
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
+    }
+    
+    func checkEmail(email: String) -> Bool {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+            return  NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
+        }
+    
+    func emailDuplicateCheck(_ email: String) -> Bool {
+        // 중복이다
+        if userEmailList.contains(email) {
+            return true
+        }
+        //중복아니다
+        return false
+        
+ 
+    }
+    
+    func nickNameDuplicateCheck(_ nickName: String) -> Bool {
+        return userNickNameList.contains(nickName)
     }
 }

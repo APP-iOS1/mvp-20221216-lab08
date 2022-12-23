@@ -8,7 +8,8 @@
 import Foundation
 
 struct UserInfo: Identifiable {
-    var id: String
+    var id: String? = ""
+    var email: String? = ""
     var likePerfumes: [String]? = []
     var nation: String? = nil
     var nickName: String? = nil

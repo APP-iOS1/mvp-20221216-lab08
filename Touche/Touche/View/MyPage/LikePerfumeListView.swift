@@ -26,42 +26,45 @@ struct LikePerfumeListView: View {
                     }
                 }
             }
-            .onAppear {
-                likePerfumeStore.fetchLikePerfume()
-            }
         }
         .navigationTitle("")
     }
 }
 struct ListCell: View {
-    var likePerfume: LikePerfume
+    var likePerfume: Perfume
     @State var isSelected: Bool = true
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: likePerfume.imageUrl)) { image in
-                image
-                    .resizable()
-                    .frame(width: 150, height: 150)
-            } placeholder: {
-                ProgressView()
-            }
-            .overlay(
-                Image(systemName: isSelected ? "heart.fill" : "heart")
-                    .resizable()
-                    .frame(width: 20, height: 18)
-                    .offset(x: 60, y: -60)
-                    .foregroundColor(isSelected ? .pink : .gray)
-                    .onTapGesture {
-                        isSelected.toggle()
-                    }
+            NavigationLink {
+                DetailView(perfume: likePerfume)
+            } label: {
+                AsyncImage(url: URL(string: likePerfume.imageUrl ?? "")) { image in
+                    image
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                } placeholder: {
+                    ProgressView()
+                }
+                .overlay(
+                    Image(systemName: isSelected ? "heart.fill" : "heart")
+                        .resizable()
+                        .frame(width: 20, height: 18)
+                        .offset(x: 60, y: -60)
+                        .foregroundColor(.black)
+                        .onTapGesture {
+                            isSelected.toggle()
+                        }
                     
-            )
+                )
+            }
+
             HStack {
                 VStack(alignment: .leading) {
-                    Text(likePerfume.brand.first ?? "")
-                    Text(likePerfume.name.first ?? "")
+                    Text(likePerfume.brand?.first ?? "")
+                    Text(likePerfume.name?.first ?? "")
                 }
+                .foregroundColor(.black)
                 .font(.system(size: 16))
                 Spacer()
             }
