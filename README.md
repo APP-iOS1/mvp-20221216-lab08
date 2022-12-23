@@ -27,7 +27,8 @@
 5. 홈 탭 내 '지금 실시간 코멘트 많이 달린 향수' 를 클릭 시 상단 '최근 본 향수' 에 랜덤으로 쌓이게 됩니다. 
 6. 로그인 / 비로그인 사용자를 분리하여 댓글, 좋아요 기능 접근에 차등을 두는 뷰를 구현하지 못했습니다.
 <br/>
-![Toche_Instaill_Guideline](https://user-images.githubusercontent.com/114331071/209328790-3a3389f8-08a0-4995-a594-61915ffb347e.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/114331071/209336009-d1599a92-ce42-434f-91cb-3263a564aab9.png" width=30%></p>
+
 
 
 <br/><br/><br/>
