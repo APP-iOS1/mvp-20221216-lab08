@@ -18,9 +18,9 @@
 
 ## 앱 설치 가이드라인
 ![Toche_Instaill_Guideline](https://user-images.githubusercontent.com/114331071/209328790-3a3389f8-08a0-4995-a594-61915ffb347e.png)
+
+
 <br/><br/><br/>
-
-
 ## MVP 종료 후 회고
 - 메인 목표 달성과제 3/4 해결, 75% 완료.
 <br/><br/><br/>
