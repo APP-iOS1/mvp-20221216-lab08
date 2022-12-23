@@ -51,6 +51,6 @@ struct LotCommentsCellView_Previews: PreviewProvider {
     @State static var perfume = PerfumeStore()
     
     static var previews: some View {
-        LotCommentsCellView(perfume: Perfume(id: "", brand: [""], name: [""], type: [""], perfumer: [""], color: [""], imageUrl: "", brandSearchCount: 0, likedCount: 0, ingredientsKr: [""], ingredientsEn: [""], releasedYear: "", commentsCount: 0))
+        LotCommentsCellView(perfume: Perfume(id: "", brand: [""], name: [""], type: [""], perfumer: [""], color: [""], imageUrl: "https://ifh.cc/g/tWTd2v.png", brandSearchCount: 0, likedCount: 0, ingredientsKr: [""], ingredientsEn: [""], releasedYear: "", commentsCount: 0))
     }
 }
