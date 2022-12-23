@@ -6,6 +6,7 @@
 #### [뚜셰 스토리보드 (피그마) 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
 </div>
 <br/>
+<details>
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
@@ -158,4 +159,4 @@
 | <img src="https://avatars.githubusercontent.com/u/114036537?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114224237?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/33450365?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/98254580?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/70871997?s=96&v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114331071?s=96&v=4" width=200> |
 | :----------------------------------------------------------: | :---------------------------------------------: | :-------------------------------------------------: | :-------------------------------------------------: |  :-------------------------------------------------: |  :-------------------------------------------------: |
 | 미주<br/>[@mumjee03](https://github.com/mumjee03)<br/> | 영서<br/>[@yngddo](https://github.com/yngddo)<br/> | 은노<br/> [@Eunno-An](https://github.com/Eunno-An)<br/> | 종환<br/>[@JJH0729](https://github.com/JJH0729)<br/> | 석진<br/>[@tjrwls](https://github.com/tjrwls)<br/> | 유진<br/>[@yooj1202](https://github.com/yooj1202)<br/> |
- <details>
+
