@@ -61,9 +61,9 @@ struct DetailView: View {
                         .shadow(color: Color.gray.opacity(0.2), radius: 5)
                     //                            .overlay(Color.red)
                         .padding(.vertical, 20)
-                    
+
                 }
-                
+                    
                 ZStack(){
                   
                         VStack(alignment: .leading){

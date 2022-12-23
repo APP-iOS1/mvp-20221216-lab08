@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import FirebaseAuth
 
 /*
  28일 월요일 우선순위
@@ -24,7 +25,7 @@ import UIKit
 struct SearchView: View {
     
     let sectionList = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"]
-    
+    @EnvironmentObject var userStore: UserStore
     @EnvironmentObject var searchStore: SearchStore
     @EnvironmentObject var colorStore: ColorInfoStore
     @State private var isToggle: Bool = false

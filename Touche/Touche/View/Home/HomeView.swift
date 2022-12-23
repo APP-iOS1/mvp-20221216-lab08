@@ -156,8 +156,6 @@ struct HomeView: View {
         .onAppear {
             perfumeStore.fetchPerfume()
             clickedStore.fetchClickedPerfume()
-            userStore.logOut()
-            print("11")
         }
     }
 }

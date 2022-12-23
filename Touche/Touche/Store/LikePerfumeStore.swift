@@ -39,5 +39,24 @@ class LikePerfumeStore: ObservableObject {
                 }
             }
         }
-    }   
+    }
+    
+    //    func inputDataLikePerfume(){
+    //        for perfume in self.perfumeStore {
+    //            database2.document("i5yMiGuhXTQdocwzfX4nJZf4cjg1").collection("LikePerfume").document(perfume.id ?? "")
+    //                .setData(["brand" : perfume.brand!,
+    //                          "name" : perfume.name!,
+    //                          "type" : perfume.type!,
+    //                          "perfumer" : perfume.perfumer!,
+    //                          "color" : perfume.color!,
+    //                          "imageUrl" : perfume.imageUrl ?? "",
+    //                          "brandSearchCount" : perfume.brandSearchCount ?? 0 ,
+    //                          "likedCount" : perfume.likedCount ?? 0,
+    //                          "ingredients_kr" : perfume.ingredientsKr ?? [],
+    //                          "ingredients_en" : perfume.ingredientsEn ?? [],
+    //                          "releasedYear" : perfume.releasedYear ?? "",
+    //                          "commentsCount" : perfume.commentsCount ?? 0], merge: true)
+    //        }
+    //    }
+    
 }
