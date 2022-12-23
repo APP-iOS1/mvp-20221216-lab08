@@ -137,7 +137,7 @@ struct HomeView: View {
                             HStack {
                                 ForEach(manyCommentsBottom) { item in
                                     NavigationLink(value: item) {
-                                        LotCommentsCellView2(perfume: item)
+                                        LotCommentsCellView(perfume: item)
                                     }
                                     .navigationDestination(for: Perfume.self, destination: { item in
                                         DetailView(perfume: item, perfumeUid: item.id ?? "")
