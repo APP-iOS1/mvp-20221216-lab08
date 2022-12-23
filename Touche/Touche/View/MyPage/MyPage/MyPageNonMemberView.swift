@@ -25,15 +25,26 @@ struct MyPageNonMemberView: View {
                         .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 40)
                         .background(.black)
                         .foregroundColor(.white)
+                        .border(.black)
+                        .overlay(
+                            Rectangle().stroke(Color.black, lineWidth: 0.5)
+                        )
+                        .padding(.trailing, -4)
                 }.tint(.black)
                 
                 NavigationLink {
                     MyPageLoginView(selectedIndex: 1)
                 } label: {
                     Text("회원 가입")
+                        
                         .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 40)
                         .foregroundColor(.black)
+                        .overlay(
+                            Rectangle().stroke(Color.gray, lineWidth: 0.5)
+                        )
+                        .padding(.leading, -4)
                 }.tint(.white)
+                    
             }
         }
     }
