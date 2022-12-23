@@ -12,6 +12,7 @@
 		04BB6D912952A74700F0D8C8 /* SelectedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D902952A74700F0D8C8 /* SelectedButtonView.swift */; };
 		04BB6D932952A8D400F0D8C8 /* SelectedColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D922952A8D400F0D8C8 /* SelectedColorButtonView.swift */; };
 		04BB6D952952BCC300F0D8C8 /* FilteringResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB6D942952BCC300F0D8C8 /* FilteringResultView.swift */; };
+		04C0EEF8295588B700E7290E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C0EEF7295588B700E7290E /* FirebaseFirestoreSwift */; };
 		04D112542951C2DE003A8A57 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D112532951C2DE003A8A57 /* SearchView.swift */; };
 		04D112572951C389003A8A57 /* BrandListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D112562951C389003A8A57 /* BrandListView.swift */; };
 		04D112592951C39F003A8A57 /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D112582951C39F003A8A57 /* ColorListView.swift */; };
@@ -52,7 +53,6 @@
 		6177F83329530491004439CE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83229530491004439CE /* GoogleSignIn */; };
 		6177F83529530491004439CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6177F83429530491004439CE /* GoogleSignInSwift */; };
 		618E5D302953075D00D793B9 /* SegmentedPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 618E5D2F2953075D00D793B9 /* SegmentedPicker */; };
-		61BA41332954138C00B14455 /* TextFieldClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BA41322954138C00B14455 /* TextFieldClearButton.swift */; };
 		655A1DC9295298D3007CF44B /* PerfumeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DC8295298D3007CF44B /* PerfumeTabView.swift */; };
 		655A1DCB2952CC48007CF44B /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DCA2952CC48007CF44B /* ColorConverter.swift */; };
 		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
@@ -106,7 +106,6 @@
 		6177F82C29530266004439CE /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
 		6177F82D29530266004439CE /* LikePerfumeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikePerfumeStore.swift; sourceTree = "<group>"; };
 		6177F83029530341004439CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		61BA41322954138C00B14455 /* TextFieldClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButton.swift; sourceTree = "<group>"; };
 		655A1DC8295298D3007CF44B /* PerfumeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfumeTabView.swift; sourceTree = "<group>"; };
 		655A1DCA2952CC48007CF44B /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
@@ -131,6 +130,7 @@
 				6177F83529530491004439CE /* GoogleSignInSwift in Frameworks */,
 				61639DF8295039C10051C954 /* FirebaseDatabase in Frameworks */,
 				61639DF6295039C10051C954 /* FirebaseAuth in Frameworks */,
+				04C0EEF8295588B700E7290E /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +143,13 @@
 				04BB6D8E2952A09200F0D8C8 /* Brand.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		04C0EEF6295588B700E7290E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		04D112552951C373003A8A57 /* Search */ = {
@@ -178,6 +185,7 @@
 				61639DE1295038760051C954 /* Touche */,
 				61639DE0295038760051C954 /* Products */,
 				82D837542952F51600B96B9C /* Recovered References */,
+				04C0EEF6295588B700E7290E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,7 +290,6 @@
 				6177F818295301F5004439CE /* MyPageLoginView.swift */,
 				6177F819295301F5004439CE /* SignInView.swift */,
 				6177F817295301F5004439CE /* SignUpView.swift */,
-				61BA41322954138C00B14455 /* TextFieldClearButton.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -330,6 +337,7 @@
 				6177F83229530491004439CE /* GoogleSignIn */,
 				6177F83429530491004439CE /* GoogleSignInSwift */,
 				618E5D2F2953075D00D793B9 /* SegmentedPicker */,
+				04C0EEF7295588B700E7290E /* FirebaseFirestoreSwift */,
 			);
 			productName = Touche;
 			productReference = 61639DDF295038760051C954 /* Touche.app */;
@@ -414,7 +422,6 @@
 				04BB6D952952BCC300F0D8C8 /* FilteringResultView.swift in Sources */,
 				04D1125B2951CB47003A8A57 /* ColorInfo.swift in Sources */,
 				8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */,
-				61BA41332954138C00B14455 /* TextFieldClearButton.swift in Sources */,
 				61639E0329503DFF0051C954 /* UserInfo.swift in Sources */,
 				82D837582952F5CF00B96B9C /* DetailView.swift in Sources */,
 				6177F81D295301F5004439CE /* SignInView.swift in Sources */,
@@ -666,6 +673,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		04C0EEF7295588B700E7290E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		61639DF5295039C10051C954 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61639DF4295039C10051C954 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
