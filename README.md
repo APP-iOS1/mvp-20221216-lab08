@@ -28,13 +28,16 @@
 6. 로그인 / 비로그인 사용자를 분리하여 댓글, 좋아요 기능 접근에 차등을 두는 뷰를 구현하지 못했습니다.
 <br/>
 <p align="center"><img src="https://user-images.githubusercontent.com/114331071/209336009-d1599a92-ce42-434f-91cb-3263a564aab9.png" width=80%></p>
-
+<br/><br/><br/>
 
 ## GIF 앱 화면
-
-| <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337919-83f8ec30-a2e3-4018-849d-093d1569a99b.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |
+| <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337919-83f8ec30-a2e3-4018-849d-093d1569a99b.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209338448-ba8a7935-5d12-4675-a29b-222579d60f08.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |
 | :-: | :-: | :-: | :-: |
 | 홈 | 홈 화면 내 댓글 달기 | 브랜드, 색 필터링 | 내 계정 |
+
+
+<br/><br/><br/>
+
 
 
 
