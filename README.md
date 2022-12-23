@@ -103,7 +103,7 @@
 - [x] DetailView > 뷰 정렬, 코멘트 추가 시 Review 내 즉시 반영 (영서) 
 - [x] HomeView > SafeArea 적용, Readme 업데이트 (유진)
 - [x] LoginView 내 전체 UI 정렬, 회원가입 시 예외 처리 기능 업데이트 (미주, 석진) 
-- [x] DetailVIew > Firebase 에 저장된 컬러 데이터 접근을 통한 뷰별 애니메이션 기능 업데이트 (은노)
+- [x] DetailVIew > Firebase 에 저장된 컬러 데이터 접근을 통한 뷰별 애니메이션 기능 업데이트 (은노) <br/><br/><br/>
 
 
 ## 뷰 별 피드백 정리
@@ -141,6 +141,8 @@
  기술 피드백
 > UserStore 전부 부르기보다 UserDefault에 저장
 > Query 함수 대신 WhereField 검색 참조 (12/22 은노 수정 완료)
+
+
 <br/><br/><br/>
 
 
