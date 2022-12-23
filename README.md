@@ -98,7 +98,6 @@
 - [x] 유민영 강사님 및 조별 상호 피드백을 통한 개선사항 정리 및 목표 재설정
 
 > 12/23 금
-<br/><br/><br/>
 - [x] HomeView > 최근 본 향수와 DetailView 연결 (종환)
 - [x] DetailView > 뷰 정렬, 코멘트 추가 시 Review 내 즉시 반영 (영서) 
 - [x] HomeView > SafeArea 적용, Readme 업데이트 (유진)
