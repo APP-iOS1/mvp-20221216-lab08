@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ClickedCellView: View {
     var clicked: Clicked
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             AsyncImage(
-                url: URL(string: String(clicked.imageUrl)),
+                url: URL(string: String(clicked.imageUrl ?? "")),
                 content: { image in
                     image
                         .resizable()
@@ -43,14 +43,15 @@ struct ClickedCellView: View {
 //            }
 //            .font(.system(size: 12))
 //            .foregroundColor(.gray)
+
         }
     }
 }
 
-//struct ClickedCellView_Previews: PreviewProvider {
-//    @State static var perfume = PerfumeStore()
-//
-//    static var previews: some View {
-//        LotCommentsCellView(perfume: .init())
-//    }
-//}
+struct ClickedCellView_Previews: PreviewProvider {
+    @State static var clicked = ClickedStore()
+
+    static var previews: some View {
+        ClickedCellView(clicked: Clicked(id: "", imageUrl: ""))
+    }
+}

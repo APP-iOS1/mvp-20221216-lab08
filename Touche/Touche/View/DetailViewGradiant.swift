@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct DetailViewGradiant: View {
+    @State var perfume: Perfume
     var body: some View {
-        FloatingClouds()
+        FloatingClouds( generalBackground: getSRGBColor(hexString: perfume.color![1]))
     }
-}
-
-func convertSRGB(r:Double, g:Double, b :Double){
-    var sR: Double = r/255
-    var sG: Double = g/255
-    var sB: Double = b/255
-    
-    return
+    //convertSRGB(hexString: perfume.color_hex)`
+    func getSRGBColor(hexString: String) -> Color{
+        let scanner = Scanner(string: hexString)
+        _ = scanner.scanString("#")
+                                  
+        var rgb: UInt64 = 0
+        scanner.scanHexInt64(&rgb)
+                                  
+        let sR = Double((rgb >> 16) & 0xFF) / 255.0
+        let sG = Double((rgb >>  8) & 0xFF) / 255.0
+        let sB = Double((rgb >>  0) & 0xFF) / 255.0
+        
+        print("sR:\(sR), sG:\(sG), sB:\(sB)")
+        return Color(red:sR, green:sG, blue:sB)
+    }
 }
 
 
@@ -60,90 +68,83 @@ struct Cloud: View {
 struct FloatingClouds: View {
     @Environment(\.colorScheme) var scheme
     let blur: CGFloat = 60
-
+    var generalBackground:Color
     var body: some View {
         GeometryReader { proxy in
             ZStack {
-                Theme.generalBackground
+                generalBackground.opacity(0.25)
                 Cloud(proxy: proxy,
-                      color: Theme.ellipsesBottomTrailing(forScheme: scheme),
+                      color: Theme.ellipsesBottomTrailing(color: generalBackground),
                       rotationStart: 0,
-                      duration: 60,
+                      duration: 6,
                       alignment: .bottomTrailing)
                 Cloud(proxy: proxy,
-                      color: Theme.ellipsesTopTrailing(forScheme: scheme),
+                      color: Theme.ellipsesTopTrailing(color: generalBackground),
                       rotationStart: 240,
-                      duration: 50,
+                      duration: 5,
                       alignment: .topTrailing)
                 Cloud(proxy: proxy,
-                      color: Theme.ellipsesBottomLeading(forScheme: scheme),
+                      color: Theme.ellipsesBottomLeading(color: generalBackground),
                       rotationStart: 120,
-                      duration: 80,
+                      duration: 8,
                       alignment: .bottomLeading)
                 Cloud(proxy: proxy,
-                      color: Theme.ellipsesTopLeading(forScheme: scheme),
+                      color: Theme.ellipsesTopLeading(color: generalBackground),
                       rotationStart: 180,
-                      duration: 70,
+                      duration: 7,
                       alignment: .topLeading)
             }
             .blur(radius: blur)
 //            .ignoresSafeArea()
         }
+        
     }
+    
+    
 }
 
 
 struct Theme {
-    static var generalBackground: Color {
-        Color(red: 0.043, green: 0.597, blue: 0.574)
+    static func ellipsesTopLeading(color: Color) -> Color {
+        return color
     }
 
-    static func ellipsesTopLeading(forScheme scheme: ColorScheme) -> Color {
-        let any = Color(red: 0.039, green: 0.388, blue: 0.502, opacity: 0.81)
-        let dark = Color(red: 0.000, green: 0.176, blue: 0.216, opacity: 80.0)
-        switch scheme {
-        case .light:
-            return any
-        case .dark:
-            return dark
-        @unknown default:
-            return any
-        }
+    static func ellipsesTopTrailing(color: Color) -> Color {
+        let temp = color.components
+        return Color(red: temp.red * 0.75 , green: temp.green*0.75, blue:temp.blue*0.75)
     }
 
-    static func ellipsesTopTrailing(forScheme scheme: ColorScheme) -> Color {
-        let any = Color(red: 0.196, green: 0.796, blue: 0.329)
-        let dark = Color(red: 0.408, green: 0.698, blue: 0.420, opacity: 0.61)
-        switch scheme {
-        case .light:
-            return any
-        case .dark:
-            return dark
-        @unknown default:
-            return any
-        }
+    static func ellipsesBottomTrailing(color: Color) -> Color {
+        let temp = color.components
+        return Color(red: temp.red * 0.5 , green: temp.green*0.5, blue:temp.blue*0.5)
     }
 
-    static func ellipsesBottomTrailing(forScheme scheme: ColorScheme) -> Color {
-        Color(red: 0.541, green: 0.733, blue: 0.812, opacity: 0.7)
-    }
-
-    static func ellipsesBottomLeading(forScheme scheme: ColorScheme) -> Color {
-        let any = Color(red: 0.196, green: 0.749, blue: 0.986, opacity: 0.55)
-        let dark = Color(red: 0.525, green: 0.859, blue: 0.655, opacity: 0.45)
-        switch scheme {
-        case .light:
-            return any
-        case .dark:
-            return dark
-        @unknown default:
-            return any
-        }
+    static func ellipsesBottomLeading(color: Color) -> Color {
+        let temp = color.components
+        return Color(red: temp.red * 0.25 , green: temp.green*0.25, blue:temp.blue*0.25)
     }
 }
 
-struct DetailViewGradiant_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailViewGradiant()
+
+extension Color {
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
+
+        #if canImport(UIKit)
+        typealias NativeColor = UIColor
+        #elseif canImport(AppKit)
+        typealias NativeColor = NSColor
+        #endif
+
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var o: CGFloat = 0
+
+        guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
+            // You can handle the failure here as you want
+            return (0, 0, 0, 0)
+        }
+
+        return (r, g, b, o)
     }
 }

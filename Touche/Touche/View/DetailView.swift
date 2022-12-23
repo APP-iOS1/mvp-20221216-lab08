@@ -20,6 +20,7 @@ struct DetailView: View {
     var perfumeUid: String = ""
     
     var body: some View {
+
         ScrollView{
             VStack(){
                 
