@@ -21,6 +21,23 @@
 <br/><br/><br/>
 
 
+## MVP 종료 후 회고
+- 메인 목표 달성과제 3/4 해결, 75% 완료.
+
+## 기술 한계점
+HomeView -> Store 연결 유저가 선택한 향수에 ULD 삽입하지 않고(PerfumeSotre), 유저 정보에 유저가 선택한 향수(ClickedStore)를 따로 만들어 관리하여 데이터 중복, 동기화되지 않는 문제
+DetailView -> 좋아요 버튼 클릭 시 UserStore 내 likePerfumes 와 미연동, Review 내 작성시간(createdAt -> Date 변환 불가) 미노출
+SearchView -> Query 비동기 함수를 생성해 DB에서 데이터를 직접 가져오지 못함
+GoogleSignIn 시 nickName값 받아오지 못하는 문제
+일반 로그인 시 FirebaseAuth 내 유저프로필 정보를 저장하지 못함 
+기획 : 향수 무게감에 따른 색상 별 위도값을 나타내는 것에 대한 기획 부족
+로그인 실패 에러 핸들링 미구현
+로그인 사용자와 비로그인 사용자별 뷰 구분 미구현
+HomeView내 
+
+
+
+
 ## 주요기능
 - 향수 정보 제공 및 의견 공유가 가능한 커뮤니티 기능
 - 브랜드, 색채 정보를 활용한 향수 정보 필터화 기능
