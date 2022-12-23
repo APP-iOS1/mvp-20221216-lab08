@@ -56,7 +56,6 @@
 		655A1DC9295298D3007CF44B /* PerfumeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DC8295298D3007CF44B /* PerfumeTabView.swift */; };
 		655A1DCB2952CC48007CF44B /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A1DCA2952CC48007CF44B /* ColorConverter.swift */; };
 		8215632429518D68008360B8 /* LotCommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215632329518D68008360B8 /* LotCommentsCellView.swift */; };
-		821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821563252951A7E8008360B8 /* LotCommentsCellView2.swift */; };
 		822CFA9D2952CC42009AA6A8 /* ClickedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */; };
 		822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFA9E2952CC89009AA6A8 /* Clicked.swift */; };
 		822CFAA12952D63A009AA6A8 /* CilckedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */; };
@@ -109,7 +108,6 @@
 		655A1DC8295298D3007CF44B /* PerfumeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfumeTabView.swift; sourceTree = "<group>"; };
 		655A1DCA2952CC48007CF44B /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		8215632329518D68008360B8 /* LotCommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView.swift; sourceTree = "<group>"; };
-		821563252951A7E8008360B8 /* LotCommentsCellView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotCommentsCellView2.swift; sourceTree = "<group>"; };
 		822CFA9C2952CC42009AA6A8 /* ClickedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedStore.swift; sourceTree = "<group>"; };
 		822CFA9E2952CC89009AA6A8 /* Clicked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clicked.swift; sourceTree = "<group>"; };
 		822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CilckedCellView.swift; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 				828B724D2951421700CE1DDD /* HomeView.swift */,
 				822CFAA02952D63A009AA6A8 /* CilckedCellView.swift */,
 				8215632329518D68008360B8 /* LotCommentsCellView.swift */,
-				821563252951A7E8008360B8 /* LotCommentsCellView2.swift */,
 				3A5B5055295570AF0066739F /* Detail */,
 			);
 			path = Home;
@@ -426,7 +423,6 @@
 				82D837582952F5CF00B96B9C /* DetailView.swift in Sources */,
 				6177F81D295301F5004439CE /* SignInView.swift in Sources */,
 				04BB6D8F2952A09200F0D8C8 /* Brand.swift in Sources */,
-				821563262951A7E8008360B8 /* LotCommentsCellView2.swift in Sources */,
 				828B724E2951421700CE1DDD /* HomeView.swift in Sources */,
 				822CFA9F2952CC89009AA6A8 /* Clicked.swift in Sources */,
 				3A948FE62952979800EAEA43 /* CommentView.swift in Sources */,

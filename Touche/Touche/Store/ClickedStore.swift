@@ -39,14 +39,29 @@ class ClickedStore: ObservableObject {
         }
     }
     func addClickedPerfume(perfume: Perfume) {
-        clickedStore = []
-        let userID:String = "i5yMiGuhXTQdocwzfX4nJZf4cjg1"
-        do {
-            try database.document(userID).collection("ClickedPerfume").document(perfume.id ?? "")
-                .setData(from: perfume)
-        } catch let error {
-            print("Error writing city to Firestore: \(error)")
+        
+        // Full error: The compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions 에러 발생
+        let data: [String: Any] = [
+            "brand": perfume.brand ?? [],
+            "name": perfume.name ?? [],
+            "type": perfume.type ?? [],
+            "perfumer": perfume.perfumer ?? [],
+            "color": perfume.color ?? [],
+            "imageUrl": perfume.imageUrl ?? "",
+            "brandSearchCount": perfume.brandSearchCount ?? 0,
+            "likedCount": perfume.likedCount ?? 0,
+            "ingredients_kr": perfume.ingredientsKr ?? [],
+            "ingredients_en": perfume.ingredientsEn ?? [],
+            "releasedYear": perfume.releasedYear ?? "",
+            "commentsCount": perfume.commentsCount ?? 0
+        ]
+        
+        database.document("i5yMiGuhXTQdocwzfX4nJZf4cjg1").collection("ClickedPerfume").document(perfume.id ?? "").setData(data) { err in
+            if let error = err {
+                print(error.localizedDescription)
+            }
         }
+        
         fetchClickedPerfume()
     }
 }
