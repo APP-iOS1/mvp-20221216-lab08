@@ -135,6 +135,11 @@
 - [x] HomeView > SafeArea 적용, Readme 업데이트 (유진)
 - [x] LoginView 내 전체 UI 정렬, 회원가입 시 예외 처리 기능 업데이트_MVP lab16 : 떡볶잉 팀 코드 참조 (미주, 석진) 
 - [x] DetailVIew > Firebase 에 저장된 컬러 데이터 접근을 통한 뷰별 애니메이션 기능 업데이트 (은노) <br/><br/><br/>
+- [x] SignIn, SignUp View > 강사님 피드백 사항 수정(textFeild 모서리 수정, text와 textField 그룹핑)
+- [x] SignIn, SignUp View > 로그인, 회원가입 에러핸들링, 로그인 실패시 크러쉬 Fix
+- [x] SignUp View > 회원가입시 닉네임 user collection에 저장
+- [x] MyPageView > 위시리스트 버튼 chevron추가 밑 선택 범위 확대
+- [x] MyPageView > 위시리스트 네이게이션 버튼이 같이 스크롤 되던 것 Fix
 
 
 ## 뷰 별 피드백 정리
