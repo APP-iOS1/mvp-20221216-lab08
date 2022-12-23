@@ -46,10 +46,6 @@ struct HomeView: View {
                                 Spacer()
                             }
                         }
-                        // 고정 헤더 만들기 위해서 패딩 내리기
-//                        .padding(.horizontal, 20)
-//                        .padding(.top, 100)
-                        
                         .padding()
                         .background(.black)
                         
@@ -153,34 +149,9 @@ struct HomeView: View {
                             }
                         }
                     }
-//                    GeometryReader { gr in
-//                        VStack {
-//                            Rectangle()
-//                                .fill(Color.white)
-//                                .frame(height:
-//                                        self.calculateHeight(minHeight: 100,
-//                                                             maxHeight: 100,
-//                                                             yOffset: gr.frame(in: .global).origin.y))
-//                                .overlay(
-//                                    HStack(spacing: 10) {
-//                                        Spacer()
-//                                        Image(systemName: "magnifyingglass")
-//                                        Image(systemName: "bell")
-//                                        Image(systemName: "bag")
-//                                    }
-//                                        .padding()
-//                                        .font(.system(size: 20, weight: .medium))
-//                                        .foregroundColor(.black)
-//                                        .opacity(0.8))
-//                                .offset(y: gr.frame(in: .global).origin.y < 0
-//                                        ? abs(gr.frame(in: .global).origin.y)
-//                                        : -gr.frame(in: .global).origin.y)
-//                            Spacer() // 헤더를 맨 위로 푸시
-//                        }
-//                    }
                 }
             }
-//            .edgesIgnoringSafeArea(.vertical)
+            .padding(.top, 1)
         }
         .onAppear {
             perfumeStore.fetchPerfume()
@@ -201,7 +172,3 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-//
-//magnifyingglass
-//bell
-//bag
