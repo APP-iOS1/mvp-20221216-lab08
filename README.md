@@ -30,6 +30,16 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/114331071/209336009-d1599a92-ce42-434f-91cb-3263a564aab9.png" width=80%></p>
 
 
+## GIF 앱 화면
+
+| <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |
+| :-: | :-: | :-: | :-: |
+| 홈 | 홈 화면 내 댓글 달기 | 브랜드, 색 필터링 | 내 계정 |
+
+
+
+
+
 
 <br/><br/><br/>
 ## MVP 목표 달성률
