@@ -1,6 +1,11 @@
+<details>
+<summary>뚜셰 이전 프로젝트 Readme.</summary>
+<div markdown="1">
 #### [뚜셰 1차 프로토타입 Readme 바로가기](https://github.com/APPSCHOOL1-REPO/prototype-20221107-team07/blob/main/README.md)
 #### [뚜셰 2차 프로토타입 Readme 바로가기](https://github.com/APPSCHOOL1-REPO/prototype-20221128-lab05/blob/main/README.md)
-#### [뚜셰 스토리보드 (피그마) 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)<br/>
+#### [뚜셰 스토리보드 (피그마) 바로가기](https://www.figma.com/file/EsC7W0gvBhiOcVzfMfDxAQ/%EB%9A%9C%EC%85%B0-%EC%95%B1-%EC%84%A4%EC%B9%98-%26-%EC%8B%A4%ED%96%89-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1&t=ic24XfWW608V5FnE-3)
+</div>
+<br/>
 
  <h1 align="middle">뚜셰(Touché)</h1>
  <p align="middle"><img src="https://user-images.githubusercontent.com/114331071/208329761-5e65d8b0-1ae5-4521-8be8-aec4e6a943f8.png" width=30%></p>
@@ -17,6 +22,9 @@
 
 
 ## 앱 설치 가이드라인
+1. 아이폰 14 Pro, Light Mode Only, Potrait Mode Only 환경으로 실행 요청드립니다.
+1. 이 앱은 비로그인 사용자도 향수 정보에 접근할 수 있습니다.
+2. 회원가입 시
 ![Toche_Instaill_Guideline](https://user-images.githubusercontent.com/114331071/209328790-3a3389f8-08a0-4995-a594-61915ffb347e.png)
 
 
@@ -150,3 +158,4 @@
 | <img src="https://avatars.githubusercontent.com/u/114036537?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114224237?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/33450365?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/98254580?v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/70871997?s=96&v=4" width=200> | <img src="https://avatars.githubusercontent.com/u/114331071?s=96&v=4" width=200> |
 | :----------------------------------------------------------: | :---------------------------------------------: | :-------------------------------------------------: | :-------------------------------------------------: |  :-------------------------------------------------: |  :-------------------------------------------------: |
 | 미주<br/>[@mumjee03](https://github.com/mumjee03)<br/> | 영서<br/>[@yngddo](https://github.com/yngddo)<br/> | 은노<br/> [@Eunno-An](https://github.com/Eunno-An)<br/> | 종환<br/>[@JJH0729](https://github.com/JJH0729)<br/> | 석진<br/>[@tjrwls](https://github.com/tjrwls)<br/> | 유진<br/>[@yooj1202](https://github.com/yooj1202)<br/> |
+ <details>
