@@ -94,7 +94,7 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal) {
                             HStack {
-                                ForEach(clickedStore.clicedStore) { item in
+                                ForEach(clickedStore.clickedStore) { item in
                                     ClickedCellView(perfume: item)
                                         .padding(.leading)
                                 }

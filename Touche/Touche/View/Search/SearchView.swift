@@ -196,6 +196,9 @@ struct SearchView: View {
                 }
             }
         }
+        .onAppear {
+            print(userStore.nickName)
+        }
     }
     /// 가장 첫 초성 추출
     func sectionCheck(name: String) -> String {

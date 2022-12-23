@@ -10,26 +10,35 @@ import FirebaseAuth
 struct WishListView: View {
     @EnvironmentObject var likePerfumeStore: LikePerfumeStore
     var body: some View {
-        ScrollView(.horizontal) {
-            VStack {
-                HStack {
-                    NavigationLink {
-                        LikePerfumeListView()
-                    } label: {
+        VStack {
+            HStack {
+                NavigationLink {
+                    LikePerfumeListView()
+                } label: {
+                    HStack {
                         Text("향수 관심리스트")
                             .foregroundColor(.black)
                             .font(.title2)
+                        Spacer()
+                        Image(systemName: "chevron.right")
                     }
-                    Spacer()
-                    
+                    .foregroundColor(.black)
                 }
-                .padding(.horizontal)
-                HStack {
-                    ForEach(likePerfumeStore.likePerfumeStore) { perfume in
-                        WishListCell(likePerfume: perfume)
+                Spacer()
+                
+            }
+            .padding(.horizontal)
+            ScrollView(.horizontal) {
+                VStack {
+                    
+                    HStack {
+                        ForEach(likePerfumeStore.likePerfumeStore) { perfume in
+                            WishListCell(likePerfume: perfume)
+                        }
                     }
                 }
             }
+            .scrollIndicators(.hidden)
         }
     }
 }

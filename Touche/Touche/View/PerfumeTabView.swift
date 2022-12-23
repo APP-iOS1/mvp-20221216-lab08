@@ -10,7 +10,7 @@ import SwiftUI
 struct PerfumeTabView: View {
     @State private var selectedIndex = 0
     @State private var touchTab = false
-    let tabBarNames = ["홈", "카테고리", "내 계정"]
+    let tabBarNames = ["   홈", "   카테고리", "내 계정"]
     
     var body: some View {
         NavigationStack {
@@ -27,6 +27,7 @@ struct PerfumeTabView: View {
                         }
                     }
                     Spacer()
+                    
                     HStack{
                         Spacer()
                         
@@ -53,18 +54,18 @@ struct PerfumeTabView: View {
                             Circle()
                                 .foregroundColor(Color(.black))
                                 .frame(width: 101, height: 4)
-                                .padding(.leading, geometry.size.width / -2.320)
+                                .padding(.leading, geometry.size.width / -2.4)
                         case 1:
                             Circle()
                                 .foregroundColor(Color(.black))
                                 .frame(width: 101, height: 4)
-                                .padding(.leading, geometry.size.width / -12.90)
-                           
+                                .padding(.leading, geometry.size.width / -50)
+                            
                         case 2:
                             Circle()
                                 .foregroundColor(Color(.black))
                                 .frame(width: 101, height: 4)
-                                .padding(.leading, geometry.size.width / 1.9)
+                                .padding(.leading, geometry.size.width / 1.8)
                         default :
                             Circle()
                                 .foregroundColor(Color(.black))

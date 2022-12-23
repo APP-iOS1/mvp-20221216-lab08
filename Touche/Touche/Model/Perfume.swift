@@ -22,20 +22,20 @@ struct Perfume: Codable,Identifiable, Hashable {
     var releasedYear     : String?   = nil
     var commentsCount    : Int?      = nil
 
-//    enum CodingKeys: String, CodingKey {
-//        case id               = "id"
-//        case brand            = "brand"
-//        case name             = "name"
-//        case type             = "type"
-//        case perfumer         = "perfumer"
-//        case color            = "color"
-//        case imageUrl         = "imageUrl"
-//        case brandSearchCount = "brandSearchCount"
-//        case likedCount       = "likedCount"
-//        case ingredientsKr    = "ingredients_kr"
-//        case ingredientsEn    = "ingredients_en"
-//        case releasedYear     = "releasedYear"
-//    }
+    enum CodingKeys: String, CodingKey {
+        case id               = "id"
+        case brand            = "brand"
+        case name             = "name"
+        case type             = "type"
+        case perfumer         = "perfumer"
+        case color            = "color"
+        case imageUrl         = "imageUrl"
+        case brandSearchCount = "brandSearchCount"
+        case likedCount       = "likedCount"
+        case ingredientsKr    = "ingredients_kr"
+        case ingredientsEn    = "ingredients_en"
+        case releasedYear     = "releasedYear"
+    }
     
 //    init(from decoder: Decoder) throws {
 //        let values = try decoder.container(keyedBy: CodingKeys.self)

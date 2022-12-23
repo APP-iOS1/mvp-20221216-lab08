@@ -13,7 +13,7 @@ import FirebaseAuth
 class UserStore: ObservableObject{
     @Published var userStore: [UserInfo] = []
     let database = Firestore.firestore().collection("User")
-    
+    var nickName: String?
     var user: User? {
         didSet { // 저장된 user 정보가 바뀌면 호출되어서 값을 업데이트
             objectWillChange.send()
@@ -66,6 +66,9 @@ class UserStore: ObservableObject{
                     
                     let userInfo: UserInfo = UserInfo(id: id, likePerfumes: likePerfumes, nation: nation, nickName: nickName, watchList: watchList)
                     self.userStore.append(userInfo)
+                    if self.user?.uid == id {
+                        self.nickName = nickName ?? ""
+                    }
                 }
             }
         }
@@ -117,11 +120,11 @@ class UserStore: ObservableObject{
                 print("an error occured: \(error.localizedDescription)")
                 return
             } else {
+//                guard let uid = result?.user.uid else { return }
                 // MARK: 받아온 닉네임 정보로 사용자의 displayName 설정
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = nickname
                 self.logIn(emailAddress: emailAddress, password: password)
-//                self.updateDisplayName(displayName: nickname)
+//                let user = UserInfo(id: uid, email: emailAddress, nickName: nickname)
+//                self.addUser(user)
             }
         }
     }

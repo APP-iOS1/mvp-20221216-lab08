@@ -7,14 +7,14 @@
 
 import Foundation
 import FirebaseFirestore
-
+import FirebaseFirestoreSwift
 class ClickedStore: ObservableObject {
-    @Published var clicedStore: [Perfume] = []
+    @Published var clickedStore: [Perfume] = []
     let database = Firestore.firestore().collection("User")
     
     func fetchClickedPerfume() {
         database.document("i5yMiGuhXTQdocwzfX4nJZf4cjg1").collection("ClickedPerfume").getDocuments { [self] (snapshot, error) in
-            self.clicedStore.removeAll()
+            self.clickedStore.removeAll()
             if let snapshot {
                 for document in snapshot.documents {
                     let docData = document.data()
@@ -33,12 +33,11 @@ class ClickedStore: ObservableObject {
                     let commentsCount: Int = docData["commentsCount"] as? Int ?? 0
                     
                     let perfume: Perfume = Perfume(id: id, brand: brand, name: name, type: type, perfumer: perfumer, color: color, imageUrl: imageUrl, brandSearchCount: brandSearchCount, likedCount: likedCount, ingredientsKr: ingredientsKr, ingredientsEn: ingredientsEn, releasedYear: releasedYear, commentsCount: commentsCount)
-                    self.clicedStore.append(perfume)
+                    self.clickedStore.append(perfume)
                 }
             }
         }
     }
-    
     func addClickedPerfume(perfume: Perfume) {
         
         // Full error: The compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions 에러 발생
@@ -66,3 +65,7 @@ class ClickedStore: ObservableObject {
         fetchClickedPerfume()
     }
 }
+
+
+
+
