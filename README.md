@@ -21,11 +21,16 @@
 
 ## 앱 설치 가이드라인
 ```
+앱 정상 실행을 위한 GoogleService-Info.plist 파일이 요구됩니다.
+elinholic95@icloud.com 으로 메일 주시면 사용자 및 목적 확인 후 해당 파일을 전달받으실 수 있습니다.
 ```
 
 
 ## 사용한 라이브러리
-| SegmentedPicker   | `0.0.2` | `SPM` |
+```
+SegmentedPicker
+`0.0.2` `SPM`
+```
 
 
 ## GIF 앱 화면
