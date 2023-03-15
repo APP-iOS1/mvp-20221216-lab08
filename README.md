@@ -28,8 +28,7 @@ elinholic95@icloud.com 으로 메일 주시면 사용자 및 목적 확인 후 �
 
 ## 사용한 라이브러리
 ```
-SegmentedPicker
-`0.0.2` `SPM`
+SegmentedPicker 0.0.2, SPM
 ```
 
 
