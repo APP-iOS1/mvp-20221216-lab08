@@ -20,16 +20,13 @@
 
 
 ## 앱 설치 가이드라인
-1. 하단 첨부 이미지에 따라 로컬 저장소에 파일을 다운로드 부탁드립니다.
-2. 시뮬레이터는 아이폰 14 Pro, Light Mode Only, Portrait Mode Only 환경으로 실행 요청드립니다.
-3. 향수 정보에 접근하기 위해서는 로그인이 강제되지 않습니다.
-4. 내 계정 탭, 회원 가입 시 약 2-3초간의 대기 시간이 소요 됩니다.
-5. 홈 탭 내 '지금 실시간 코멘트 많이 달린 향수' 를 클릭 시 상단 '최근 본 향수' 에 랜덤으로 쌓이게 됩니다. 
-6. 로그인 / 비로그인 사용자를 분리하여 댓글, 좋아요 기능 접근에 차등을 두는 뷰를 구현하지 못했습니다.
-7. 사용자가 선호하는 향수에 대한 토글버튼 On 상태를 모든 페이지 내에서 연동될 수 있도록 구현할 예정입니다.
-<br/>
-<p align="center"><img src="https://user-images.githubusercontent.com/114331071/209336009-d1599a92-ce42-434f-91cb-3263a564aab9.png" width=80%></p>
-<br/><br/><br/>
+```
+```
+
+
+## 사용한 라이브러리
+| SegmentedPicker   | `0.0.2` | `SPM` |
+
 
 ## GIF 앱 화면
 | <img src="https://user-images.githubusercontent.com/114331071/209337549-2e93402d-026e-42f3-a70d-e20ff1793a0a.mov" width="180"/> |  <img src="https://user-images.githubusercontent.com/114331071/209337919-83f8ec30-a2e3-4018-849d-093d1569a99b.mov" width="180"/>  |  <img src="https://user-images.githubusercontent.com/114331071/209338448-ba8a7935-5d12-4675-a29b-222579d60f08.mov" width="180"/> | <img src="https://user-images.githubusercontent.com/114331071/209338792-f5d67e65-6654-4069-8388-11a653957ed8.mov" width="180"/> |
